@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[利用AIDL进程间通信模拟QQ社交登陆SDK]]></title>
       <url>https://lijiahua.github.io/2016/08/30/%E5%88%A9%E7%94%A8AIDL%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%A8%A1%E6%8B%9FQQ%E7%A4%BE%E4%BA%A4%E7%99%BB%E9%99%86SDK/</url>
-      <content type="html"><![CDATA[<h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是安卓的一种接口定义语言，通过它我们可以定义在安卓上实现进程间通信的接口。</p>
+      <content type="html"><![CDATA[<h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是安卓的一种接口定义语言，通过它我们可以定义在安卓上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。</p>
 ]]></content>
     </entry>
     
