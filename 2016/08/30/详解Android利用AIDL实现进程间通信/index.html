@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android,AIDL,进程间通信," />
 
 
 
@@ -84,12 +84,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="李家华">
-<meta property="og:url" content="https://lijiahua.github.io/index.html">
+<meta name="description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="详解Android利用AIDL实现进程间通信">
+<meta property="og:url" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/index.html">
 <meta property="og:site_name" content="李家华">
+<meta property="og:description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/Create_AIDL_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/SYNC.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_JAVA_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_Client_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/Result.gif">
+<meta property="og:updated_time" content="2016-08-31T09:17:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李家华">
+<meta name="twitter:title" content="详解Android利用AIDL实现进程间通信">
+<meta name="twitter:description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta name="twitter:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/Create_AIDL_File.png">
 
 
 
@@ -110,9 +121,9 @@
 
 
 
-  <link rel="canonical" href="https://lijiahua.github.io/"/>
+  <link rel="canonical" href="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/"/>
 
-  <title> 李家华 </title>
+  <title> 详解Android利用AIDL实现进程间通信 | 李家华 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,9 +144,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,9 +236,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -249,10 +258,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/30/详解Android利用AIDL实现进程间通信/" itemprop="url">
-                  详解Android利用AIDL实现进程间通信
-                </a>
+                详解Android利用AIDL实现进程间通信
               
             
           </h1>
@@ -307,6 +313,11 @@
           
 
           
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
         </div>
       </header>
     
@@ -318,9 +329,7 @@
       
 
       
-        
-          
-            <h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。<br>在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对象的代码单调又难于开发，好在Android为我们提供了AIDL处理这些功能。</p>
+        <h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。<br>在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对象的代码单调又难于开发，好在Android为我们提供了AIDL处理这些功能。</p>
 <h2 id="什么场合下用AIDL？"><a href="#什么场合下用AIDL？" class="headerlink" title="什么场合下用AIDL？"></a>什么场合下用AIDL？</h2><p>直接看官方指南:<a href="https://developer.android.com/guide/components/aidl.html的这段话：" target="_blank" rel="external">https://developer.android.com/guide/components/aidl.html的这段话：</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Note: Using AIDL is necessary only if you allow clients from different applications </div><div class="line">to access your service for IPC and want to handle multithreading in your service. </div><div class="line">If you do not need to perform concurrent IPC across different applications, you </div><div class="line">should create your interface by implementing a Binder or, if you want to perform </div><div class="line">IPC, but do not need to handle multithreading, implement your interface using a </div><div class="line">Messenger.</div></pre></td></tr></table></figure>
 <p>只有在你允许多个应用程序访问你提供的服务进行进程间通信，并且在提供的服务中涉及到多线程处理的时候才需要使用到AIDL。如果你无需处理多应用并发通信，你应该采用Binder进行进程间通信。如果你实现的进程间通信未涉及多线程处理，你需要采用Messenger进行进程间通信。<br>一般适用于为其它应用程序提供公共服务的Service，这种Service即为系统常驻的Service(如：天气服务，日历服务等)。</p>
@@ -341,36 +350,89 @@
 <p>以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。</p>
 <p>本文中的两个工程例子在此：<a href="https://github.com/lijiahua/AIDL_Test" target="_blank" rel="external">https://github.com/lijiahua/AIDL_Test</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/pay/wechatpay.jpg" alt="李家华 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/pay/alipay.jpg" alt="李家华 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/Android-AIDL-进程间通信/" rel="tag">#Android,AIDL,进程间通信</a>
+          
+        </div>
       
 
       
+
       
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -378,6 +440,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/30/详解Android利用AIDL实现进程间通信/"
+           data-title="详解Android利用AIDL实现进程间通信" data-url="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -397,8 +467,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -468,6 +547,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是AIDL？"><span class="nav-number">1.</span> <span class="nav-text">什么是AIDL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么场合下用AIDL？"><span class="nav-number">2.</span> <span class="nav-text">什么场合下用AIDL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择AIDL进行进程间通信有什么优缺点"><span class="nav-number">3.</span> <span class="nav-text">选择AIDL进行进程间通信有什么优缺点?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AIDL如何使用？"><span class="nav-number">4.</span> <span class="nav-text">AIDL如何使用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Server端实现"><span class="nav-number">4.1.</span> <span class="nav-text">Server端实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client端实现"><span class="nav-number">4.2.</span> <span class="nav-text">Client端实现</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -580,6 +670,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
