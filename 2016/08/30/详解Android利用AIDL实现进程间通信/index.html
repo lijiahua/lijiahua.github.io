@@ -1,0 +1,837 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,AIDL,进程间通信," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="详解Android利用AIDL实现进程间通信">
+<meta property="og:url" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/index.html">
+<meta property="og:site_name" content="撼地神牛">
+<meta property="og:description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/Create_AIDL_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/SYNC.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_JAVA_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_Client_File.png">
+<meta property="og:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/Result.gif">
+<meta property="og:updated_time" content="2016-08-31T09:17:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="详解Android利用AIDL实现进程间通信">
+<meta name="twitter:description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta name="twitter:image" content="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/Create_AIDL_File.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/"/>
+
+  <title> 详解Android利用AIDL实现进程间通信 | 撼地神牛 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">撼地神牛</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">专注,深入,折腾,热爱生活</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                详解Android利用AIDL实现进程间通信
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-30T17:11:53+08:00" content="2016-08-30">
+              2016-08-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Android-Development/" itemprop="url" rel="index">
+                    <span itemprop="name">Android Development</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/30/详解Android利用AIDL实现进程间通信/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/30/详解Android利用AIDL实现进程间通信/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。<br>在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对象的代码单调又难于开发，好在Android为我们提供了AIDL处理这些功能。</p>
+<h2 id="什么场合下用AIDL？"><a href="#什么场合下用AIDL？" class="headerlink" title="什么场合下用AIDL？"></a>什么场合下用AIDL？</h2><p>直接看官方指南:<a href="https://developer.android.com/guide/components/aidl.html的这段话：" target="_blank" rel="external">https://developer.android.com/guide/components/aidl.html的这段话：</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Note: Using AIDL is necessary only if you allow clients from different applications </div><div class="line">to access your service for IPC and want to handle multithreading in your service. </div><div class="line">If you do not need to perform concurrent IPC across different applications, you </div><div class="line">should create your interface by implementing a Binder or, if you want to perform </div><div class="line">IPC, but do not need to handle multithreading, implement your interface using a </div><div class="line">Messenger.</div></pre></td></tr></table></figure>
+<p>只有在你允许多个应用程序访问你提供的服务进行进程间通信，并且在提供的服务中涉及到多线程处理的时候才需要使用到AIDL。如果你无需处理多应用并发通信，你应该采用Binder进行进程间通信。如果你实现的进程间通信未涉及多线程处理，你需要采用Messenger进行进程间通信。<br>一般适用于为其它应用程序提供公共服务的Service，这种Service即为系统常驻的Service(如：天气服务，日历服务等)。</p>
+<h2 id="选择AIDL进行进程间通信有什么优缺点"><a href="#选择AIDL进行进程间通信有什么优缺点" class="headerlink" title="选择AIDL进行进程间通信有什么优缺点?"></a>选择AIDL进行进程间通信有什么优缺点?</h2><p>优点:<br>1.AIDL有自己的独立进程，不会受到其它进程的影响；<br>2.可以被其它进程复用，提供公共服务；<br>3.具有很高的灵活性。<br>4.相比Messenger,可以传输的数据量大。<br>缺点:<br>1.相对普通服务，占用系统资源较多，使用AIDL进行IPC也相对麻烦。</p>
+<h2 id="AIDL如何使用？"><a href="#AIDL如何使用？" class="headerlink" title="AIDL如何使用？"></a>AIDL如何使用？</h2><p>既然用AIDL的最终目标是进行不同进程间通信，那这里咱们搞两个APP，一个Server,提供一个Service，用来对传入的参数做加法运算，另外一个Client,调用Server提供的Service。</p>
+<h3 id="Server端实现"><a href="#Server端实现" class="headerlink" title="Server端实现"></a>Server端实现</h3><p>1.建立一个工程，命名:AIDLServer<br>2.新建AIDL文件,命名:IMyAidlInterface<br><img src="/2016/08/30/详解Android利用AIDL实现进程间通信/Create_AIDL_File.png" alt="[图1]" title="[图1]"><br>3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。<br><img src="/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_File.png" alt="[图2]" title="[图2]"><br>4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击<img src="/2016/08/30/详解Android利用AIDL实现进程间通信/SYNC.png" alt="SYNC.png" title="">，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：<br><img src="/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_JAVA_File.png" alt="[图3]" title="[图3]"><br>5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">package jackleeforce.aidlserver;</div><div class="line">import android.app.Service;</div><div class="line">import android.content.Intent;</div><div class="line">import android.os.IBinder;</div><div class="line">import android.os.RemoteException;</div><div class="line">import android.support.annotation.Nullable;</div><div class="line"></div><div class="line">public class AIDLService extends Service</div><div class="line">&#123;</div><div class="line"></div><div class="line">    public class MyAidlImpl extends IMyAidlInterface.Stub</div><div class="line">    &#123;</div><div class="line">        @Override</div><div class="line">        public int add(int value1, int value2) throws RemoteException &#123;</div><div class="line">            return value1 + value2;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException &#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Nullable</div><div class="line">    @Override</div><div class="line">    public IBinder onBind(Intent intent) &#123;</div><div class="line">        return new MyAidlImpl();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>6.注册AIDLService,在AndroidManifest里面加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;service android:name=&quot;jackleeforce.aidlserver.AIDLService&quot;</div><div class="line">            android:exported=&quot;true&quot;&gt;</div><div class="line">&lt;/service&gt;</div></pre></td></tr></table></figure></p>
+<p>Server端口开发到此结束，实际上就三步，新增AIDL文件，然后创建绑定服务，在服务内实现我们要对外暴露的接口，然后注册服务，大家注意注册服务时我们写的name值，后面要用到，android:exported=”true”表示导出这个服务接口。接下来我们实现客户端。</p>
+<h3 id="Client端实现"><a href="#Client端实现" class="headerlink" title="Client端实现"></a>Client端实现</h3><p>1.建立一个工程，命名:AIDLClient<br>2.把刚才在AIDLServer工程里面建的IMyAidlInterface.aidl文件拷贝过来，这里注意包名，一定要跟Server端的一致，可以直接从AIDLServer文件夹里面连同AIDL目录一起拷过来，然后在AS里面刷新一下文件就出现了,如图4:<br><img src="/2016/08/30/详解Android利用AIDL实现进程间通信/AIDL_Client_File.png" alt="[图4]" title="[图4]"><br>3.我们刚才在服务端定义了一个add计算两个数字和的接口，现在在客户端要使用这个接口，为了演示，这里做个简单计算器好了，MainActivity布局文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</div><div class="line">    android:layout_width=&quot;match_parent&quot;</div><div class="line">    android:layout_height=&quot;match_parent&quot;</div><div class="line">    android:padding=&quot;16dp&quot;</div><div class="line">    tools:context=&quot;.MainActivity&quot;&gt;</div><div class="line"></div><div class="line">    &lt;EditText</div><div class="line">        android:id=&quot;@+id/et_a&quot;</div><div class="line">        android:layout_width=&quot;0dp&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:layout_weight=&quot;1&quot;</div><div class="line">        android:inputType=&quot;number&quot;</div><div class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;TextView</div><div class="line">        android:layout_width=&quot;wrap_content&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:text=&quot;+&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;EditText</div><div class="line">        android:id=&quot;@+id/et_b&quot;</div><div class="line">        android:layout_width=&quot;0dp&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:layout_weight=&quot;1&quot;</div><div class="line">        android:inputType=&quot;number&quot;</div><div class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;TextView</div><div class="line">        android:layout_width=&quot;wrap_content&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:text=&quot;=&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;EditText</div><div class="line">        android:id=&quot;@+id/et_result&quot;</div><div class="line">        android:layout_width=&quot;wrap_content&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:layout_weight=&quot;1&quot;</div><div class="line">        android:enabled=&quot;false&quot;</div><div class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;Button</div><div class="line">        android:id=&quot;@+id/calculate&quot;</div><div class="line">        android:layout_width=&quot;0dp&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:layout_weight=&quot;1&quot;</div><div class="line">        android:onClick=&quot;onCalculate&quot;</div><div class="line">        android:text=&quot;计算&quot; /&gt;</div><div class="line">&lt;/LinearLayout&gt;</div></pre></td></tr></table></figure>
+<p>MainActivity.java代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div></pre></td><td class="code"><pre><div class="line">package jackleeforce.aidlclient;</div><div class="line"></div><div class="line">import android.content.ComponentName;</div><div class="line">import android.content.Context;</div><div class="line">import android.content.Intent;</div><div class="line">import android.content.ServiceConnection;</div><div class="line">import android.os.IBinder;</div><div class="line">import android.os.RemoteException;</div><div class="line">import android.support.v7.app.AppCompatActivity;</div><div class="line">import android.os.Bundle;</div><div class="line">import android.view.View;</div><div class="line">import android.widget.Button;</div><div class="line">import android.widget.EditText;</div><div class="line">import android.widget.Toast;</div><div class="line">import jackleeforce.aidlserver.IMyAidlInterface;</div><div class="line"></div><div class="line"></div><div class="line">public class MainActivity extends AppCompatActivity implements View.OnClickListener &#123;</div><div class="line"></div><div class="line">    private EditText et_a;</div><div class="line">    private EditText et_b;</div><div class="line">    private EditText et_result;</div><div class="line">    private Button btn_calc;</div><div class="line">    private IMyAidlInterface mService;</div><div class="line">    private AddServiceConnect mServiceConnect;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</div><div class="line">        super.onCreate(savedInstanceState);</div><div class="line">        setContentView(R.layout.activity_main);</div><div class="line"></div><div class="line">        initUI();</div><div class="line"></div><div class="line">        connectService();</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    protected void onDestroy() &#123;</div><div class="line">        super.onDestroy();</div><div class="line"></div><div class="line">        releaseService();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private void initUI()</div><div class="line">    &#123;</div><div class="line">        et_a = (EditText)findViewById(R.id.et_a);</div><div class="line">        et_b = (EditText)findViewById(R.id.et_b);</div><div class="line">        et_result = (EditText)findViewById(R.id.et_result);</div><div class="line">        btn_calc = (Button)findViewById(R.id.calculate);</div><div class="line"></div><div class="line">        btn_calc.setOnClickListener(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onClick(View v) &#123;</div><div class="line">        switch (v.getId())</div><div class="line">        &#123;</div><div class="line">            case R.id.calculate:</div><div class="line">                calc();</div><div class="line">                break;</div><div class="line">            default:</div><div class="line">                break;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private void calc()</div><div class="line">    &#123;</div><div class="line">        int a = Integer.parseInt(et_a.getText().toString());</div><div class="line">        int b = Integer.parseInt(et_b.getText().toString());</div><div class="line"></div><div class="line">        try</div><div class="line">        &#123;</div><div class="line">            int result = mService.add(a, b);</div><div class="line"></div><div class="line">            et_result.setText(String.valueOf(result));</div><div class="line">        &#125;</div><div class="line">        catch (Exception e)</div><div class="line">        &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    class AddServiceConnect implements ServiceConnection</div><div class="line">    &#123;</div><div class="line">        @Override</div><div class="line">        public void onServiceConnected(ComponentName name, IBinder service) &#123;</div><div class="line">            mService = IMyAidlInterface.Stub.asInterface(service);</div><div class="line"></div><div class="line">            Toast.makeText(MainActivity.this,&quot;onServiceConnected&quot;,Toast.LENGTH_LONG).show();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        @Override</div><div class="line">        public void onServiceDisconnected(ComponentName name) &#123;</div><div class="line">            mService = null;</div><div class="line"></div><div class="line">            Toast.makeText(MainActivity.this,&quot;onServiceDisconnected&quot;,Toast.LENGTH_LONG).show();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void connectService()</div><div class="line">    &#123;</div><div class="line">        mServiceConnect = new AddServiceConnect();</div><div class="line">        Intent i = new Intent();</div><div class="line"></div><div class="line">        i.setComponent(new ComponentName(&quot;jackleeforce.aidlserver&quot;,&quot;jackleeforce.aidlserver.AIDLService&quot;));</div><div class="line">        i.setPackage(getPackageName());</div><div class="line"></div><div class="line">        boolean result = getApplicationContext().bindService(i,mServiceConnect, Context.BIND_AUTO_CREATE);</div><div class="line">        if (!result)</div><div class="line">        &#123;</div><div class="line">            Toast.makeText(MainActivity.this,&quot;bindService failed&quot;,Toast.LENGTH_LONG).show();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void releaseService()</div><div class="line">    &#123;</div><div class="line">        unbindService(mServiceConnect);</div><div class="line">        mServiceConnect = null;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到MainActivity起来的时候调用我们实现的connectService去连接服务端提供的服务，咱们看一下上面的connectService函数，第104行创建一个AddServiceConnect对象，从85行可以看到AddServiceConnect是一个内部类，实现了ServiceConnection接口，一看重载的两个方法名字就能明白，这是一个回调接口，当服务成功连接上了会调用onServiceConnected方法，89行我在onServiceConnected方法中，将返回的Binder对象转换成AIDL接口，以后就可以通过这个AIDL接口去调用服务端暴露出来的Service（在服务端实现的add）。当服务端因异常或者主动断开后，会执行onServiceDisConnected方法，表示已经断开连接。<br>接下来再回到connectService函数，第105行创建了一个Intent对象，接下来107和108两行代码非常关键，可以说是一个大坑，照着网络上大部分博文学习AIDL，最后无法成功绑定服务就是因为写错，107行设置Intent对象的ComponentName，第一个参数服务端的包名，第二个参数服务端暴露的Service名字,也就是前面实现服务端代码时在AndroidManifest里面注册的Service Name，这里是jackleeforce.aidlserver.AIDLService，由于Andorid 5.0以后不允许使用匿名Intent对象，这里在108行通过setPackage方法设置包名。然后在110行通过bindService函数去绑定服务。</p>
+<p>到这里我们Server端与Client端代码都实现完成了，这里总结一下：<br>服务端<br>1.定义AIDL文件。<br>2.定义要暴露的的Service，并在里面实现AIDL文件中声明的方法。<br>3.注册Service，明确Service Name，并将Service声明成Export。</p>
+<p>客户端<br>1.引入AIDL文件。<br>2.通过bindService函数去绑定服务端暴露的Service,系统会通过我们指定的Service Name找到这个Service，成功连接了以后会返回一个Binder对象，我们要用Stub.asInterface将这个Binder对象转换成我们需要的AIDL对象，这个AIDL对象的类实现代码就是系统自动为我们引入的AIDL文件生成的JAVA文件。<br>3.有了AIDL对象，我们就可以调用里面暴露的接口了。</p>
+<p>分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：<br><img src="/2016/08/30/详解Android利用AIDL实现进程间通信/Result.gif" alt="[最终效果]" title="[最终效果]"></p>
+<p>以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。</p>
+<p>本文中的两个工程例子在此：<a href="https://github.com/lijiahua/AIDL_Test" target="_blank" rel="external">https://github.com/lijiahua/AIDL_Test</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/pay/wechatpay.jpg" alt="JackLee(https://twitter.com/jackleeforce) WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/pay/alipay.jpg" alt="JackLee(https://twitter.com/jackleeforce) Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android-AIDL-进程间通信/" rel="tag">#Android,AIDL,进程间通信</a>
+          
+        </div>
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/30/详解Android利用AIDL实现进程间通信/"
+           data-title="详解Android利用AIDL实现进程间通信" data-url="https://lijiahua.github.io/2016/08/30/详解Android利用AIDL实现进程间通信/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="JackLee(https://twitter.com/jackleeforce)" />
+          <p class="site-author-name" itemprop="name">JackLee(https://twitter.com/jackleeforce)</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lijiahua" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/jackleeforce" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是AIDL？"><span class="nav-number">1.</span> <span class="nav-text">什么是AIDL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么场合下用AIDL？"><span class="nav-number">2.</span> <span class="nav-text">什么场合下用AIDL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择AIDL进行进程间通信有什么优缺点"><span class="nav-number">3.</span> <span class="nav-text">选择AIDL进行进程间通信有什么优缺点?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AIDL如何使用？"><span class="nav-number">4.</span> <span class="nav-text">AIDL如何使用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Server端实现"><span class="nav-number">4.1.</span> <span class="nav-text">Server端实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client端实现"><span class="nav-number">4.2.</span> <span class="nav-text">Client端实现</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JackLee(https://twitter.com/jackleeforce)</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"lijiahua"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
