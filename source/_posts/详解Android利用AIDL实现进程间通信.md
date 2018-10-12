@@ -2,7 +2,7 @@
 title: 详解Android利用AIDL实现进程间通信
 date: 2016-08-30 17:11:53
 categories: Android Development
-tags: Android,AIDL,进程间通信
+tags: Android,AIDL,进程间通信,技术
 
 ---
 
