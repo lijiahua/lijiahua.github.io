@@ -4,8 +4,8 @@
   
     
     <entry>
-      <title><![CDATA[机器学习极简入门课-学习笔记-第六课（机器学习三要素之数据、模型、算法）]]></title>
-      <url>https://www.jacklee.work/2019/01/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AD%E8%AF%BE%EF%BC%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%89%E8%A6%81%E7%B4%A0%E4%B9%8B%E6%95%B0%E6%8D%AE%E3%80%81%E6%A8%A1%E5%9E%8B%E3%80%81%E7%AE%97%E6%B3%95%EF%BC%89/</url>
+      <title><![CDATA[机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）]]></title>
+      <url>https://www.jacklee.work/2019/01/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AD%E8%AF%BE%EF%BC%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%89%E8%A6%81%E7%B4%A0%E4%B9%8B%E6%95%B0%E6%8D%AE%E3%80%81%E6%A8%A1%E5%9E%8B%E3%80%81%E7%AE%97%E6%B3%95%EF%BC%89/</url>
       <content type="html"><![CDATA[<h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><h4 id="向量空间模型-Vector-Space-Model，VSM"><a href="#向量空间模型-Vector-Space-Model，VSM" class="headerlink" title="向量空间模型(Vector Space Model，VSM)"></a>向量空间模型(Vector Space Model，VSM)</h4><ul>
 <li>向量指一个同时具有大小和方向的几何對象。</li>
 <li>向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。</li>
