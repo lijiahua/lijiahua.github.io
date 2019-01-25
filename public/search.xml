@@ -6,11 +6,11 @@
     <entry>
       <title><![CDATA[机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)]]></title>
       <url>https://www.jacklee.work/2019/01/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AB%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%B4%A8%E9%87%8F%E5%92%8C%E8%AF%84%E5%88%A4%E6%8C%87%E6%A0%87/</url>
-      <content type="html"><![CDATA[<h3 id="分类模型的评判指标"><a href="#分类模型的评判指标" class="headerlink" title="分类模型的评判指标"></a>分类模型的评判指标</h3><p>####精准率/查准率（Precision）<br>Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
+      <content type="html"><![CDATA[<h3 id="分类模型的评判指标"><a href="#分类模型的评判指标" class="headerlink" title="分类模型的评判指标"></a>分类模型的评判指标</h3><h4 id="精准率-查准率（Precision）"><a href="#精准率-查准率（Precision）" class="headerlink" title="精准率/查准率（Precision）"></a>精准率/查准率（Precision）</h4><p>Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
 <p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。</p>
-<p>####召回率/查全率（Recall）<br>Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p>
+<h4 id="召回率-查全率（Recall）"><a href="#召回率-查全率（Recall）" class="headerlink" title="召回率/查全率（Recall）"></a>召回率/查全率（Recall）</h4><p>Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p>
 <p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望尽可能的选出里面所有的好瓜，则个概念叫召回率/查全率</p>
-<p>####F1Score<br>F1Score = 2<em>(Precision </em> Recall)/(Precision + Recall)</p>
+<h4 id="F1Score"><a href="#F1Score" class="headerlink" title="F1Score"></a>F1Score</h4><p>F1Score = 2<em>(Precision </em> Recall)/(Precision + Recall)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此处需要注意，P、R、F1Score 在分类问题中都是对某一个类而言的。如针对一堆西瓜中的好瓜，有P,R,F1Score。对一堆西瓜中的熟瓜，也有P,R,F1Score。</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假设一个模型总共可以分10个类，那么对于每一个类都有一套独立的 P、R、F1Score 的值。衡量模型整体质量，要综合看所有10套指标，而不是只看一套。</span><br></pre></td></tr></table></figure>
 <h4 id="TP"><a href="#TP" class="headerlink" title="TP"></a>TP</h4><p>True Positive</p>
