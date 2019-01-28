@@ -4,6 +4,22 @@
   
     
     <entry>
+      <title><![CDATA[机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法)]]></title>
+      <url>https://www.jacklee.work/2019/01/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B9%9D%E8%AF%BE-%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/</url>
+      <content type="html"><![CDATA[<h4 id="目标函数，损失函数，代价函数"><a href="#目标函数，损失函数，代价函数" class="headerlink" title="目标函数，损失函数，代价函数"></a>目标函数，损失函数，代价函数</h4><p><a href="https://www.zhihu.com/question/52398145" target="_blank" rel="noopener">机器学习中的目标函数、损失函数、代价函数有什么区别</a></p>
+<h4 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h4><ul>
+<li>同济大学高等数学定义</li>
+</ul>
+<p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt=""></p>
+<p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt=""></p>
+<p>那么称 f(x) 在 I 上的图形是（向上）凸的（或凸弧）。</p>
+<p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前人的工作已经保证了经典机器学习模型的目标函数都是凸函数。未来在应用中构建自己的目标函数，那么千万记得在直接应用任何优化算法之前，应该先确定它是凸函数。</span><br></pre></td></tr></table></figure>
+<h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>算法不能学习，需要人为设定的参数，就叫做超参数。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)]]></title>
       <url>https://www.jacklee.work/2019/01/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AB%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%B4%A8%E9%87%8F%E5%92%8C%E8%AF%84%E5%88%A4%E6%8C%87%E6%A0%87/</url>
       <content type="html"><![CDATA[<h3 id="分类模型的评判指标"><a href="#分类模型的评判指标" class="headerlink" title="分类模型的评判指标"></a>分类模型的评判指标</h3><h4 id="精准率-查准率（Precision）"><a href="#精准率-查准率（Precision）" class="headerlink" title="精准率/查准率（Precision）"></a>精准率/查准率（Precision）</h4><p>Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
