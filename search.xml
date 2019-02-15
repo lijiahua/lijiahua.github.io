@@ -21,7 +21,17 @@
 </ul>
 <p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1g05xkzwbz4j308p029mx2.jpg" alt=""></p>
 <p>其中“!”代表 <a href="https://www.shuxuele.com/numbers/factorial.html" target="_blank" rel="noopener">阶乘</a>，例如 4！= 4*3*2*1 = 24</p>
-<h2 id="欧拉常数"><a href="#欧拉常数" class="headerlink" title="欧拉常数"></a><a href="https://www.shuxuele.com/numbers/e-eulers-number.html" target="_blank" rel="noopener">欧拉常数</a></h2>]]></content>
+<h2 id="欧拉常数"><a href="#欧拉常数" class="headerlink" title="欧拉常数"></a><a href="https://www.shuxuele.com/numbers/e-eulers-number.html" target="_blank" rel="noopener">欧拉常数</a></h2><h2 id="充分条件，必要条件"><a href="#充分条件，必要条件" class="headerlink" title="充分条件，必要条件"></a>充分条件，必要条件</h2><ul>
+<li>假设 A 是条件，B 是结论: </li>
+<li>由 A 可以推出B,由 B 可以推出A，则A是B的充要条件（充分且必要条件）。 </li>
+<li>由 A 可以推出B,由 B 不可以推出A，则A是B的充分不必要条件。 </li>
+<li>由 A 不可以推出 B, 由 B 可以推出A，则A是B的必要不充分条件。 </li>
+<li>由 A 不可以推出 B, 由 B 不可以推出A，则A是B的不充分不必要条件。 </li>
+<li>简单一点就是：由条件能推出结论，但由结论推不出这个条件，这个条件就是充分条件。 </li>
+<li>如果能由结论推出条件，但由条件推不出结论,此条件为必要条件。 </li>
+<li>如果既能由结论推出条件，又能有条件推出结论,此条件为充要条件。</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
@@ -32,17 +42,69 @@
 <h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1g04vo1bc3lj31620l5161.jpg" alt=""><br><img src="https://ws3.sinaimg.cn/large/006tNc79gy1g04vz87hmdj316008aaed.jpg" alt=""></p>
 <h3 id="特殊函数的导数公式"><a href="#特殊函数的导数公式" class="headerlink" title="特殊函数的导数公式"></a>特殊函数的导数公式</h3><h4 id="幂函数的导数公式"><a href="#幂函数的导数公式" class="headerlink" title="幂函数的导数公式"></a>幂函数的导数公式</h4><p>幂函数f(x) = x<sup>n</sup> (n ϵ R ) 的导数公式：</p>
 <p>(x<sup>n</sup>)<sup>‘</sup> = nx<sup>n-1</sup></p>
-<h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><p>正弦函数f(x) = sinx  的导数公式：</p>
-<p>(sinx)<sup>‘</sup> = cos x</p>
+<h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><ul>
+<li><p>正弦函数 f(x) = sin x  的导数公式</p>
+<ul>
+<li><p>(sin x)<sup>‘</sup> = cos x</p>
 <p>即正弦函数的导数是余弦函数。</p>
-<p>余弦函数f(x) = cosx  的导数公式：</p>
-<p>(cosx)<sup>‘</sup> = -sina x</p>
+</li>
+</ul>
+</li>
+<li><p>余弦函数 f(x) = cos x  的导数公式：</p>
+<ul>
+<li><p>(cos x)<sup>‘</sup> = -sina x</p>
 <p>即余弦函数的导数是负的正弦函数。</p>
+</li>
+</ul>
+</li>
+<li><p>正切函数 f(x) = tan x 的导数公式：</p>
+<ul>
+<li>(tan x)<sup>‘</sup> = sec<sup>2</sup>x</li>
+</ul>
+</li>
+<li><p>余切函数 f(x) = cot x 的导数公式：</p>
+<ul>
+<li>(cot x)<sup>‘</sup> = - csc<sup>2</sup>x </li>
+</ul>
+</li>
+<li><p>正割函数 f(x) = sec x 的导数公式：</p>
+<ul>
+<li>(sec x)<sup>‘</sup> = sec x * tan x</li>
+</ul>
+</li>
+<li><p>余割函数 f(x) = csc x 的导数公式：</p>
+<ul>
+<li>(csc x)<sup>‘</sup> = - csc x * cot x</li>
+</ul>
+</li>
+<li><p>反正弦函数 f(x) = arcsinx x 的导数公式：</p>
+</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g06xsn9gadj30xw03q74t.jpg" alt=""></p>
+<ul>
+<li>反余弦函数 f(x) = arccos x 的导数公式：</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g06xtbd0z5j30q603uq3i.jpg" alt=""></p>
+<ul>
+<li>反正切函数 f(x) = arctan x 的导数公式：</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g06xug35n6j30ny03cdg8.jpg" alt=""></p>
+<ul>
+<li>反余切函数 f(x) = arccot x 的导数公式：</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g06xv0ccppj30p603eq3c.jpg" alt=""></p>
 <h4 id="指数函数的导数公式"><a href="#指数函数的导数公式" class="headerlink" title="指数函数的导数公式"></a>指数函数的导数公式</h4><p>指数函数f(x) = a<sup>x</sup> (a&gt;0,a≠1)的导数公式:</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g061yzw31zj312q06cgow.jpg" alt=""></p>
 <h4 id="对数函数的导数公式"><a href="#对数函数的导数公式" class="headerlink" title="对数函数的导数公式"></a>对数函数的导数公式</h4><p>对数函数f(x) = log<sub>a</sub>x (a&gt;0,a≠1)的导数公式:</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g061ydw3zyj31dm0aiaec.jpg" alt=""></p>
 <h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g062b8p94aj314g0u0azy.jpg" alt=""></p>
+<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g06x7ax4wnj31b40bsqaz.jpg" alt=""></p>
+<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g06xq09vvtj31bg09879l.jpg" alt=""></p>
+<ul>
+<li>即反函数的导数等于直接函数导数的倒数。</li>
+</ul>
+<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g06y50xqeaj31d00720xs.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g06y68y0cfj31bc080gvl.jpg" alt=""></p>
+<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g06y93ttspj30u00xxar5.jpg" alt=""></p>
 ]]></content>
     </entry>
     
