@@ -110,20 +110,20 @@
 
 
 
-  <meta name="description" content="分类 VS 回归 分类模型 VS 回归模型最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。 换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。 也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。 先验概率和后验概率贝叶斯公式">
+  <meta name="description" content="分类 VS 回归 分类模型 VS 回归模型最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。 换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。 也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。 先验概率和后验概率 先验概率（prior probability">
 <meta name="keywords" content="机器学习,人工智能,AI,学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)">
 <meta property="og:url" content="https://www.jacklee.work/2019/02/19/机器学习极简入门课学习笔记-第十二课-朴素贝叶斯分类器——从贝叶斯定理到分类模型/index.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="分类 VS 回归 分类模型 VS 回归模型最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。 换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。 也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。 先验概率和后验概率贝叶斯公式">
+<meta property="og:description" content="分类 VS 回归 分类模型 VS 回归模型最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。 换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。 也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。 先验概率和后验概率 先验概率（prior probability">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg">
-<meta property="og:updated_time" content="2019-02-19T01:52:02.723Z">
+<meta property="og:updated_time" content="2019-02-19T01:57:49.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)">
-<meta name="twitter:description" content="分类 VS 回归 分类模型 VS 回归模型最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。 换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。 也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。 先验概率和后验概率贝叶斯公式">
+<meta name="twitter:description" content="分类 VS 回归 分类模型 VS 回归模型最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。 换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。 也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。 先验概率和后验概率 先验概率（prior probability">
 <meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg">
 
 
@@ -363,7 +363,7 @@
                 
               
 
-              <time title="创建时间：2019-02-19 09:39:03 / 修改时间：09:52:02" itemprop="dateCreated datePublished" datetime="2019-02-19T09:39:03+08:00">2019-02-19</time>
+              <time title="创建时间：2019-02-19 09:39:03 / 修改时间：09:57:49" itemprop="dateCreated datePublished" datetime="2019-02-19T09:39:03+08:00">2019-02-19</time>
             
 
             
@@ -444,7 +444,13 @@
 <h4 id="分类模型-VS-回归模型"><a href="#分类模型-VS-回归模型" class="headerlink" title="分类模型 VS 回归模型"></a>分类模型 VS 回归模型</h4><p>最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。</p>
 <p>换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。</p>
 <p>也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。</p>
-<h4 id="先验概率和后验概率"><a href="#先验概率和后验概率" class="headerlink" title="先验概率和后验概率"></a><a href="https://zhuanlan.zhihu.com/p/38567891" target="_blank" rel="noopener">先验概率和后验概率</a></h4><h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt=""></p>
+<h4 id="先验概率和后验概率"><a href="#先验概率和后验概率" class="headerlink" title="先验概率和后验概率"></a><a href="https://zhuanlan.zhihu.com/p/38567891" target="_blank" rel="noopener">先验概率和后验概率</a></h4><ul>
+<li><p>先验概率（prior probability）：指根据以往经验和分析。在实验或采样前就可以得到的概率。</p>
+</li>
+<li><p>后验概率（posterior probability）：指某件事已经发生，想要计算这件事发生的原因是由某个因素引起的概率。</p>
+</li>
+</ul>
+<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt=""></p>
 
       
     </div>
