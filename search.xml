@@ -49,7 +49,9 @@
 <h4 id="正弦函数图像"><a href="#正弦函数图像" class="headerlink" title="正弦函数图像"></a>正弦函数图像</h4><p><img src="../assets/images/image-20190220153921694.png" alt=""></p>
 <h3 id="余弦"><a href="#余弦" class="headerlink" title="余弦"></a>余弦</h3><p>cosΦ = 邻边/斜边</p>
 <h4 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h4><p>三角形中任何一边的平方 = 其它两边的平方和减去这两边与它们的夹角的余弦的积的两倍。</p>
-<p>$$<br>a^2 = b^2 + c^2 – 2bc  <em> cosA<br>b^2 = a^2 + c^2 –2ac  </em> cosB<br>c^2 = a^2 + b^2 – 2ab  * cosC<br>$$</p>
+<p>$$<br>a^2 = b^2 + c^2 – 2bc  * cosA<br>$$</p>
+<p>$$<br>b^2 = a^2 + c^2 –2ac  * cosB<br>$$</p>
+<p>$$<br>c^2 = a^2 + b^2 – 2ab  * cosC<br>$$</p>
 <h4 id="余弦函数图像"><a href="#余弦函数图像" class="headerlink" title="余弦函数图像"></a>余弦函数图像</h4><p><img src="../assets/images/image-20190220154322852.png" alt="image-20190220154322852"></p>
 <ul>
 <li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li>
