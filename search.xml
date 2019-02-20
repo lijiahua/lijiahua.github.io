@@ -52,7 +52,7 @@
 <ul>
 <li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li>
 </ul>
-<h3 id="正弦余弦函数图像动画"><a href="#正弦余弦函数图像动画" class="headerlink" title="正弦余弦函数图像动画"></a>正弦余弦函数图像动画</h3><iframe height="498" width="510" src="../assets/videos/sin_cos.mp4">
+<h3 id="正弦余弦函数图像动画"><a href="#正弦余弦函数图像动画" class="headerlink" title="正弦余弦函数图像动画"></a>正弦余弦函数图像动画</h3><iframe height="498" width="510" src="../assets/videos/sin_cos.mp4"></iframe>
 
 <h3 id="正切"><a href="#正切" class="headerlink" title="正切"></a>正切</h3><p>tanΦ = 对边/邻边 = sinΦ/cosΦ</p>
 <h3 id="余切"><a href="#余切" class="headerlink" title="余切"></a>余切</h3><h3 id="正割"><a href="#正割" class="headerlink" title="正割"></a>正割</h3><h3 id="余割"><a href="#余割" class="headerlink" title="余割"></a>余割</h3><h3 id="反正弦"><a href="#反正弦" class="headerlink" title="反正弦"></a>反正弦</h3><h3 id="反余弦"><a href="#反余弦" class="headerlink" title="反余弦"></a>反余弦</h3><h3 id="反正切"><a href="#反正切" class="headerlink" title="反正切"></a>反正切</h3><h3 id="反余切"><a href="#反余切" class="headerlink" title="反余切"></a>反余切</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><img src="../assets/images/006tKfTcgy1g062lwzogdj30d001474g.jpg" alt=""></p>
@@ -75,7 +75,7 @@
 <li>如果能由结论推出条件，但由条件推不出结论,此条件为必要条件。 </li>
 <li>如果既能由结论推出条件，又能有条件推出结论,此条件为充要条件。</li>
 </ul>
-</iframe>]]></content>
+]]></content>
     </entry>
     
     <entry>
