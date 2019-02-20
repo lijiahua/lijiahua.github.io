@@ -110,25 +110,25 @@
 
 
 
-  <meta name="description" content="分类模型的评判指标精准率/查准率（Precision）Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。 如&amp;lt;&amp;lt;机器学习&amp;gt;&amp;gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。 召回率/查全率（Recall）Recall=TP/（TP+FN），即在所有">
+  <meta name="description" content="构建模型的一般步骤 Step-1：数据准备。  Step-1.1 数据预处理：收集数据、清洗数据、标注数据。 Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。 Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。   Step-2：训练——将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依">
 <meta name="keywords" content="机器学习,人工智能,AI,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)">
-<meta property="og:url" content="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标">
+<meta property="og:title" content="机器学习极简入门课学习笔记-第七课(模型的获取和改进)">
+<meta property="og:url" content="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="分类模型的评判指标精准率/查准率（Precision）Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。 如&amp;lt;&amp;lt;机器学习&amp;gt;&amp;gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。 召回率/查全率（Recall）Recall=TP/（TP+FN），即在所有">
+<meta property="og:description" content="构建模型的一般步骤 Step-1：数据准备。  Step-1.1 数据预处理：收集数据、清洗数据、标注数据。 Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。 Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。   Step-2：训练——将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-02-15T08:21:57.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)">
-<meta name="twitter:description" content="分类模型的评判指标精准率/查准率（Precision）Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。 如&amp;lt;&amp;lt;机器学习&amp;gt;&amp;gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。 召回率/查全率（Recall）Recall=TP/（TP+FN），即在所有">
+<meta name="twitter:title" content="机器学习极简入门课学习笔记-第七课(模型的获取和改进)">
+<meta name="twitter:description" content="构建模型的一般步骤 Step-1：数据准备。  Step-1.1 数据预处理：收集数据、清洗数据、标注数据。 Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。 Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。   Step-2：训练——将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标"/>
+  <link rel="canonical" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>机器学习极简入门课学习笔记-第八课(模型的质量和评判指标) | JackLee</title>
+  <title>机器学习极简入门课学习笔记-第七课(模型的获取和改进) | JackLee</title>
   
 
 
@@ -318,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackLee">
@@ -335,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)
+          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第七课(模型的获取和改进)
               
             
           </h1>
@@ -360,7 +360,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 16:42:21" itemprop="dateCreated datePublished" datetime="2019-01-25T16:42:21+08:00">2019-01-25</time>
+              <time title="创建时间：2019-01-25 16:04:48" itemprop="dateCreated datePublished" datetime="2019-01-25T16:04:48+08:00">2019-01-25</time>
             
 
             
@@ -409,8 +409,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标" itemprop="commentCount"></span>
+                <a href="/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -418,7 +418,7 @@
 
           
           
-             <span id="/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)">
+             <span id="/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第七课(模型的获取和改进)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -449,22 +449,50 @@
       
 
       
-        <h3 id="分类模型的评判指标"><a href="#分类模型的评判指标" class="headerlink" title="分类模型的评判指标"></a>分类模型的评判指标</h3><h4 id="精准率-查准率（Precision）"><a href="#精准率-查准率（Precision）" class="headerlink" title="精准率/查准率（Precision）"></a>精准率/查准率（Precision）</h4><p>Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
-<p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。</p>
-<h4 id="召回率-查全率（Recall）"><a href="#召回率-查全率（Recall）" class="headerlink" title="召回率/查全率（Recall）"></a>召回率/查全率（Recall）</h4><p>Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p>
-<p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望尽可能的选出里面所有的好瓜，则个概念叫召回率/查全率</p>
-<h4 id="F1Score"><a href="#F1Score" class="headerlink" title="F1Score"></a>F1Score</h4><p>F1Score = 2<em>(Precision </em> Recall)/(Precision + Recall)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此处需要注意，P、R、F1Score 在分类问题中都是对某一个分类而言的。如针对一堆西瓜中的好瓜，有P,R,F1Score。对一堆西瓜中的熟瓜，也有P,R,F1Score。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假设一个模型总共可以分10个类，那么对于每一个类都有一套独立的 P、R、F1Score 的值。衡量模型整体质量，要综合看所有10套指标，而不是只看一套。</span><br></pre></td></tr></table></figure>
-<h4 id="TP"><a href="#TP" class="headerlink" title="TP"></a>TP</h4><p>True Positive</p>
-<h4 id="TN"><a href="#TN" class="headerlink" title="TN"></a>TN</h4><p>True Negative</p>
-<h4 id="FP"><a href="#FP" class="headerlink" title="FP"></a>FP</h4><p>False Positive</p>
-<h4 id="FN"><a href="#FN" class="headerlink" title="FN"></a>FN</h4><p>False Positive</p>
-<h4 id="欠拟合（Underfitting）"><a href="#欠拟合（Underfitting）" class="headerlink" title="欠拟合（Underfitting）"></a>欠拟合（Underfitting）</h4><p>如果一个模型，在训练集上的预测结果就不佳，指标偏低，那一般是欠拟合的问题。</p>
-<p>欠拟合多数情况下是因为选定模型类型太过简单，特征选取不够导致的</p>
-<h4 id="过拟合（Overfitting）"><a href="#过拟合（Overfitting）" class="headerlink" title="过拟合（Overfitting）"></a>过拟合（Overfitting）</h4><p>训练过程中为了尽可能命中训练集所有标签，导致最后训练出来的模型对训练集的验证误差率很低，但是当使用该模型运用在其他验证集或者测试集上时，该模型的误差率陡然增高的现象。</p>
-<p>过拟合则可能是模型太过复杂，特征选择不当（过多或组合不当）造成的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无论是过拟合问题还是欠拟合问题，增大训练数据量都可能会有所帮助。</span><br></pre></td></tr></table></figure>
+        <h4 id="构建模型的一般步骤"><a href="#构建模型的一般步骤" class="headerlink" title="构建模型的一般步骤"></a><span id="BuildModel">构建模型的一般步骤</span></h4><ul>
+<li><p>Step-1：数据准备。</p>
+<ul>
+<li>Step-1.1 数据预处理：收集数据、清洗数据、标注数据。</li>
+<li>Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。</li>
+<li>Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。</li>
+</ul>
+</li>
+<li><p><span id="Step2">Step-2</span>：训练——将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依据的算法进行运算。训练程序输出的结果，就是模型。</p>
+</li>
+<li><p>Step-3：测试——将测试集数据输入给训练获得的模型，得到预测结果；再将预测结果与这些数据原本预期的结果进行比较。</p>
+</li>
+</ul>
+<h4 id="有监督学习过程中对数据集的划分"><a href="#有监督学习过程中对数据集的划分" class="headerlink" title="有监督学习过程中对数据集的划分"></a>有监督学习过程中对数据集的划分</h4><ul>
+<li><p>训练集（Train Set）：用来做训练的数据的集合。</p>
+</li>
+<li><p>验证集（Validation Set）：在训练的过程中，每个训练轮次结束后用来验证当前模型性能，为进一步优化模型提供参考的数据的集合。</p>
+</li>
+<li><p>测试集（Test Set）：用来测试的数据的集合，用于检验最终得出的模型的性能。</p>
+</li>
+</ul>
+<p>每个集合都应当是独立的，和另外两个没有重叠。</p>
+<p>训练集是训练过程的基础，而验证和测试集则是在不同阶段用来评价训练结果的。</p>
+<h4 id="训练的过程"><a href="#训练的过程" class="headerlink" title="训练的过程"></a>训练的过程</h4><p><a href="#BuildModel">构建模型的</a>过程中<a href="#Step2">Step-2</a>训练，又可以细化为几个步骤。</p>
+<ul>
+<li><p>Step-2.1： 编写训练程序。</p>
+<ul>
+<li>Step-2.1.1： 选择模型类型；</li>
+<li>Step-2.1.2： 选择优化算法；</li>
+<li>Step-2.1.3： 根据模型类型和算法编写程序。</li>
+</ul>
+</li>
+<li><p>Step-2.2： 训练 -&gt; 获得临时模型。</p>
+</li>
+<li><p>Step-2.3： 在训练集上运行临时模型，获得训练集预测结果。</p>
+</li>
+<li><p>Step-2.4： 在验证集上运行临时模型，获得验证集预测结果。</p>
+</li>
+<li><p>Step-2.5： 综合参照 Step-2.3 和 Step-2.4 的预测结果，改进模型。</p>
+</li>
+<li><p>Step-2.6： Step-2.2 到 Step-2.5 反复迭代，直至获得让我们满意，或者已经无法继续优化的模型。</p>
+</li>
+</ul>
+<h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>超参数是需要模型训练者自己来设置和调整的。</p>
 
       
     </div>
@@ -518,8 +546,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进" rel="next" title="机器学习极简入门课学习笔记-第七课(模型的获取和改进)">
-                <i class="fa fa-chevron-left"></i> 机器学习极简入门课学习笔记-第七课(模型的获取和改进)
+              <a href="/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html" rel="next" title="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
+                <i class="fa fa-chevron-left"></i> 机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）
               </a>
             
           </div>
@@ -528,8 +556,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/机器学习极简入门课学习笔记-第九课-最常用的优化算法——梯度下降法" rel="prev" title="机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法)">
-                机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/机器学习极简入门课学习笔记-第八课-模型的质量和评判指标.html" rel="prev" title="机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)">
+                机器学习极简入门课学习笔记-第八课(模型的质量和评判指标) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -701,7 +729,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类模型的评判指标"><span class="nav-number">1.</span> <span class="nav-text">分类模型的评判指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#精准率-查准率（Precision）"><span class="nav-number">1.1.</span> <span class="nav-text">精准率/查准率（Precision）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#召回率-查全率（Recall）"><span class="nav-number">1.2.</span> <span class="nav-text">召回率/查全率（Recall）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#F1Score"><span class="nav-number">1.3.</span> <span class="nav-text">F1Score</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TP"><span class="nav-number">1.4.</span> <span class="nav-text">TP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TN"><span class="nav-number">1.5.</span> <span class="nav-text">TN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FP"><span class="nav-number">1.6.</span> <span class="nav-text">FP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FN"><span class="nav-number">1.7.</span> <span class="nav-text">FN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#欠拟合（Underfitting）"><span class="nav-number">1.8.</span> <span class="nav-text">欠拟合（Underfitting）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过拟合（Overfitting）"><span class="nav-number">1.9.</span> <span class="nav-text">过拟合（Overfitting）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#构建模型的一般步骤"><span class="nav-number">1.</span> <span class="nav-text">构建模型的一般步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#有监督学习过程中对数据集的划分"><span class="nav-number">2.</span> <span class="nav-text">有监督学习过程中对数据集的划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#训练的过程"><span class="nav-number">3.</span> <span class="nav-text">训练的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#超参数"><span class="nav-number">4.</span> <span class="nav-text">超参数</span></a></li></ol></div>
             
 
           </div>
