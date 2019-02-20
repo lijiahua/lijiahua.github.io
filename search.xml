@@ -52,6 +52,7 @@
 <p>$$<br>a^2 = b^2 + c^2 – 2bc  * cosA<br>$$</p>
 <p>$$<br>b^2 = a^2 + c^2 –2ac  * cosB<br>$$</p>
 <p>$$<br>c^2 = a^2 + b^2 – 2ab  * cosC<br>$$</p>
+<p><img src="../assets/image-20190220161324089.png" alt="image-20190220161324089"></p>
 <h4 id="余弦函数图像"><a href="#余弦函数图像" class="headerlink" title="余弦函数图像"></a>余弦函数图像</h4><p><img src="../assets/images/image-20190220154322852.png" alt="image-20190220154322852"></p>
 <ul>
 <li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li>
