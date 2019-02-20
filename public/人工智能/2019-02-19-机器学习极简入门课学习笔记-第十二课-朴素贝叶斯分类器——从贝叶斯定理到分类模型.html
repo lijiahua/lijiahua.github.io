@@ -15,10 +15,10 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -36,8 +36,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -60,9 +60,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
@@ -134,7 +134,7 @@
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-02-19-机器学习极简入门课学习笔记-第十二课-朴素贝叶斯分类器——从贝叶斯定理到分类模型.html"/>
+  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-02-19-机器学习极简入门课学习笔记-第十二课-朴素贝叶斯分类器——从贝叶斯定理到分类模型.html">
 
 
 
@@ -234,7 +234,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -242,7 +242,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -252,7 +252,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -275,9 +275,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -389,7 +387,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -455,7 +453,7 @@
       
 
       
-        <h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/images/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt=""></p>
+        <h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/images/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt></p>
 <h4 id="分类模型-VS-回归模型"><a href="#分类模型-VS-回归模型" class="headerlink" title="分类模型 VS 回归模型"></a>分类模型 VS 回归模型</h4><p>最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。</p>
 <p>换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。</p>
 <p>也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。</p>
@@ -465,10 +463,10 @@
 <li><p>后验概率（posterior probability）：指某件事已经发生，想要计算这件事发生的原因是由某个因素引起的概率。</p>
 </li>
 </ul>
-<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt=""></p>
-<h4 id="一般化的贝叶斯公式"><a href="#一般化的贝叶斯公式" class="headerlink" title="一般化的贝叶斯公式"></a>一般化的贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0biu8p76tj31ea08qq4u.jpg" alt=""></p>
-<h4 id="简单的朴素贝叶斯分类器的模型函数"><a href="#简单的朴素贝叶斯分类器的模型函数" class="headerlink" title="简单的朴素贝叶斯分类器的模型函数"></a>简单的朴素贝叶斯分类器的模型函数</h4><p><img src="../assets/images/006tKfTcly1g0bkvcn4j5j30qa02ct8z.jpg" alt=""></p>
-<p><img src="../assets/images/006tKfTcly1g0bkw3qtcaj31bg0h842t.jpg" alt=""></p>
+<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt></p>
+<h4 id="一般化的贝叶斯公式"><a href="#一般化的贝叶斯公式" class="headerlink" title="一般化的贝叶斯公式"></a>一般化的贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0biu8p76tj31ea08qq4u.jpg" alt></p>
+<h4 id="简单的朴素贝叶斯分类器的模型函数"><a href="#简单的朴素贝叶斯分类器的模型函数" class="headerlink" title="简单的朴素贝叶斯分类器的模型函数"></a>简单的朴素贝叶斯分类器的模型函数</h4><p><img src="../assets/images/006tKfTcly1g0bkvcn4j5j30qa02ct8z.jpg" alt></p>
+<p><img src="../assets/images/006tKfTcly1g0bkw3qtcaj31bg0h842t.jpg" alt></p>
 
       
     </div>
@@ -596,9 +594,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="JackLee" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="JackLee">
             
               <p class="site-author-name" itemprop="name">JackLee</p>
               <p class="site-description motion-element" itemprop="description">自由泳宇宙顶尖高手</p>
@@ -739,7 +735,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
