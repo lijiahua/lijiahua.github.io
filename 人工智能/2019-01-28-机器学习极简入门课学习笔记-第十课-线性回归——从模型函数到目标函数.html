@@ -118,13 +118,13 @@
 <meta property="og:site_name" content="JackLee">
 <meta property="og:description" content="线性回归模型目标函数的一般形式 上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。 在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。 但到了 J(a,b) 中，x(i) 和 y(i)是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fzma4k26rnj30ab01w748.jpg">
-<meta property="og:updated_time" content="2019-02-15T08:21:57.733Z">
+<meta property="og:image" content="https://www.jacklee.work/assets/006tNc79gy1fzmb3efunij30m401nq31.jpg">
+<meta property="og:image" content="https://www.jacklee.work/assets/006tNc79ly1fzma4k26rnj30ab01w748.jpg">
+<meta property="og:updated_time" content="2019-02-20T03:56:04.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)">
 <meta name="twitter:description" content="线性回归模型目标函数的一般形式 上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。 在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。 但到了 J(a,b) 中，x(i) 和 y(i)是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg">
+<meta name="twitter:image" content="https://www.jacklee.work/assets/006tNc79gy1fzmb3efunij30m401nq31.jpg">
 
 
 
@@ -380,7 +380,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-15 16:21:57" itemprop="dateModified" datetime="2019-02-15T16:21:57+08:00">2019-02-15</time>
+                <time title="修改时间：2019-02-20 11:56:04" itemprop="dateModified" datetime="2019-02-20T11:56:04+08:00">2019-02-20</time>
               
             
           </span>
@@ -452,14 +452,14 @@
       
 
       
-        <h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
+        <h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
 <p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p>
 <p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p>
 <p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p>
 <p>我们要做的，就是找到最好的 a 和 b。</p>
 <h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p>
 <p>如下是一个二元四阶多项式：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
+<p><img src="../assets/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
 <h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p>
 <h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p>
 <p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p>

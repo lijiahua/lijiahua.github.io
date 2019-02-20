@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)]]></title>
       <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-19-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E4%BB%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86%E5%88%B0%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B.html</url>
-      <content type="html"><![CDATA[<h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt=""></p>
 <h4 id="分类模型-VS-回归模型"><a href="#分类模型-VS-回归模型" class="headerlink" title="分类模型 VS 回归模型"></a>分类模型 VS 回归模型</h4><p>最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。</p>
 <p>换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。</p>
 <p>也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。</p>
@@ -58,9 +58,9 @@
     <entry>
       <title><![CDATA[高等数学(同济大学第七版)学习笔记-第二章-导数与微分]]></title>
       <url>https://www.jacklee.work/%E6%95%B0%E5%AD%A6/2019-02-13-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%83%E7%89%88)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86.html</url>
-      <content type="html"><![CDATA[<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt=""></p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt=""></p>
-<h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt=""><br><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076io14cwj316008awfj.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="../assets/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt=""></p>
+<h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="../assets/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt=""><br><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076io14cwj316008awfj.jpg" alt=""></p>
 <h3 id="特殊函数的导数公式"><a href="#特殊函数的导数公式" class="headerlink" title="特殊函数的导数公式"></a>特殊函数的导数公式</h3><h4 id="幂函数的导数公式"><a href="#幂函数的导数公式" class="headerlink" title="幂函数的导数公式"></a>幂函数的导数公式</h4><p>幂函数f(x) = x<sup>n</sup> (n ϵ R ) 的导数公式：</p>
 <p>(x<sup>n</sup>)<sup>‘</sup> = nx<sup>n-1</sup></p>
 <h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><ul>
@@ -101,39 +101,39 @@
 <li><p>反正弦函数 f(x) = arcsinx x 的导数公式：</p>
 </li>
 </ul>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt=""></p>
 <ul>
 <li>反余弦函数 f(x) = arccos x 的导数公式：</li>
 </ul>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt=""></p>
 <ul>
 <li>反正切函数 f(x) = arctan x 的导数公式：</li>
 </ul>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt=""></p>
 <ul>
 <li>反余切函数 f(x) = arccot x 的导数公式：</li>
 </ul>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt=""></p>
 <h4 id="指数函数的导数公式"><a href="#指数函数的导数公式" class="headerlink" title="指数函数的导数公式"></a>指数函数的导数公式</h4><p>指数函数f(x) = a<sup>x</sup> (a&gt;0,a≠1)的导数公式:</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt=""></p>
 <h4 id="对数函数的导数公式"><a href="#对数函数的导数公式" class="headerlink" title="对数函数的导数公式"></a>对数函数的导数公式</h4><p>对数函数f(x) = log<sub>a</sub>x (a&gt;0,a≠1)的导数公式:</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt=""></p>
-<h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt=""></p>
-<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt=""></p>
-<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt=""></p>
+<h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="../assets/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt=""></p>
+<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="../assets/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt=""></p>
+<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="../assets/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt=""></p>
 <ul>
 <li>即反函数的导数等于直接函数导数的倒数。</li>
 </ul>
-<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt=""><br><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt=""></p>
-<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt=""></p>
-<h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt=""></p>
-<h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt=""></p>
-<h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt=""></p>
-<h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt=""></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt=""></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt=""></p>
-<h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p>​<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt=""></p>
-<h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt=""></p>
+<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="../assets/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt=""><br><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt=""></p>
+<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="../assets/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt=""></p>
+<h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="../assets/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt=""></p>
+<h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="../assets/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt=""></p>
+<h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="../assets/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt=""></p>
+<h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="../assets/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt=""></p>
+<p><img src="../assets/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt=""></p>
+<h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p><img src="../assets/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt=""></p>
+<h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="../assets/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt=""></p>
 ]]></content>
     </entry>
     
@@ -146,14 +146,14 @@
     <entry>
       <title><![CDATA[机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)]]></title>
       <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E4%BB%8E%E6%A8%A1%E5%9E%8B%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html</url>
-      <content type="html"><![CDATA[<h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
 <p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p>
 <p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p>
 <p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p>
 <p>我们要做的，就是找到最好的 a 和 b。</p>
 <h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p>
 <p>如下是一个二元四阶多项式：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
+<p><img src="../assets/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
 <h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p>
 <h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p>
 <p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p>
@@ -169,10 +169,10 @@
 <h4 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h4><ul>
 <li>同济大学高等数学定义</li>
 </ul>
-<p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt=""></p>
-<p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt=""></p>
+<p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="../assets/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt=""></p>
+<p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="../assets/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt=""></p>
 <p>那么称 f(x) 在 I 上的图形是（向上）凸的（或凸弧）。</p>
-<p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt=""></p>
+<p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="../assets/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前人的工作已经保证了经典机器学习模型的目标函数都是凸函数。未来在应用中构建自己的目标函数，那么千万记得在直接应用任何优化算法之前，应该先确定它是凸函数。</span><br></pre></td></tr></table></figure>
 <h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>算法不能学习，需要人为设定的参数，就叫做超参数。</p>
 ]]></content>
