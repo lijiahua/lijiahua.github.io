@@ -110,36 +110,25 @@
 
 
 
-  <meta name="description" content="初等数学有理数无理数三角函数 特殊角度的三角函数值表 正弦sinΦ = 对边/斜边 正弦定理 正弦函数图像 余弦cosΦ = 邻边/斜边 余弦定理余弦函数图像  cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。  正弦余弦函数图像动画  正切tanΦ = 对边/邻边 = sinΦ/cosΦ 余切正割余割反正弦反余弦反正切反余切指数函数 幂函数">
-<meta name="keywords" content="数学,学习笔记">
+  <meta name="description" content="极大似然估计 (Maximum Likelihood Estimation, MLE)似然（Likelihood） 似然指某种事件发生的可能，和概率相似。  二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。">
+<meta name="keywords" content="机器学习,人工智能,AI,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初等数学-相关概念记录">
-<meta property="og:url" content="https://www.jacklee.work/数学/2019-02-14-初等数学-相关概念记录.html">
+<meta property="og:title" content="机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)">
+<meta property="og:url" content="https://www.jacklee.work/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="初等数学有理数无理数三角函数 特殊角度的三角函数值表 正弦sinΦ = 对边/斜边 正弦定理 正弦函数图像 余弦cosΦ = 邻边/斜边 余弦定理余弦函数图像  cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。  正弦余弦函数图像动画  正切tanΦ = 对边/邻边 = sinΦ/cosΦ 余切正割余割反正弦反余弦反正切反余切指数函数 幂函数">
+<meta property="og:description" content="极大似然估计 (Maximum Likelihood Estimation, MLE)似然（Likelihood） 似然指某种事件发生的可能，和概率相似。  二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcly1g06bdpxrwij30g80beaat.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcly1g0ajpd019wj30e706igmp.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcgy1g06bnf2367j30za0rmdk4.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20190220153921694.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20190220154322852.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcgy1g062lwzogdj30d001474g.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcly1g062lj1e28j30cb01774h.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcgy1g062mbl2t9j30qk013wf2.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tNc79gy1g05pb8gww8j318c0ky41r.jpg">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/006tKfTcly1g05xkzwbz4j308p029mx2.jpg">
-<meta property="og:updated_time" content="2019-02-20T07:57:43.588Z">
+<meta property="og:updated_time" content="2019-02-20T06:49:19.986Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初等数学-相关概念记录">
-<meta name="twitter:description" content="初等数学有理数无理数三角函数 特殊角度的三角函数值表 正弦sinΦ = 对边/斜边 正弦定理 正弦函数图像 余弦cosΦ = 邻边/斜边 余弦定理余弦函数图像  cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。  正弦余弦函数图像动画  正切tanΦ = 对边/邻边 = sinΦ/cosΦ 余切正割余割反正弦反余弦反正切反余切指数函数 幂函数">
-<meta name="twitter:image" content="https://www.jacklee.work/assets/images/006tKfTcly1g06bdpxrwij30g80beaat.jpg">
+<meta name="twitter:title" content="机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)">
+<meta name="twitter:description" content="极大似然估计 (Maximum Likelihood Estimation, MLE)似然（Likelihood） 似然指某种事件发生的可能，和概率相似。  二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/数学/2019-02-14-初等数学-相关概念记录.html"/>
+  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html"/>
 
 
 
@@ -149,7 +138,7 @@
   };
 </script>
 
-  <title>初等数学-相关概念记录 | JackLee</title>
+  <title>机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计) | JackLee</title>
   
 
 
@@ -329,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/数学/2019-02-14-初等数学-相关概念记录.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackLee">
@@ -346,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初等数学-相关概念记录
+          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)
               
             
           </h1>
@@ -371,24 +360,12 @@
                 
               
 
-              <time title="创建时间：2019-02-14 09:25:46" itemprop="dateCreated datePublished" datetime="2019-02-14T09:25:46+08:00">2019-02-14</time>
+              <time title="创建时间：2019-02-20 14:20:34 / 修改时间：14:49:19" itemprop="dateCreated datePublished" datetime="2019-02-20T14:20:34+08:00">2019-02-20</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-20 15:57:43" itemprop="dateModified" datetime="2019-02-20T15:57:43+08:00">2019-02-20</time>
               
             
           </span>
@@ -405,7 +382,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数学/" itemprop="url" rel="index"><span itemprop="name">数学</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
 
                 
                 
@@ -420,8 +397,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/数学/2019-02-14-初等数学-相关概念记录.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/数学/2019-02-14-初等数学-相关概念记录.html" itemprop="commentCount"></span>
+                <a href="/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,7 +406,7 @@
 
           
           
-             <span id="/数学/2019-02-14-初等数学-相关概念记录.html" class="leancloud_visitors" data-flag-title="初等数学-相关概念记录">
+             <span id="/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -460,40 +437,11 @@
       
 
       
-        <h1 id="初等数学"><a href="#初等数学" class="headerlink" title="初等数学"></a>初等数学</h1><h2 id="有理数无理数"><a href="#有理数无理数" class="headerlink" title="有理数无理数"></a><a href="https://www.shuxuele.com/irrational-numbers.html" target="_blank" rel="noopener">有理数无理数</a></h2><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p><img src="../assets/images/006tKfTcly1g06bdpxrwij30g80beaat.jpg" alt=""></p>
-<h3 id="特殊角度的三角函数值表"><a href="#特殊角度的三角函数值表" class="headerlink" title="特殊角度的三角函数值表"></a>特殊角度的三角函数值表</h3><p><img src="../assets/images/006tKfTcly1g0ajpd019wj30e706igmp.jpg" alt=""></p>
-<h3 id="正弦"><a href="#正弦" class="headerlink" title="正弦"></a>正弦</h3><p>sinΦ = 对边/斜边</p>
-<h4 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h4><p><img src="../assets/images/006tKfTcgy1g06bnf2367j30za0rmdk4.jpg" alt=""></p>
-<h4 id="正弦函数图像"><a href="#正弦函数图像" class="headerlink" title="正弦函数图像"></a>正弦函数图像</h4><p><img src="../assets/images/image-20190220153921694.png" alt=""></p>
-<h3 id="余弦"><a href="#余弦" class="headerlink" title="余弦"></a>余弦</h3><p>cosΦ = 邻边/斜边</p>
-<h4 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h4><h4 id="余弦函数图像"><a href="#余弦函数图像" class="headerlink" title="余弦函数图像"></a>余弦函数图像</h4><p><img src="../assets/images/image-20190220154322852.png" alt="image-20190220154322852"></p>
-<ul>
-<li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li>
+        <h4 id="极大似然估计-Maximum-Likelihood-Estimation-MLE"><a href="#极大似然估计-Maximum-Likelihood-Estimation-MLE" class="headerlink" title="极大似然估计 (Maximum Likelihood Estimation, MLE)"></a>极大似然估计 (Maximum Likelihood Estimation, MLE)</h4><h4 id="似然（Likelihood）"><a href="#似然（Likelihood）" class="headerlink" title="似然（Likelihood）"></a>似然（Likelihood）</h4><ul>
+<li>似然指某种事件发生的可能，和概率相似。</li>
 </ul>
-<h3 id="正弦余弦函数图像动画"><a href="#正弦余弦函数图像动画" class="headerlink" title="正弦余弦函数图像动画"></a>正弦余弦函数图像动画</h3><iframe height="498" width="510" src="../assets/videos/sin_cos.mp4">
+<p>二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。</p>
 
-<h3 id="正切"><a href="#正切" class="headerlink" title="正切"></a>正切</h3><p>tanΦ = 对边/邻边 = sinΦ/cosΦ</p>
-<h3 id="余切"><a href="#余切" class="headerlink" title="余切"></a>余切</h3><h3 id="正割"><a href="#正割" class="headerlink" title="正割"></a>正割</h3><h3 id="余割"><a href="#余割" class="headerlink" title="余割"></a>余割</h3><h3 id="反正弦"><a href="#反正弦" class="headerlink" title="反正弦"></a>反正弦</h3><h3 id="反余弦"><a href="#反余弦" class="headerlink" title="反余弦"></a>反余弦</h3><h3 id="反正切"><a href="#反正切" class="headerlink" title="反正切"></a>反正切</h3><h3 id="反余切"><a href="#反余切" class="headerlink" title="反余切"></a>反余切</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><img src="../assets/images/006tKfTcgy1g062lwzogdj30d001474g.jpg" alt=""></p>
-<h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><p><img src="../assets/images/006tKfTcly1g062lj1e28j30cb01774h.jpg" alt=""></p>
-<h3 id="幂函数运算"><a href="#幂函数运算" class="headerlink" title="幂函数运算"></a>幂函数运算</h3><h4 id="同底数幂函数运算"><a href="#同底数幂函数运算" class="headerlink" title="同底数幂函数运算"></a>同底数幂函数运算</h4><h4 id="同指数幂函数运算"><a href="#同指数幂函数运算" class="headerlink" title="同指数幂函数运算"></a>同指数幂函数运算</h4><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><p><img src="../assets/images/006tKfTcgy1g062mbl2t9j30qk013wf2.jpg" alt=""></p>
-<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p><a href="https://www.shuxuele.com/algebra/binomial-theorem.html" target="_blank" rel="noopener">最容易理解的二项式定理解释</a></p>
-<h3 id="二项式展开与二项式系数"><a href="#二项式展开与二项式系数" class="headerlink" title="二项式展开与二项式系数"></a>二项式展开与二项式系数</h3><p><img src="../assets/images/006tNc79gy1g05pb8gww8j318c0ky41r.jpg" alt=""></p>
-<ul>
-<li>二项式系数等式</li>
-</ul>
-<p><img src="../assets/images/006tKfTcly1g05xkzwbz4j308p029mx2.jpg" alt=""></p>
-<p>其中“!”代表 <a href="https://www.shuxuele.com/numbers/factorial.html" target="_blank" rel="noopener">阶乘</a>，例如 4！= 4*3*2*1 = 24</p>
-<h2 id="欧拉常数"><a href="#欧拉常数" class="headerlink" title="欧拉常数"></a><a href="https://www.shuxuele.com/numbers/e-eulers-number.html" target="_blank" rel="noopener">欧拉常数</a></h2><h2 id="充分条件，必要条件"><a href="#充分条件，必要条件" class="headerlink" title="充分条件，必要条件"></a>充分条件，必要条件</h2><ul>
-<li>假设 A 是条件，B 是结论: </li>
-<li>由 A 可以推出B,由 B 可以推出A，则A是B的充要条件（充分且必要条件）。 </li>
-<li>由 A 可以推出B,由 B 不可以推出A，则A是B的充分不必要条件。 </li>
-<li>由 A 不可以推出 B, 由 B 可以推出A，则A是B的必要不充分条件。 </li>
-<li>由 A 不可以推出 B, 由 B 不可以推出A，则A是B的不充分不必要条件。 </li>
-<li>简单一点就是：由条件能推出结论，但由结论推不出这个条件，这个条件就是充分条件。 </li>
-<li>如果能由结论推出条件，但由条件推不出结论,此条件为必要条件。 </li>
-<li>如果既能由结论推出条件，又能有条件推出结论,此条件为充要条件。</li>
-</ul>
-</iframe>
       
     </div>
 
@@ -513,7 +461,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数学-学习笔记/" rel="tag"># 数学,学习笔记</a>
+            <a href="/tags/机器学习-人工智能-AI-学习笔记/" rel="tag"># 机器学习,人工智能,AI,学习笔记</a>
           
         </div>
       
@@ -546,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html" rel="next" title="高等数学(同济大学第七版)学习笔记-第二章-导数与微分">
-                <i class="fa fa-chevron-left"></i> 高等数学(同济大学第七版)学习笔记-第二章-导数与微分
+              <a href="/人工智能/2019-02-19-机器学习极简入门课学习笔记-第十二课-朴素贝叶斯分类器——从贝叶斯定理到分类模型.html" rel="next" title="机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)">
+                <i class="fa fa-chevron-left"></i> 机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)
               </a>
             
           </div>
@@ -556,8 +504,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/人工智能/2019-02-19-机器学习极简入门课学习笔记-第十二课-朴素贝叶斯分类器——从贝叶斯定理到分类模型.html" rel="prev" title="机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)">
-                机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型) <i class="fa fa-chevron-right"></i>
+              <a href="/uncategorized/2019-02-20-机器学习极简入门课学习笔记-第十四课-逻辑回归——非线性逻辑函数的由来.html" rel="prev" title="机器学习极简入门课学习笔记-第十四课(逻辑回归——非线性逻辑函数的由来)">
+                机器学习极简入门课学习笔记-第十四课(逻辑回归——非线性逻辑函数的由来) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -729,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初等数学"><span class="nav-number">1.</span> <span class="nav-text">初等数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有理数无理数"><span class="nav-number">1.1.</span> <span class="nav-text">有理数无理数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三角函数"><span class="nav-number">1.2.</span> <span class="nav-text">三角函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊角度的三角函数值表"><span class="nav-number">1.2.1.</span> <span class="nav-text">特殊角度的三角函数值表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正弦"><span class="nav-number">1.2.2.</span> <span class="nav-text">正弦</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#正弦定理"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">正弦定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正弦函数图像"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">正弦函数图像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#余弦"><span class="nav-number">1.2.3.</span> <span class="nav-text">余弦</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#余弦定理"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">余弦定理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#余弦函数图像"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">余弦函数图像</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正弦余弦函数图像动画"><span class="nav-number">1.2.4.</span> <span class="nav-text">正弦余弦函数图像动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正切"><span class="nav-number">1.2.5.</span> <span class="nav-text">正切</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#余切"><span class="nav-number">1.2.6.</span> <span class="nav-text">余切</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正割"><span class="nav-number">1.2.7.</span> <span class="nav-text">正割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#余割"><span class="nav-number">1.2.8.</span> <span class="nav-text">余割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反正弦"><span class="nav-number">1.2.9.</span> <span class="nav-text">反正弦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反余弦"><span class="nav-number">1.2.10.</span> <span class="nav-text">反余弦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反正切"><span class="nav-number">1.2.11.</span> <span class="nav-text">反正切</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反余切"><span class="nav-number">1.2.12.</span> <span class="nav-text">反余切</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指数函数"><span class="nav-number">1.3.</span> <span class="nav-text">指数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#幂函数"><span class="nav-number">1.4.</span> <span class="nav-text">幂函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#幂函数运算"><span class="nav-number">1.4.1.</span> <span class="nav-text">幂函数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同底数幂函数运算"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">同底数幂函数运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同指数幂函数运算"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">同指数幂函数运算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对数函数"><span class="nav-number">1.5.</span> <span class="nav-text">对数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二项式定理"><span class="nav-number">1.6.</span> <span class="nav-text">二项式定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二项式展开与二项式系数"><span class="nav-number">1.6.1.</span> <span class="nav-text">二项式展开与二项式系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉常数"><span class="nav-number">1.7.</span> <span class="nav-text">欧拉常数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#充分条件，必要条件"><span class="nav-number">1.8.</span> <span class="nav-text">充分条件，必要条件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#极大似然估计-Maximum-Likelihood-Estimation-MLE"><span class="nav-number">1.</span> <span class="nav-text">极大似然估计 (Maximum Likelihood Estimation, MLE)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#似然（Likelihood）"><span class="nav-number">2.</span> <span class="nav-text">似然（Likelihood）</span></a></li></ol></div>
             
 
           </div>

@@ -4,9 +4,25 @@
   
     
     <entry>
+      <title><![CDATA[机器学习极简入门课学习笔记-第十四课(逻辑回归——非线性逻辑函数的由来)]]></title>
+      <url>https://www.jacklee.work/uncategorized/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E5%9B%9B%E8%AF%BE-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E9%9D%9E%E7%BA%BF%E6%80%A7%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%B1%E6%9D%A5.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)]]></title>
+      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%89%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1.html</url>
+      <content type="html"><![CDATA[<h4 id="极大似然估计-Maximum-Likelihood-Estimation-MLE"><a href="#极大似然估计-Maximum-Likelihood-Estimation-MLE" class="headerlink" title="极大似然估计 (Maximum Likelihood Estimation, MLE)"></a>极大似然估计 (Maximum Likelihood Estimation, MLE)</h4><h4 id="似然（Likelihood）"><a href="#似然（Likelihood）" class="headerlink" title="似然（Likelihood）"></a>似然（Likelihood）</h4><ul>
+<li>似然指某种事件发生的可能，和概率相似。</li>
+</ul>
+<p>二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)]]></title>
       <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-19-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E4%BB%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86%E5%88%B0%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B.html</url>
-      <content type="html"><![CDATA[<h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/images/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt=""></p>
 <h4 id="分类模型-VS-回归模型"><a href="#分类模型-VS-回归模型" class="headerlink" title="分类模型 VS 回归模型"></a>分类模型 VS 回归模型</h4><p>最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。</p>
 <p>换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。</p>
 <p>也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。</p>
@@ -16,31 +32,38 @@
 <li><p>后验概率（posterior probability）：指某件事已经发生，想要计算这件事发生的原因是由某个因素引起的概率。</p>
 </li>
 </ul>
-<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="../assets/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt=""></p>
-<h4 id="一般化的贝叶斯公式"><a href="#一般化的贝叶斯公式" class="headerlink" title="一般化的贝叶斯公式"></a>一般化的贝叶斯公式</h4><p><img src="../assets/006tKfTcly1g0biu8p76tj31ea08qq4u.jpg" alt=""></p>
-<h4 id="朴素贝叶斯分类器的模型函数"><a href="#朴素贝叶斯分类器的模型函数" class="headerlink" title="朴素贝叶斯分类器的模型函数"></a>朴素贝叶斯分类器的模型函数</h4><p><img src="../assets/006tKfTcly1g0bkvcn4j5j30qa02ct8z.jpg" alt=""></p>
-<p><img src="../assets/006tKfTcly1g0bkw3qtcaj31bg0h842t.jpg" alt=""></p>
+<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt=""></p>
+<h4 id="一般化的贝叶斯公式"><a href="#一般化的贝叶斯公式" class="headerlink" title="一般化的贝叶斯公式"></a>一般化的贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0biu8p76tj31ea08qq4u.jpg" alt=""></p>
+<h4 id="简单的朴素贝叶斯分类器的模型函数"><a href="#简单的朴素贝叶斯分类器的模型函数" class="headerlink" title="简单的朴素贝叶斯分类器的模型函数"></a>简单的朴素贝叶斯分类器的模型函数</h4><p><img src="../assets/images/006tKfTcly1g0bkvcn4j5j30qa02ct8z.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcly1g0bkw3qtcaj31bg0h842t.jpg" alt=""></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[初等数学-相关概念记录]]></title>
       <url>https://www.jacklee.work/%E6%95%B0%E5%AD%A6/2019-02-14-%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E8%AE%B0%E5%BD%95.html</url>
-      <content type="html"><![CDATA[<h1 id="初等数学"><a href="#初等数学" class="headerlink" title="初等数学"></a>初等数学</h1><h2 id="有理数无理数"><a href="#有理数无理数" class="headerlink" title="有理数无理数"></a><a href="https://www.shuxuele.com/irrational-numbers.html" target="_blank" rel="noopener">有理数无理数</a></h2><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p><img src="../assets/006tKfTcly1g06bdpxrwij30g80beaat.jpg" alt=""></p>
-<h3 id="特殊角度的三角函数值表"><a href="#特殊角度的三角函数值表" class="headerlink" title="特殊角度的三角函数值表"></a>特殊角度的三角函数值表</h3><p><img src="../assets/006tKfTcly1g0ajpd019wj30e706igmp.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h1 id="初等数学"><a href="#初等数学" class="headerlink" title="初等数学"></a>初等数学</h1><h2 id="有理数无理数"><a href="#有理数无理数" class="headerlink" title="有理数无理数"></a><a href="https://www.shuxuele.com/irrational-numbers.html" target="_blank" rel="noopener">有理数无理数</a></h2><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p><img src="../assets/images/006tKfTcly1g06bdpxrwij30g80beaat.jpg" alt=""></p>
+<h3 id="特殊角度的三角函数值表"><a href="#特殊角度的三角函数值表" class="headerlink" title="特殊角度的三角函数值表"></a>特殊角度的三角函数值表</h3><p><img src="../assets/images/006tKfTcly1g0ajpd019wj30e706igmp.jpg" alt=""></p>
 <h3 id="正弦"><a href="#正弦" class="headerlink" title="正弦"></a>正弦</h3><p>sinΦ = 对边/斜边</p>
-<h4 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h4><p><img src="../assets/006tKfTcgy1g06bnf2367j30za0rmdk4.jpg" alt=""></p>
-<h3 id="反正弦"><a href="#反正弦" class="headerlink" title="反正弦"></a>反正弦</h3><h3 id="余弦"><a href="#余弦" class="headerlink" title="余弦"></a>余弦</h3><p>cosΦ = 邻边/斜边</p>
-<h4 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h4><h3 id="反余弦"><a href="#反余弦" class="headerlink" title="反余弦"></a>反余弦</h3><h3 id="正切"><a href="#正切" class="headerlink" title="正切"></a>正切</h3><p>tanΦ = 对边/邻边 = sinΦ/cosΦ</p>
-<h4 id="正切定理"><a href="#正切定理" class="headerlink" title="正切定理"></a>正切定理</h4><h3 id="反正切"><a href="#反正切" class="headerlink" title="反正切"></a>反正切</h3><h3 id="余切"><a href="#余切" class="headerlink" title="余切"></a>余切</h3><h3 id="反余切"><a href="#反余切" class="headerlink" title="反余切"></a>反余切</h3><h3 id="正割"><a href="#正割" class="headerlink" title="正割"></a>正割</h3><h3 id="余割"><a href="#余割" class="headerlink" title="余割"></a>余割</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><img src="../assets/006tKfTcgy1g062lwzogdj30d001474g.jpg" alt=""></p>
-<h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><p><img src="../assets/006tKfTcly1g062lj1e28j30cb01774h.jpg" alt=""></p>
-<h3 id="幂函数运算"><a href="#幂函数运算" class="headerlink" title="幂函数运算"></a>幂函数运算</h3><h4 id="同底数幂函数运算"><a href="#同底数幂函数运算" class="headerlink" title="同底数幂函数运算"></a>同底数幂函数运算</h4><h4 id="同指数幂函数运算"><a href="#同指数幂函数运算" class="headerlink" title="同指数幂函数运算"></a>同指数幂函数运算</h4><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><p><img src="../assets/006tKfTcgy1g062mbl2t9j30qk013wf2.jpg" alt=""></p>
+<h4 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h4><p><img src="../assets/images/006tKfTcgy1g06bnf2367j30za0rmdk4.jpg" alt=""></p>
+<h4 id="正弦函数图像"><a href="#正弦函数图像" class="headerlink" title="正弦函数图像"></a>正弦函数图像</h4><p><img src="../assets/images/image-20190220153921694.png" alt=""></p>
+<h3 id="余弦"><a href="#余弦" class="headerlink" title="余弦"></a>余弦</h3><p>cosΦ = 邻边/斜边</p>
+<h4 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h4><h4 id="余弦函数图像"><a href="#余弦函数图像" class="headerlink" title="余弦函数图像"></a>余弦函数图像</h4><p><img src="../assets/images/image-20190220154322852.png" alt="image-20190220154322852"></p>
+<ul>
+<li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li>
+</ul>
+<h3 id="正弦余弦函数图像动画"><a href="#正弦余弦函数图像动画" class="headerlink" title="正弦余弦函数图像动画"></a>正弦余弦函数图像动画</h3><iframe height="498" width="510" src="../assets/videos/sin_cos.mp4">
+
+<h3 id="正切"><a href="#正切" class="headerlink" title="正切"></a>正切</h3><p>tanΦ = 对边/邻边 = sinΦ/cosΦ</p>
+<h3 id="余切"><a href="#余切" class="headerlink" title="余切"></a>余切</h3><h3 id="正割"><a href="#正割" class="headerlink" title="正割"></a>正割</h3><h3 id="余割"><a href="#余割" class="headerlink" title="余割"></a>余割</h3><h3 id="反正弦"><a href="#反正弦" class="headerlink" title="反正弦"></a>反正弦</h3><h3 id="反余弦"><a href="#反余弦" class="headerlink" title="反余弦"></a>反余弦</h3><h3 id="反正切"><a href="#反正切" class="headerlink" title="反正切"></a>反正切</h3><h3 id="反余切"><a href="#反余切" class="headerlink" title="反余切"></a>反余切</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><img src="../assets/images/006tKfTcgy1g062lwzogdj30d001474g.jpg" alt=""></p>
+<h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><p><img src="../assets/images/006tKfTcly1g062lj1e28j30cb01774h.jpg" alt=""></p>
+<h3 id="幂函数运算"><a href="#幂函数运算" class="headerlink" title="幂函数运算"></a>幂函数运算</h3><h4 id="同底数幂函数运算"><a href="#同底数幂函数运算" class="headerlink" title="同底数幂函数运算"></a>同底数幂函数运算</h4><h4 id="同指数幂函数运算"><a href="#同指数幂函数运算" class="headerlink" title="同指数幂函数运算"></a>同指数幂函数运算</h4><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><p><img src="../assets/images/006tKfTcgy1g062mbl2t9j30qk013wf2.jpg" alt=""></p>
 <h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p><a href="https://www.shuxuele.com/algebra/binomial-theorem.html" target="_blank" rel="noopener">最容易理解的二项式定理解释</a></p>
-<h3 id="二项式展开与二项式系数"><a href="#二项式展开与二项式系数" class="headerlink" title="二项式展开与二项式系数"></a>二项式展开与二项式系数</h3><p><img src="../assets/006tNc79gy1g05pb8gww8j318c0ky41r.jpg" alt=""></p>
+<h3 id="二项式展开与二项式系数"><a href="#二项式展开与二项式系数" class="headerlink" title="二项式展开与二项式系数"></a>二项式展开与二项式系数</h3><p><img src="../assets/images/006tNc79gy1g05pb8gww8j318c0ky41r.jpg" alt=""></p>
 <ul>
 <li>二项式系数等式</li>
 </ul>
-<p><img src="../assets/006tKfTcly1g05xkzwbz4j308p029mx2.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcly1g05xkzwbz4j308p029mx2.jpg" alt=""></p>
 <p>其中“!”代表 <a href="https://www.shuxuele.com/numbers/factorial.html" target="_blank" rel="noopener">阶乘</a>，例如 4！= 4*3*2*1 = 24</p>
 <h2 id="欧拉常数"><a href="#欧拉常数" class="headerlink" title="欧拉常数"></a><a href="https://www.shuxuele.com/numbers/e-eulers-number.html" target="_blank" rel="noopener">欧拉常数</a></h2><h2 id="充分条件，必要条件"><a href="#充分条件，必要条件" class="headerlink" title="充分条件，必要条件"></a>充分条件，必要条件</h2><ul>
 <li>假设 A 是条件，B 是结论: </li>
@@ -52,15 +75,15 @@
 <li>如果能由结论推出条件，但由条件推不出结论,此条件为必要条件。 </li>
 <li>如果既能由结论推出条件，又能有条件推出结论,此条件为充要条件。</li>
 </ul>
-]]></content>
+</iframe>]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[高等数学(同济大学第七版)学习笔记-第二章-导数与微分]]></title>
       <url>https://www.jacklee.work/%E6%95%B0%E5%AD%A6/2019-02-13-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%83%E7%89%88)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86.html</url>
-      <content type="html"><![CDATA[<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="../assets/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt=""></p>
-<p><img src="../assets/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt=""></p>
-<h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="../assets/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt=""><br><img src="../assets/006tKfTcgy1g076io14cwj316008awfj.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="../assets/images/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt=""></p>
+<h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="../assets/images/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt=""><br><img src="../assets/images/006tKfTcgy1g076io14cwj316008awfj.jpg" alt=""></p>
 <h3 id="特殊函数的导数公式"><a href="#特殊函数的导数公式" class="headerlink" title="特殊函数的导数公式"></a>特殊函数的导数公式</h3><h4 id="幂函数的导数公式"><a href="#幂函数的导数公式" class="headerlink" title="幂函数的导数公式"></a>幂函数的导数公式</h4><p>幂函数f(x) = x<sup>n</sup> (n ϵ R ) 的导数公式：</p>
 <p>(x<sup>n</sup>)<sup>‘</sup> = nx<sup>n-1</sup></p>
 <h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><ul>
@@ -101,39 +124,39 @@
 <li><p>反正弦函数 f(x) = arcsinx x 的导数公式：</p>
 </li>
 </ul>
-<p><img src="../assets/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt=""></p>
 <ul>
 <li>反余弦函数 f(x) = arccos x 的导数公式：</li>
 </ul>
-<p><img src="../assets/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt=""></p>
 <ul>
 <li>反正切函数 f(x) = arctan x 的导数公式：</li>
 </ul>
-<p><img src="../assets/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt=""></p>
 <ul>
 <li>反余切函数 f(x) = arccot x 的导数公式：</li>
 </ul>
-<p><img src="../assets/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt=""></p>
 <h4 id="指数函数的导数公式"><a href="#指数函数的导数公式" class="headerlink" title="指数函数的导数公式"></a>指数函数的导数公式</h4><p>指数函数f(x) = a<sup>x</sup> (a&gt;0,a≠1)的导数公式:</p>
-<p><img src="../assets/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt=""></p>
 <h4 id="对数函数的导数公式"><a href="#对数函数的导数公式" class="headerlink" title="对数函数的导数公式"></a>对数函数的导数公式</h4><p>对数函数f(x) = log<sub>a</sub>x (a&gt;0,a≠1)的导数公式:</p>
-<p><img src="../assets/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt=""></p>
-<h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="../assets/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt=""></p>
-<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="../assets/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt=""></p>
-<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="../assets/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt=""></p>
+<h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="../assets/images/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt=""></p>
+<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt=""></p>
+<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt=""></p>
 <ul>
 <li>即反函数的导数等于直接函数导数的倒数。</li>
 </ul>
-<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="../assets/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt=""><br><img src="../assets/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt=""></p>
-<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="../assets/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt=""></p>
-<h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="../assets/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt=""></p>
-<h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="../assets/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt=""></p>
-<h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="../assets/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt=""></p>
-<h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="../assets/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt=""></p>
-<p><img src="../assets/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt=""></p>
-<p><img src="../assets/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt=""></p>
-<h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p><img src="../assets/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt=""></p>
-<h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="../assets/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt=""></p>
+<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt=""><br><img src="../assets/images/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt=""></p>
+<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="../assets/images/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt=""></p>
+<h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="../assets/images/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt=""></p>
+<h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="../assets/images/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt=""></p>
+<h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="../assets/images/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt=""></p>
+<h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="../assets/images/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt=""></p>
+<p><img src="../assets/images/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt=""></p>
+<h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p><img src="../assets/images/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt=""></p>
+<h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="../assets/images/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt=""></p>
 ]]></content>
     </entry>
     
@@ -146,14 +169,14 @@
     <entry>
       <title><![CDATA[机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)]]></title>
       <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E4%BB%8E%E6%A8%A1%E5%9E%8B%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html</url>
-      <content type="html"><![CDATA[<h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
+      <content type="html"><![CDATA[<h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/images/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
 <p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p>
 <p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p>
 <p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p>
 <p>我们要做的，就是找到最好的 a 和 b。</p>
 <h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p>
 <p>如下是一个二元四阶多项式：</p>
-<p><img src="../assets/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
+<p><img src="../assets/images/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
 <h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p>
 <h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p>
 <p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p>
@@ -169,10 +192,10 @@
 <h4 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h4><ul>
 <li>同济大学高等数学定义</li>
 </ul>
-<p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="../assets/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt=""></p>
-<p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="../assets/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt=""></p>
+<p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="../assets/images/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt=""></p>
+<p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="../assets/images/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt=""></p>
 <p>那么称 f(x) 在 I 上的图形是（向上）凸的（或凸弧）。</p>
-<p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="../assets/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt=""></p>
+<p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="../assets/images/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前人的工作已经保证了经典机器学习模型的目标函数都是凸函数。未来在应用中构建自己的目标函数，那么千万记得在直接应用任何优化算法之前，应该先确定它是凸函数。</span><br></pre></td></tr></table></figure>
 <h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>算法不能学习，需要人为设定的参数，就叫做超参数。</p>
 ]]></content>
@@ -504,7 +527,7 @@
 <p>只有在你允许多个应用程序访问你提供的服务进行进程间通信，并且在提供的服务中涉及到多线程处理的时候才需要使用到AIDL。如果你无需处理多应用并发通信，你应该采用Binder进行进程间通信。如果你实现的进程间通信未涉及多线程处理，你需要采用Messenger进行进程间通信。<br>一般适用于为其它应用程序提供公共服务的Service，这种Service即为系统常驻的Service(如：天气服务，日历服务等)。</p>
 <h2 id="选择AIDL进行进程间通信有什么优缺点"><a href="#选择AIDL进行进程间通信有什么优缺点" class="headerlink" title="选择AIDL进行进程间通信有什么优缺点?"></a>选择AIDL进行进程间通信有什么优缺点?</h2><p>优点:<br>1.AIDL有自己的独立进程，不会受到其它进程的影响；<br>2.可以被其它进程复用，提供公共服务；<br>3.具有很高的灵活性。<br>4.相比Messenger,可以传输的数据量大。<br>缺点:<br>1.相对普通服务，占用系统资源较多，使用AIDL进行IPC也相对麻烦。</p>
 <h2 id="AIDL如何使用？"><a href="#AIDL如何使用？" class="headerlink" title="AIDL如何使用？"></a>AIDL如何使用？</h2><p>既然用AIDL的最终目标是进行不同进程间通信，那这里咱们搞两个APP，一个Server,提供一个Service，用来对传入的参数做加法运算，另外一个Client,调用Server提供的Service。</p>
-<h3 id="Server端实现"><a href="#Server端实现" class="headerlink" title="Server端实现"></a>Server端实现</h3><p>1.建立一个工程，命名:AIDLServer<br>2.新建AIDL文件,命名:IMyAidlInterface<br><img src="../assets/Create_AIDL_File.png" alt=""><br>3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。<br><img src="../assets/AIDL_File.png" alt=""><br>4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击<img src="../assets/SYNC.png" alt="">，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：<br><img src="../assets/AIDL_JAVA_File.png" alt=""><br>5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。</p>
+<h3 id="Server端实现"><a href="#Server端实现" class="headerlink" title="Server端实现"></a>Server端实现</h3><p>1.建立一个工程，命名:AIDLServer<br>2.新建AIDL文件,命名:IMyAidlInterface<br><img src="../assets/images/Create_AIDL_File.png" alt=""><br>3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。<br><img src="../assets/images/AIDL_File.png" alt=""><br>4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击<img src="../assets/images/SYNC.png" alt="">，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：<br><img src="../assets/images/AIDL_JAVA_File.png" alt=""><br>5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlserver;</span><br><span class="line">import android.app.Service;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.annotation.Nullable;</span><br><span class="line"></span><br><span class="line">public class AIDLService extends Service</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public class MyAidlImpl extends IMyAidlInterface.Stub</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public int add(int value1, int value2) throws RemoteException &#123;</span><br><span class="line">            return value1 + value2;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException &#123;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Nullable</span><br><span class="line">    @Override</span><br><span class="line">    public IBinder onBind(Intent intent) &#123;</span><br><span class="line">        return new MyAidlImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>6.注册AIDLService,在AndroidManifest里面加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;service android:name=&quot;jackleeforce.aidlserver.AIDLService&quot;</span><br><span class="line">            android:exported=&quot;true&quot;&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure></p>
 <p>Server端口开发到此结束，实际上就三步，新增AIDL文件，然后创建绑定服务，在服务内实现我们要对外暴露的接口，然后注册服务，大家注意注册服务时我们写的name值，后面要用到，android:exported=”true”表示导出这个服务接口。接下来我们实现客户端。</p>
@@ -515,7 +538,7 @@
 <p>可以看到MainActivity起来的时候调用我们实现的connectService去连接服务端提供的服务，咱们看一下上面的connectService函数，第104行创建一个AddServiceConnect对象，从85行可以看到AddServiceConnect是一个内部类，实现了ServiceConnection接口，一看重载的两个方法名字就能明白，这是一个回调接口，当服务成功连接上了会调用onServiceConnected方法，89行我在onServiceConnected方法中，将返回的Binder对象转换成AIDL接口，以后就可以通过这个AIDL接口去调用服务端暴露出来的Service（在服务端实现的add）。当服务端因异常或者主动断开后，会执行onServiceDisConnected方法，表示已经断开连接。<br>接下来再回到connectService函数，第105行创建了一个Intent对象，接下来107和108两行代码非常关键，可以说是一个大坑，照着网络上大部分博文学习AIDL，最后无法成功绑定服务就是因为写错，107行设置Intent对象的ComponentName，第一个参数服务端的包名，第二个参数服务端暴露的Service名字,也就是前面实现服务端代码时在AndroidManifest里面注册的Service Name，这里是jackleeforce.aidlserver.AIDLService，由于Andorid 5.0以后不允许使用匿名Intent对象，这里在108行通过setPackage方法设置包名。然后在110行通过bindService函数去绑定服务。</p>
 <p>到这里我们Server端与Client端代码都实现完成了，这里总结一下：<br>服务端<br>1.定义AIDL文件。<br>2.定义要暴露的的Service，并在里面实现AIDL文件中声明的方法。<br>3.注册Service，明确Service Name，并将Service声明成Export。</p>
 <p>客户端<br>1.引入AIDL文件。<br>2.通过bindService函数去绑定服务端暴露的Service,系统会通过我们指定的Service Name找到这个Service，成功连接了以后会返回一个Binder对象，我们要用Stub.asInterface将这个Binder对象转换成我们需要的AIDL对象，这个AIDL对象的类实现代码就是系统自动为我们引入的AIDL文件生成的JAVA文件。<br>3.有了AIDL对象，我们就可以调用里面暴露的接口了。</p>
-<p>分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：<br><img src="../assets/Result.gif" alt=""></p>
+<p>分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：<br><img src="../assets/images/Result.gif" alt=""></p>
 <p>以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。</p>
 <p>本文中的两个工程例子在此：<a href="https://github.com/lijiahua/AIDL_Test" target="_blank" rel="noopener">https://github.com/lijiahua/AIDL_Test</a></p>
 ]]></content>
