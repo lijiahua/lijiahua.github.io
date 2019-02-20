@@ -39,11 +39,11 @@ Messenger.
 ### Server端实现
 1.建立一个工程，命名:AIDLServer
 2.新建AIDL文件,命名:IMyAidlInterface
-![](../assets/Create_AIDL_File.png)
+![](../assets/images/Create_AIDL_File.png)
 3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。
-![](../assets/AIDL_File.png)
-4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击![](../assets/SYNC.png)，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：
-![](../assets/AIDL_JAVA_File.png )
+![](../assets/images/AIDL_File.png)
+4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击![](../assets/images/SYNC.png)，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：
+![](../assets/images/AIDL_JAVA_File.png )
 5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。
 
 {% codeblock %}
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 3.有了AIDL对象，我们就可以调用里面暴露的接口了。
 
 分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：
-![](../assets/Result.gif)
+![](../assets/images/Result.gif)
 
 以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。
 
