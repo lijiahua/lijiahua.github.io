@@ -39,11 +39,11 @@ Messenger.
 ### Server端实现
 1.建立一个工程，命名:AIDLServer
 2.新建AIDL文件,命名:IMyAidlInterface
-{% asset_img Create_AIDL_File.png [图1] %}
+![](../assets/Create_AIDL_File.png)
 3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。
-{% asset_img AIDL_File.png [图2] %}
-4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击{% asset_img SYNC.png %}，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：
-{% asset_img AIDL_JAVA_File.png [图3] %}
+![](../assets/AIDL_File.png)
+4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击![](../assets/SYNC.png)，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：
+![](../assets/AIDL_JAVA_File.png )
 5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。
 
 {% codeblock %}
@@ -63,13 +63,13 @@ public class AIDLService extends Service
         public int add(int value1, int value2) throws RemoteException {
             return value1 + value2;
         }
-
+    
         @Override
         public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
-
+    
         }
     }
-
+    
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -109,12 +109,12 @@ Server端口开发到此结束，实际上就三步，新增AIDL文件，然后�
         android:layout_weight="1"
         android:inputType="number"
         android:gravity="center_horizontal" />
-
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+" />
-
+    
     <EditText
         android:id="@+id/et_b"
         android:layout_width="0dp"
@@ -122,12 +122,12 @@ Server端口开发到此结束，实际上就三步，新增AIDL文件，然后�
         android:layout_weight="1"
         android:inputType="number"
         android:gravity="center_horizontal" />
-
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="=" />
-
+    
     <EditText
         android:id="@+id/et_result"
         android:layout_width="wrap_content"
@@ -135,7 +135,7 @@ Server端口开发到此结束，实际上就三步，新增AIDL文件，然后�
         android:layout_weight="1"
         android:enabled="false"
         android:gravity="center_horizontal" />
-
+    
     <Button
         android:id="@+id/calculate"
         android:layout_width="0dp"
@@ -174,35 +174,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn_calc;
     private IMyAidlInterface mService;
     private AddServiceConnect mServiceConnect;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+    
         initUI();
-
+    
         connectService();
-
+    
     }
-
+    
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
+    
         releaseService();
     }
-
+    
     private void initUI()
     {
         et_a = (EditText)findViewById(R.id.et_a);
         et_b = (EditText)findViewById(R.id.et_b);
         et_result = (EditText)findViewById(R.id.et_result);
         btn_calc = (Button)findViewById(R.id.calculate);
-
+    
         btn_calc.setOnClickListener(this);
     }
-
+    
     @Override
     public void onClick(View v) {
         switch (v.getId())
@@ -212,19 +212,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             default:
                 break;
-
+    
         }
     }
-
+    
     private void calc()
     {
         int a = Integer.parseInt(et_a.getText().toString());
         int b = Integer.parseInt(et_b.getText().toString());
-
+    
         try
         {
             int result = mService.add(a, b);
-
+    
             et_result.setText(String.valueOf(result));
         }
         catch (Exception e)
@@ -232,39 +232,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
     }
-
+    
     class AddServiceConnect implements ServiceConnection
     {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             mService = IMyAidlInterface.Stub.asInterface(service);
-
+    
             Toast.makeText(MainActivity.this,"onServiceConnected",Toast.LENGTH_LONG).show();
         }
-
+    
         @Override
         public void onServiceDisconnected(ComponentName name) {
             mService = null;
-
+    
             Toast.makeText(MainActivity.this,"onServiceDisconnected",Toast.LENGTH_LONG).show();
         }
     }
-
+    
     public void connectService()
     {
         mServiceConnect = new AddServiceConnect();
         Intent i = new Intent();
-
+    
         i.setComponent(new ComponentName("jackleeforce.aidlserver","jackleeforce.aidlserver.AIDLService"));
         i.setPackage(getPackageName());
-
+    
         boolean result = getApplicationContext().bindService(i,mServiceConnect, Context.BIND_AUTO_CREATE);
         if (!result)
         {
             Toast.makeText(MainActivity.this,"bindService failed",Toast.LENGTH_LONG).show();
         }
     }
-
+    
     public void releaseService()
     {
         unbindService(mServiceConnect);
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 3.有了AIDL对象，我们就可以调用里面暴露的接口了。
 
 分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：
-{% asset_img Result.gif [最终效果] %}
+![](../assets/Result.gif)
 
 以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。
 
