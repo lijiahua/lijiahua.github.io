@@ -110,28 +110,25 @@
 
 
 
-  <meta name="description" content="线性回归模型目标函数的一般形式 上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。 在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。 但到了 J(a,b) 中，x(i) 和 y(i)是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a">
+  <meta name="description" content="向量空间模型(Vector Space Model，VSM) 向量指一个同时具有大小和方向的几何對象。 向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。  特征向量(Feature Vector)描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量 特征工程特征工程，包括以下两个步骤：  确定用哪些特征来表示数据；">
 <meta name="keywords" content="机器学习,人工智能,AI,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)">
-<meta property="og:url" content="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html">
+<meta property="og:title" content="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
+<meta property="og:url" content="https://www.jacklee.work/人工智能/2019-01-25-机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="线性回归模型目标函数的一般形式 上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。 在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。 但到了 J(a,b) 中，x(i) 和 y(i)是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a">
+<meta property="og:description" content="向量空间模型(Vector Space Model，VSM) 向量指一个同时具有大小和方向的几何對象。 向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。  特征向量(Feature Vector)描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量 特征工程特征工程，包括以下两个步骤：  确定用哪些特征来表示数据；">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fzma4k26rnj30ab01w748.jpg">
-<meta property="og:updated_time" content="2019-02-15T08:21:57.733Z">
+<meta property="og:updated_time" content="2019-02-15T08:21:57.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)">
-<meta name="twitter:description" content="线性回归模型目标函数的一般形式 上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。 在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。 但到了 J(a,b) 中，x(i) 和 y(i)是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg">
+<meta name="twitter:title" content="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
+<meta name="twitter:description" content="向量空间模型(Vector Space Model，VSM) 向量指一个同时具有大小和方向的几何對象。 向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。  特征向量(Feature Vector)描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量 特征工程特征工程，包括以下两个步骤：  确定用哪些特征来表示数据；">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html"/>
+  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-01-25-机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html"/>
 
 
 
@@ -141,7 +138,7 @@
   };
 </script>
 
-  <title>机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数) | JackLee</title>
+  <title>机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法） | JackLee</title>
   
 
 
@@ -321,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/人工智能/2019-01-25-机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackLee">
@@ -338,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)
+          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）
               
             
           </h1>
@@ -363,7 +360,7 @@
                 
               
 
-              <time title="创建时间：2019-01-28 13:42:56" itemprop="dateCreated datePublished" datetime="2019-01-28T13:42:56+08:00">2019-01-28</time>
+              <time title="创建时间：2019-01-25 14:43:31" itemprop="dateCreated datePublished" datetime="2019-01-25T14:43:31+08:00">2019-01-25</time>
             
 
             
@@ -412,8 +409,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html" itemprop="commentCount"></span>
+                <a href="/人工智能/2019-01-25-机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/人工智能/2019-01-25-机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -421,7 +418,7 @@
 
           
           
-             <span id="/2019/机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)">
+             <span id="/人工智能/2019-01-25-机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,19 +449,23 @@
       
 
       
-        <h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
-<p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p>
-<p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p>
-<p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p>
-<p>我们要做的，就是找到最好的 a 和 b。</p>
-<h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p>
-<p>如下是一个二元四阶多项式：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
-<h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p>
-<h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p>
-<p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p>
-<p>总结一下：特征是一维的，线性模型在二维空间构成一条直线；特征是二维的，线性模型在三维空间中构成一个平面；若特征是三维的，则最终模型在四维空间中构成一个体，以此类推。</p>
-<h4 id="用线性回归模型拟合非线性关系"><a href="#用线性回归模型拟合非线性关系" class="headerlink" title="用线性回归模型拟合非线性关系"></a>用线性回归模型拟合非线性关系</h4><p>可以通过多项式代替的方式将非线性关系（如多阶多元多项式）拟合为线性关系模型（线性函数）。</p>
+        <h4 id="向量空间模型-Vector-Space-Model，VSM"><a href="#向量空间模型-Vector-Space-Model，VSM" class="headerlink" title="向量空间模型(Vector Space Model，VSM)"></a>向量空间模型(Vector Space Model，VSM)</h4><ul>
+<li>向量指一个同时具有大小和方向的几何對象。</li>
+<li>向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。</li>
+</ul>
+<h4 id="特征向量-Feature-Vector"><a href="#特征向量-Feature-Vector" class="headerlink" title="特征向量(Feature Vector)"></a>特征向量(Feature Vector)</h4><p>描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量</p>
+<h4 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h4><p>特征工程，包括以下两个步骤：</p>
+<ol>
+<li>确定用哪些特征来表示数据；</li>
+<li>确定用什么方式表达这些特征。</li>
+</ol>
+<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><p>模型是机器学习的结果，这个学习过程，称为训练（Train）。</p>
+<p>一个已经训练好的模型，可以被理解成一个函数： y=f(x)。</p>
+<p>我们把数据（对应其中的 x）输入进去，得到输出结果（对应其中的 y）。</p>
+<p>这个输出结果可能是一个数值（回归），也可能是一个标签（分类），它会告诉我们一些事情。</p>
+<h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>训练就是：根据已经被指定的模型类型，结合训练数据，计算出其中各个参数的具体取值的过程。</p>
+<h4 id="损失函数（Loss-Function）"><a href="#损失函数（Loss-Function）" class="headerlink" title="损失函数（Loss Function）"></a>损失函数（Loss Function）</h4><p>在有监督学习过程中，经过对一份训练数据的学习后，得到一个模型y‘=f(x)，再对另外一份验证数据运用这个模型计算出来得到的标签值y’与验证数据正确的标签y的差别，记做L（y, y’）= L(y, f(x))。</p>
+<h4 id="代价函数（Cost-Function）"><a href="#代价函数（Cost-Function）" class="headerlink" title="代价函数（Cost Function）"></a>代价函数（Cost Function）</h4><p>代价函数一般写作：J（theta）。<br>???</p>
 
       
     </div>
@@ -518,8 +519,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/机器学习极简入门课学习笔记-第九课-最常用的优化算法——梯度下降法.html" rel="next" title="机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法)">
-                <i class="fa fa-chevron-left"></i> 机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法)
+              <a href="/财经/2018-10-12-（转载）股民何苦为难股民，技术分析是用来骗我的吗？.html" rel="next" title="（转载）股民何苦为难股民，技术分析是用来骗我的吗？">
+                <i class="fa fa-chevron-left"></i> （转载）股民何苦为难股民，技术分析是用来骗我的吗？
               </a>
             
           </div>
@@ -528,8 +529,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/机器学习极简入门课学习笔记-第十一课-线性回归——梯度下降法求解目标函数.html" rel="prev" title="机器学习极简入门课学习笔记-第十一课(线性回归——梯度下降法求解目标函数)">
-                机器学习极简入门课学习笔记-第十一课(线性回归——梯度下降法求解目标函数) <i class="fa fa-chevron-right"></i>
+              <a href="/人工智能/2019-01-25-机器学习极简入门课学习笔记-第七课-模型的获取和改进.html" rel="prev" title="机器学习极简入门课学习笔记-第七课(模型的获取和改进)">
+                机器学习极简入门课学习笔记-第七课(模型的获取和改进) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -701,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性回归模型目标函数的一般形式"><span class="nav-number">1.</span> <span class="nav-text">线性回归模型目标函数的一般形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多项式的阶"><span class="nav-number">2.</span> <span class="nav-text">多项式的阶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性函数"><span class="nav-number">3.</span> <span class="nav-text">线性函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征与线性模型之间的关系"><span class="nav-number">4.</span> <span class="nav-text">特征与线性模型之间的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用线性回归模型拟合非线性关系"><span class="nav-number">5.</span> <span class="nav-text">用线性回归模型拟合非线性关系</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间模型-Vector-Space-Model，VSM"><span class="nav-number">1.</span> <span class="nav-text">向量空间模型(Vector Space Model，VSM)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征向量-Feature-Vector"><span class="nav-number">2.</span> <span class="nav-text">特征向量(Feature Vector)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征工程"><span class="nav-number">3.</span> <span class="nav-text">特征工程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型"><span class="nav-number">4.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#训练"><span class="nav-number">5.</span> <span class="nav-text">训练</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#损失函数（Loss-Function）"><span class="nav-number">6.</span> <span class="nav-text">损失函数（Loss Function）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代价函数（Cost-Function）"><span class="nav-number">7.</span> <span class="nav-text">代价函数（Cost Function）</span></a></li></ol></div>
             
 
           </div>

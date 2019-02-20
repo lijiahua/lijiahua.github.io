@@ -110,25 +110,50 @@
 
 
 
-  <meta name="description" content="向量空间模型(Vector Space Model，VSM) 向量指一个同时具有大小和方向的几何對象。 向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。  特征向量(Feature Vector)描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量 特征工程特征工程，包括以下两个步骤：  确定用哪些特征来表示数据；">
-<meta name="keywords" content="机器学习,人工智能,AI,学习笔记">
+  <meta name="description" content="导数与微分导数  导函数 特殊函数的导数公式幂函数的导数公式幂函数f(x) = xn (n ϵ R ) 的导数公式： (xn)‘ = nxn-1 三角函数的导数公式 正弦函数 f(x) = sin x  的导数公式  (sin x)‘ = cos x 即正弦函数的导数是余弦函数。    余弦函数 f(x) = cos x  的导数公式：  (cos x)‘ = -sina x 即余弦函数的导数是负">
+<meta name="keywords" content="数学,学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
-<meta property="og:url" content="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html">
+<meta property="og:title" content="高等数学(同济大学第七版)学习笔记-第二章-导数与微分">
+<meta property="og:url" content="https://www.jacklee.work/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="向量空间模型(Vector Space Model，VSM) 向量指一个同时具有大小和方向的几何對象。 向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。  特征向量(Feature Vector)描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量 特征工程特征工程，包括以下两个步骤：  确定用哪些特征来表示数据；">
+<meta property="og:description" content="导数与微分导数  导函数 特殊函数的导数公式幂函数的导数公式幂函数f(x) = xn (n ϵ R ) 的导数公式： (xn)‘ = nxn-1 三角函数的导数公式 正弦函数 f(x) = sin x  的导数公式  (sin x)‘ = cos x 即正弦函数的导数是余弦函数。    余弦函数 f(x) = cos x  的导数公式：  (cos x)‘ = -sina x 即余弦函数的导数是负">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-15T08:21:57.732Z">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076gyjstbj314n06bdgq.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076h31f0rj31620l5djf.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g076io14cwj316008awfj.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g076h9etdbj30q603umx2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hbuzcmj30ny03c745.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hegnf8j30p603ejr9.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g076hhs0ytj312q06cjry.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hn20abj314g0u0gqa.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hs900rj31b40bs405.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g076hy586sj31d00723zg.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076ialmgyj31840u0teu.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcgy1g076til6x3j31n609q0wj.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tKfTcgy1g076uts9iej31na03uac2.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tKfTcly1g0774zu78oj31n20gc7da.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1g0779xuog7j31o80kcdyj.jpg">
+<meta property="og:updated_time" content="2019-02-15T08:43:47.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
-<meta name="twitter:description" content="向量空间模型(Vector Space Model，VSM) 向量指一个同时具有大小和方向的几何對象。 向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。  特征向量(Feature Vector)描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量 特征工程特征工程，包括以下两个步骤：  确定用哪些特征来表示数据；">
+<meta name="twitter:title" content="高等数学(同济大学第七版)学习笔记-第二章-导数与微分">
+<meta name="twitter:description" content="导数与微分导数  导函数 特殊函数的导数公式幂函数的导数公式幂函数f(x) = xn (n ϵ R ) 的导数公式： (xn)‘ = nxn-1 三角函数的导数公式 正弦函数 f(x) = sin x  的导数公式  (sin x)‘ = cos x 即正弦函数的导数是余弦函数。    余弦函数 f(x) = cos x  的导数公式：  (cos x)‘ = -sina x 即余弦函数的导数是负">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html"/>
+  <link rel="canonical" href="https://www.jacklee.work/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html"/>
 
 
 
@@ -138,7 +163,7 @@
   };
 </script>
 
-  <title>机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法） | JackLee</title>
+  <title>高等数学(同济大学第七版)学习笔记-第二章-导数与微分 | JackLee</title>
   
 
 
@@ -318,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackLee">
@@ -335,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）
+          <h1 class="post-title" itemprop="name headline">高等数学(同济大学第七版)学习笔记-第二章-导数与微分
               
             
           </h1>
@@ -360,7 +385,7 @@
                 
               
 
-              <time title="创建时间：2019-01-25 14:43:31" itemprop="dateCreated datePublished" datetime="2019-01-25T14:43:31+08:00">2019-01-25</time>
+              <time title="创建时间：2019-02-13 16:23:03" itemprop="dateCreated datePublished" datetime="2019-02-13T16:23:03+08:00">2019-02-13</time>
             
 
             
@@ -377,7 +402,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-15 16:21:57" itemprop="dateModified" datetime="2019-02-15T16:21:57+08:00">2019-02-15</time>
+                <time title="修改时间：2019-02-15 16:43:47" itemprop="dateModified" datetime="2019-02-15T16:43:47+08:00">2019-02-15</time>
               
             
           </span>
@@ -394,7 +419,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数学/" itemprop="url" rel="index"><span itemprop="name">数学</span></a></span>
 
                 
                 
@@ -409,8 +434,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html" itemprop="commentCount"></span>
+                <a href="/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -418,7 +443,7 @@
 
           
           
-             <span id="/2019/机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）.html" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）">
+             <span id="/数学/2019-02-13-高等数学(同济大学第七版)学习笔记-第二章-导数与微分.html" class="leancloud_visitors" data-flag-title="高等数学(同济大学第七版)学习笔记-第二章-导数与微分">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -449,23 +474,82 @@
       
 
       
-        <h4 id="向量空间模型-Vector-Space-Model，VSM"><a href="#向量空间模型-Vector-Space-Model，VSM" class="headerlink" title="向量空间模型(Vector Space Model，VSM)"></a>向量空间模型(Vector Space Model，VSM)</h4><ul>
-<li>向量指一个同时具有大小和方向的几何對象。</li>
-<li>向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。</li>
+        <h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt=""></p>
+<h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt=""><br><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076io14cwj316008awfj.jpg" alt=""></p>
+<h3 id="特殊函数的导数公式"><a href="#特殊函数的导数公式" class="headerlink" title="特殊函数的导数公式"></a>特殊函数的导数公式</h3><h4 id="幂函数的导数公式"><a href="#幂函数的导数公式" class="headerlink" title="幂函数的导数公式"></a>幂函数的导数公式</h4><p>幂函数f(x) = x<sup>n</sup> (n ϵ R ) 的导数公式：</p>
+<p>(x<sup>n</sup>)<sup>‘</sup> = nx<sup>n-1</sup></p>
+<h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><ul>
+<li><p>正弦函数 f(x) = sin x  的导数公式</p>
+<ul>
+<li><p>(sin x)<sup>‘</sup> = cos x</p>
+<p>即正弦函数的导数是余弦函数。</p>
+</li>
 </ul>
-<h4 id="特征向量-Feature-Vector"><a href="#特征向量-Feature-Vector" class="headerlink" title="特征向量(Feature Vector)"></a>特征向量(Feature Vector)</h4><p>描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量</p>
-<h4 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h4><p>特征工程，包括以下两个步骤：</p>
-<ol>
-<li>确定用哪些特征来表示数据；</li>
-<li>确定用什么方式表达这些特征。</li>
-</ol>
-<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><p>模型是机器学习的结果，这个学习过程，称为训练（Train）。</p>
-<p>一个已经训练好的模型，可以被理解成一个函数： y=f(x)。</p>
-<p>我们把数据（对应其中的 x）输入进去，得到输出结果（对应其中的 y）。</p>
-<p>这个输出结果可能是一个数值（回归），也可能是一个标签（分类），它会告诉我们一些事情。</p>
-<h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>训练就是：根据已经被指定的模型类型，结合训练数据，计算出其中各个参数的具体取值的过程。</p>
-<h4 id="损失函数（Loss-Function）"><a href="#损失函数（Loss-Function）" class="headerlink" title="损失函数（Loss Function）"></a>损失函数（Loss Function）</h4><p>在有监督学习过程中，经过对一份训练数据的学习后，得到一个模型y‘=f(x)，再对另外一份验证数据运用这个模型计算出来得到的标签值y’与验证数据正确的标签y的差别，记做L（y, y’）= L(y, f(x))。</p>
-<h4 id="代价函数（Cost-Function）"><a href="#代价函数（Cost-Function）" class="headerlink" title="代价函数（Cost Function）"></a>代价函数（Cost Function）</h4><p>代价函数一般写作：J（theta）。<br>???</p>
+</li>
+<li><p>余弦函数 f(x) = cos x  的导数公式：</p>
+<ul>
+<li><p>(cos x)<sup>‘</sup> = -sina x</p>
+<p>即余弦函数的导数是负的正弦函数。</p>
+</li>
+</ul>
+</li>
+<li><p>正切函数 f(x) = tan x 的导数公式：</p>
+<ul>
+<li>(tan x)<sup>‘</sup> = sec<sup>2</sup>x</li>
+</ul>
+</li>
+<li><p>余切函数 f(x) = cot x 的导数公式：</p>
+<ul>
+<li>(cot x)<sup>‘</sup> = - csc<sup>2</sup>x </li>
+</ul>
+</li>
+<li><p>正割函数 f(x) = sec x 的导数公式：</p>
+<ul>
+<li>(sec x)<sup>‘</sup> = sec x * tan x</li>
+</ul>
+</li>
+<li><p>余割函数 f(x) = csc x 的导数公式：</p>
+<ul>
+<li>(csc x)<sup>‘</sup> = - csc x * cot x</li>
+</ul>
+</li>
+<li><p>反正弦函数 f(x) = arcsinx x 的导数公式：</p>
+</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt=""></p>
+<ul>
+<li>反余弦函数 f(x) = arccos x 的导数公式：</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt=""></p>
+<ul>
+<li>反正切函数 f(x) = arctan x 的导数公式：</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt=""></p>
+<ul>
+<li>反余切函数 f(x) = arccot x 的导数公式：</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt=""></p>
+<h4 id="指数函数的导数公式"><a href="#指数函数的导数公式" class="headerlink" title="指数函数的导数公式"></a>指数函数的导数公式</h4><p>指数函数f(x) = a<sup>x</sup> (a&gt;0,a≠1)的导数公式:</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt=""></p>
+<h4 id="对数函数的导数公式"><a href="#对数函数的导数公式" class="headerlink" title="对数函数的导数公式"></a>对数函数的导数公式</h4><p>对数函数f(x) = log<sub>a</sub>x (a&gt;0,a≠1)的导数公式:</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt=""></p>
+<h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt=""></p>
+<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt=""></p>
+<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt=""></p>
+<ul>
+<li>即反函数的导数等于直接函数导数的倒数。</li>
+</ul>
+<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt=""><br><img src="https://ws2.sinaimg.cn/large/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt=""></p>
+<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt=""></p>
+<h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt=""></p>
+<h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt=""></p>
+<h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt=""></p>
+<h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt=""></p>
+<h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p>​<img src="https://ws2.sinaimg.cn/large/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt=""></p>
+<h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt=""></p>
 
       
     </div>
@@ -486,7 +570,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习-人工智能-AI-学习笔记/" rel="tag"># 机器学习,人工智能,AI,学习笔记</a>
+            <a href="/tags/数学-学习笔记/" rel="tag"># 数学,学习笔记</a>
           
         </div>
       
@@ -519,8 +603,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/（转载）股民何苦为难股民，技术分析是用来骗我的吗？.html" rel="next" title="（转载）股民何苦为难股民，技术分析是用来骗我的吗？">
-                <i class="fa fa-chevron-left"></i> （转载）股民何苦为难股民，技术分析是用来骗我的吗？
+              <a href="/人工智能/2019-01-28-机器学习极简入门课学习笔记-第十一课-线性回归——梯度下降法求解目标函数.html" rel="next" title="机器学习极简入门课学习笔记-第十一课(线性回归——梯度下降法求解目标函数)">
+                <i class="fa fa-chevron-left"></i> 机器学习极简入门课学习笔记-第十一课(线性回归——梯度下降法求解目标函数)
               </a>
             
           </div>
@@ -529,8 +613,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/机器学习极简入门课学习笔记-第七课-模型的获取和改进.html" rel="prev" title="机器学习极简入门课学习笔记-第七课(模型的获取和改进)">
-                机器学习极简入门课学习笔记-第七课(模型的获取和改进) <i class="fa fa-chevron-right"></i>
+              <a href="/数学/2019-02-14-初等数学-相关概念记录.html" rel="prev" title="初等数学-相关概念记录">
+                初等数学-相关概念记录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -702,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#向量空间模型-Vector-Space-Model，VSM"><span class="nav-number">1.</span> <span class="nav-text">向量空间模型(Vector Space Model，VSM)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征向量-Feature-Vector"><span class="nav-number">2.</span> <span class="nav-text">特征向量(Feature Vector)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征工程"><span class="nav-number">3.</span> <span class="nav-text">特征工程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型"><span class="nav-number">4.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#训练"><span class="nav-number">5.</span> <span class="nav-text">训练</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#损失函数（Loss-Function）"><span class="nav-number">6.</span> <span class="nav-text">损失函数（Loss Function）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代价函数（Cost-Function）"><span class="nav-number">7.</span> <span class="nav-text">代价函数（Cost Function）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导数与微分"><span class="nav-number">1.</span> <span class="nav-text">导数与微分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导数"><span class="nav-number">1.1.</span> <span class="nav-text">导数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#导函数"><span class="nav-number">1.1.1.</span> <span class="nav-text">导函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊函数的导数公式"><span class="nav-number">1.1.2.</span> <span class="nav-text">特殊函数的导数公式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#幂函数的导数公式"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">幂函数的导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三角函数的导数公式"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">三角函数的导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指数函数的导数公式"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">指数函数的导数公式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对数函数的导数公式"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">对数函数的导数公式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导数的几何意义"><span class="nav-number">1.1.3.</span> <span class="nav-text">导数的几何意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求导法则"><span class="nav-number">1.1.4.</span> <span class="nav-text">求导法则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数的和，差，积，商的求导法则"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">函数的和，差，积，商的求导法则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反函数的求导法则"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">反函数的求导法则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复合函数的求导法则"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">复合函数的求导法则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本初等函数的导数公式总结："><span class="nav-number">1.1.5.</span> <span class="nav-text">基本初等函数的导数公式总结：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高阶导数"><span class="nav-number">1.1.6.</span> <span class="nav-text">高阶导数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微分"><span class="nav-number">1.2.</span> <span class="nav-text">微分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#微分的几何意义"><span class="nav-number">1.2.1.</span> <span class="nav-text">微分的几何意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本初等函数的微分公式"><span class="nav-number">1.2.2.</span> <span class="nav-text">基本初等函数的微分公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数和，差，积，商的积分法则"><span class="nav-number">1.2.3.</span> <span class="nav-text">函数和，差，积，商的积分法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合函数的微分法则"><span class="nav-number">1.2.4.</span> <span class="nav-text">复合函数的微分法则</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
