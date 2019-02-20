@@ -15,10 +15,10 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -36,8 +36,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -60,9 +60,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.2" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.2">
@@ -131,7 +131,7 @@
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-01-28-机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html"/>
+  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-01-28-机器学习极简入门课学习笔记-第十课-线性回归——从模型函数到目标函数.html">
 
 
 
@@ -231,7 +231,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -239,7 +239,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -249,7 +249,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -272,9 +272,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -386,7 +384,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -452,14 +450,14 @@
       
 
       
-        <h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/images/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
+        <h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/images/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt></p>
 <p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p>
 <p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p>
 <p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p>
 <p>我们要做的，就是找到最好的 a 和 b。</p>
 <h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p>
 <p>如下是一个二元四阶多项式：</p>
-<p><img src="../assets/images/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
+<p><img src="../assets/images/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt></p>
 <h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p>
 <h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p>
 <p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p>
@@ -592,9 +590,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="JackLee" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="JackLee">
             
               <p class="site-author-name" itemprop="name">JackLee</p>
               <p class="site-description motion-element" itemprop="description">自由泳宇宙顶尖高手</p>
@@ -735,7 +731,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 

@@ -1,553 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
+<search> 
   
   
     
     <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第十四课(逻辑回归——非线性逻辑函数的由来)]]></title>
-      <url>https://www.jacklee.work/uncategorized/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E5%9B%9B%E8%AF%BE-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E9%9D%9E%E7%BA%BF%E6%80%A7%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%B1%E6%9D%A5.html</url>
-      <content type="html"></content>
+      <title>机器学习极简入门课学习笔记-第十四课(逻辑回归——非线性逻辑函数的由来)</title>
+      <link href="/uncategorized/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E5%9B%9B%E8%AF%BE-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E9%9D%9E%E7%BA%BF%E6%80%A7%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%B1%E6%9D%A5.html"/>
+      <url>/uncategorized/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E5%9B%9B%E8%AF%BE-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E9%9D%9E%E7%BA%BF%E6%80%A7%E9%80%BB%E8%BE%91%E5%87%BD%E6%95%B0%E7%9A%84%E7%94%B1%E6%9D%A5.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
     </entry>
     
-    <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%89%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1.html</url>
-      <content type="html"><![CDATA[<h4 id="极大似然估计-Maximum-Likelihood-Estimation-MLE"><a href="#极大似然估计-Maximum-Likelihood-Estimation-MLE" class="headerlink" title="极大似然估计 (Maximum Likelihood Estimation, MLE)"></a>极大似然估计 (Maximum Likelihood Estimation, MLE)</h4><h4 id="似然（Likelihood）"><a href="#似然（Likelihood）" class="headerlink" title="似然（Likelihood）"></a>似然（Likelihood）</h4><ul>
-<li>似然指某种事件发生的可能，和概率相似。</li>
-</ul>
-<p>二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。</p>
-]]></content>
-    </entry>
+    
     
     <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-19-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E4%BB%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86%E5%88%B0%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B.html</url>
-      <content type="html"><![CDATA[<h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/images/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt=""></p>
-<h4 id="分类模型-VS-回归模型"><a href="#分类模型-VS-回归模型" class="headerlink" title="分类模型 VS 回归模型"></a>分类模型 VS 回归模型</h4><p>最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。</p>
-<p>换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。</p>
-<p>也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。</p>
-<h4 id="先验概率和后验概率"><a href="#先验概率和后验概率" class="headerlink" title="先验概率和后验概率"></a><a href="https://zhuanlan.zhihu.com/p/38567891" target="_blank" rel="noopener">先验概率和后验概率</a></h4><ul>
-<li><p>先验概率（prior probability）：指根据以往经验和分析。在实验或采样前就可以得到的概率。</p>
-</li>
-<li><p>后验概率（posterior probability）：指某件事已经发生，想要计算这件事发生的原因是由某个因素引起的概率。</p>
-</li>
-</ul>
-<h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt=""></p>
-<h4 id="一般化的贝叶斯公式"><a href="#一般化的贝叶斯公式" class="headerlink" title="一般化的贝叶斯公式"></a>一般化的贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0biu8p76tj31ea08qq4u.jpg" alt=""></p>
-<h4 id="简单的朴素贝叶斯分类器的模型函数"><a href="#简单的朴素贝叶斯分类器的模型函数" class="headerlink" title="简单的朴素贝叶斯分类器的模型函数"></a>简单的朴素贝叶斯分类器的模型函数</h4><p><img src="../assets/images/006tKfTcly1g0bkvcn4j5j30qa02ct8z.jpg" alt=""></p>
-<p><img src="../assets/images/006tKfTcly1g0bkw3qtcaj31bg0h842t.jpg" alt=""></p>
-]]></content>
+      <title>机器学习极简入门课学习笔记-第十三课(朴素贝叶斯分类器——条件概率的参数估计)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%89%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-20-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%89%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="极大似然估计-Maximum-Likelihood-Estimation-MLE"><a href="#极大似然估计-Maximum-Likelihood-Estimation-MLE" class="headerlink" title="极大似然估计 (Maximum Likelihood Estimation, MLE)"></a>极大似然估计 (Maximum Likelihood Estimation, MLE)</h4><h4 id="似然（Likelihood）"><a href="#似然（Likelihood）" class="headerlink" title="似然（Likelihood）"></a>似然（Likelihood）</h4><ul><li>似然指某种事件发生的可能，和概率相似。</li></ul><p>二者区别在于：概率用在已知参数的情况下，用来预测后续观测所得到的结果。似然则正相反，用于参数未知，但某些观测所得结果已知的情况，用来对参数进行估计。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
     
-    <entry>
-      <title><![CDATA[初等数学-相关概念记录]]></title>
-      <url>https://www.jacklee.work/%E6%95%B0%E5%AD%A6/2019-02-14-%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E8%AE%B0%E5%BD%95.html</url>
-      <content type="html"><![CDATA[<h1 id="初等数学"><a href="#初等数学" class="headerlink" title="初等数学"></a>初等数学</h1><h2 id="有理数无理数"><a href="#有理数无理数" class="headerlink" title="有理数无理数"></a><a href="https://www.shuxuele.com/irrational-numbers.html" target="_blank" rel="noopener">有理数无理数</a></h2><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p><img src="../assets/images/006tKfTcly1g06bdpxrwij30g80beaat.jpg" alt=""></p>
-<h3 id="特殊角度的三角函数值表"><a href="#特殊角度的三角函数值表" class="headerlink" title="特殊角度的三角函数值表"></a>特殊角度的三角函数值表</h3><p><img src="../assets/images/006tKfTcly1g0ajpd019wj30e706igmp.jpg" alt=""></p>
-<h3 id="正弦"><a href="#正弦" class="headerlink" title="正弦"></a>正弦</h3><p>sinΦ = 对边/斜边</p>
-<h4 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h4><p><img src="../assets/images/006tKfTcgy1g06bnf2367j30za0rmdk4.jpg" alt=""></p>
-<h4 id="正弦函数图像"><a href="#正弦函数图像" class="headerlink" title="正弦函数图像"></a>正弦函数图像</h4><p><img src="../assets/images/image-20190220153921694.png" alt=""></p>
-<h3 id="余弦"><a href="#余弦" class="headerlink" title="余弦"></a>余弦</h3><p>cosΦ = 邻边/斜边</p>
-<h4 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h4><p>三角形中任何一边的平方 = 其它两边的平方和减去这两边与它们的夹角的余弦的积的两倍。</p>
-<p>$$<br>a^2 = b^2 + c^2 – 2bc  * cosA<br>$$</p>
-<p>$$<br>b^2 = a^2 + c^2 –2ac  * cosB<br>$$</p>
-<p>$$<br>c^2 = a^2 + b^2 – 2ab  * cosC<br>$$</p>
-<p><img src="../assets/image-20190220161324089.png" alt="image-20190220161324089"></p>
-<h4 id="余弦函数图像"><a href="#余弦函数图像" class="headerlink" title="余弦函数图像"></a>余弦函数图像</h4><p><img src="../assets/images/image-20190220154322852.png" alt="image-20190220154322852"></p>
-<ul>
-<li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li>
-</ul>
-<h3 id="正弦余弦函数图像动画"><a href="#正弦余弦函数图像动画" class="headerlink" title="正弦余弦函数图像动画"></a>正弦余弦函数图像动画</h3><iframe height="498" width="510" src="../assets/videos/sin_cos.mp4"></iframe>
-
-<h3 id="正切"><a href="#正切" class="headerlink" title="正切"></a>正切</h3><p>tanΦ = 对边/邻边 = sinΦ/cosΦ</p>
-<h3 id="余切"><a href="#余切" class="headerlink" title="余切"></a>余切</h3><h3 id="正割"><a href="#正割" class="headerlink" title="正割"></a>正割</h3><h3 id="余割"><a href="#余割" class="headerlink" title="余割"></a>余割</h3><h3 id="反正弦"><a href="#反正弦" class="headerlink" title="反正弦"></a>反正弦</h3><h3 id="反余弦"><a href="#反余弦" class="headerlink" title="反余弦"></a>反余弦</h3><h3 id="反正切"><a href="#反正切" class="headerlink" title="反正切"></a>反正切</h3><h3 id="反余切"><a href="#反余切" class="headerlink" title="反余切"></a>反余切</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><img src="../assets/images/006tKfTcgy1g062lwzogdj30d001474g.jpg" alt=""></p>
-<h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><p><img src="../assets/images/006tKfTcly1g062lj1e28j30cb01774h.jpg" alt=""></p>
-<h3 id="幂函数运算"><a href="#幂函数运算" class="headerlink" title="幂函数运算"></a>幂函数运算</h3><h4 id="同底数幂函数运算"><a href="#同底数幂函数运算" class="headerlink" title="同底数幂函数运算"></a>同底数幂函数运算</h4><h4 id="同指数幂函数运算"><a href="#同指数幂函数运算" class="headerlink" title="同指数幂函数运算"></a>同指数幂函数运算</h4><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><p><img src="../assets/images/006tKfTcgy1g062mbl2t9j30qk013wf2.jpg" alt=""></p>
-<h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p><a href="https://www.shuxuele.com/algebra/binomial-theorem.html" target="_blank" rel="noopener">最容易理解的二项式定理解释</a></p>
-<h3 id="二项式展开与二项式系数"><a href="#二项式展开与二项式系数" class="headerlink" title="二项式展开与二项式系数"></a>二项式展开与二项式系数</h3><p><img src="../assets/images/006tNc79gy1g05pb8gww8j318c0ky41r.jpg" alt=""></p>
-<ul>
-<li>二项式系数等式</li>
-</ul>
-<p><img src="../assets/images/006tKfTcly1g05xkzwbz4j308p029mx2.jpg" alt=""></p>
-<p>其中“!”代表 <a href="https://www.shuxuele.com/numbers/factorial.html" target="_blank" rel="noopener">阶乘</a>，例如 4！= 4*3*2*1 = 24</p>
-<h2 id="欧拉常数"><a href="#欧拉常数" class="headerlink" title="欧拉常数"></a><a href="https://www.shuxuele.com/numbers/e-eulers-number.html" target="_blank" rel="noopener">欧拉常数</a></h2><h2 id="充分条件，必要条件"><a href="#充分条件，必要条件" class="headerlink" title="充分条件，必要条件"></a>充分条件，必要条件</h2><ul>
-<li>假设 A 是条件，B 是结论: </li>
-<li>由 A 可以推出B,由 B 可以推出A，则A是B的充要条件（充分且必要条件）。 </li>
-<li>由 A 可以推出B,由 B 不可以推出A，则A是B的充分不必要条件。 </li>
-<li>由 A 不可以推出 B, 由 B 可以推出A，则A是B的必要不充分条件。 </li>
-<li>由 A 不可以推出 B, 由 B 不可以推出A，则A是B的不充分不必要条件。 </li>
-<li>简单一点就是：由条件能推出结论，但由结论推不出这个条件，这个条件就是充分条件。 </li>
-<li>如果能由结论推出条件，但由条件推不出结论,此条件为必要条件。 </li>
-<li>如果既能由结论推出条件，又能有条件推出结论,此条件为充要条件。</li>
-</ul>
-]]></content>
-    </entry>
+    
     
     <entry>
-      <title><![CDATA[高等数学(同济大学第七版)学习笔记-第二章-导数与微分]]></title>
-      <url>https://www.jacklee.work/%E6%95%B0%E5%AD%A6/2019-02-13-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%83%E7%89%88)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86.html</url>
-      <content type="html"><![CDATA[<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="../assets/images/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt=""></p>
-<p><img src="../assets/images/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt=""></p>
-<h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="../assets/images/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt=""><br><img src="../assets/images/006tKfTcgy1g076io14cwj316008awfj.jpg" alt=""></p>
-<h3 id="特殊函数的导数公式"><a href="#特殊函数的导数公式" class="headerlink" title="特殊函数的导数公式"></a>特殊函数的导数公式</h3><h4 id="幂函数的导数公式"><a href="#幂函数的导数公式" class="headerlink" title="幂函数的导数公式"></a>幂函数的导数公式</h4><p>幂函数f(x) = x<sup>n</sup> (n ϵ R ) 的导数公式：</p>
-<p>(x<sup>n</sup>)<sup>‘</sup> = nx<sup>n-1</sup></p>
-<h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><ul>
-<li><p>正弦函数 f(x) = sin x  的导数公式</p>
-<ul>
-<li><p>(sin x)<sup>‘</sup> = cos x</p>
-<p>即正弦函数的导数是余弦函数。</p>
-</li>
-</ul>
-</li>
-<li><p>余弦函数 f(x) = cos x  的导数公式：</p>
-<ul>
-<li><p>(cos x)<sup>‘</sup> = -sina x</p>
-<p>即余弦函数的导数是负的正弦函数。</p>
-</li>
-</ul>
-</li>
-<li><p>正切函数 f(x) = tan x 的导数公式：</p>
-<ul>
-<li>(tan x)<sup>‘</sup> = sec<sup>2</sup>x</li>
-</ul>
-</li>
-<li><p>余切函数 f(x) = cot x 的导数公式：</p>
-<ul>
-<li>(cot x)<sup>‘</sup> = - csc<sup>2</sup>x </li>
-</ul>
-</li>
-<li><p>正割函数 f(x) = sec x 的导数公式：</p>
-<ul>
-<li>(sec x)<sup>‘</sup> = sec x * tan x</li>
-</ul>
-</li>
-<li><p>余割函数 f(x) = csc x 的导数公式：</p>
-<ul>
-<li>(csc x)<sup>‘</sup> = - csc x * cot x</li>
-</ul>
-</li>
-<li><p>反正弦函数 f(x) = arcsinx x 的导数公式：</p>
-</li>
-</ul>
-<p><img src="../assets/images/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt=""></p>
-<ul>
-<li>反余弦函数 f(x) = arccos x 的导数公式：</li>
-</ul>
-<p><img src="../assets/images/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt=""></p>
-<ul>
-<li>反正切函数 f(x) = arctan x 的导数公式：</li>
-</ul>
-<p><img src="../assets/images/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt=""></p>
-<ul>
-<li>反余切函数 f(x) = arccot x 的导数公式：</li>
-</ul>
-<p><img src="../assets/images/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt=""></p>
-<h4 id="指数函数的导数公式"><a href="#指数函数的导数公式" class="headerlink" title="指数函数的导数公式"></a>指数函数的导数公式</h4><p>指数函数f(x) = a<sup>x</sup> (a&gt;0,a≠1)的导数公式:</p>
-<p><img src="../assets/images/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt=""></p>
-<h4 id="对数函数的导数公式"><a href="#对数函数的导数公式" class="headerlink" title="对数函数的导数公式"></a>对数函数的导数公式</h4><p>对数函数f(x) = log<sub>a</sub>x (a&gt;0,a≠1)的导数公式:</p>
-<p><img src="../assets/images/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt=""></p>
-<h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="../assets/images/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt=""></p>
-<h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt=""></p>
-<h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt=""></p>
-<ul>
-<li>即反函数的导数等于直接函数导数的倒数。</li>
-</ul>
-<h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt=""><br><img src="../assets/images/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt=""></p>
-<h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="../assets/images/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt=""></p>
-<h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="../assets/images/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt=""></p>
-<h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="../assets/images/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt=""></p>
-<h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="../assets/images/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt=""></p>
-<h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="../assets/images/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt=""></p>
-<p><img src="../assets/images/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt=""></p>
-<p><img src="../assets/images/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt=""></p>
-<h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p><img src="../assets/images/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt=""></p>
-<h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="../assets/images/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt=""></p>
-]]></content>
+      <title>机器学习极简入门课学习笔记-第十二课(朴素贝叶斯分类器——从贝叶斯定理到分类模型)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-19-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E4%BB%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86%E5%88%B0%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-19-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%8C%E8%AF%BE-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8%E2%80%94%E2%80%94%E4%BB%8E%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86%E5%88%B0%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8B.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="分类-VS-回归"><a href="#分类-VS-回归" class="headerlink" title="分类 VS 回归"></a>分类 VS 回归</h4><p><img src="../assets/images/006tKfTcly1g0bhmanbo5j31bw0nak79.jpg" alt></p><h4 id="分类模型-VS-回归模型"><a href="#分类模型-VS-回归模型" class="headerlink" title="分类模型 VS 回归模型"></a>分类模型 VS 回归模型</h4><p>最根本的不同：前者是预测一个标签（类型、类别）；后者则是预测一个量。</p><p>换一个角度来看，分类模型输出的预测值是离散值；而回归模型输出的预测值则是连续值。</p><p>也就是说输入一个样本给模型，回归模型给出的预测结果是在某个值域（一般是实数域或其子集）上的任意值；而分类模型则是给出特定的某几个离散值之一。</p><h4 id="先验概率和后验概率"><a href="#先验概率和后验概率" class="headerlink" title="先验概率和后验概率"></a><a href="https://zhuanlan.zhihu.com/p/38567891" target="_blank" rel="noopener">先验概率和后验概率</a></h4><ul><li><p>先验概率（prior probability）：指根据以往经验和分析。在实验或采样前就可以得到的概率。</p></li><li><p>后验概率（posterior probability）：指某件事已经发生，想要计算这件事发生的原因是由某个因素引起的概率。</p></li></ul><h4 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0bhoaurgcj31dg066jsk.jpg" alt></p><h4 id="一般化的贝叶斯公式"><a href="#一般化的贝叶斯公式" class="headerlink" title="一般化的贝叶斯公式"></a>一般化的贝叶斯公式</h4><p><img src="../assets/images/006tKfTcly1g0biu8p76tj31ea08qq4u.jpg" alt></p><h4 id="简单的朴素贝叶斯分类器的模型函数"><a href="#简单的朴素贝叶斯分类器的模型函数" class="headerlink" title="简单的朴素贝叶斯分类器的模型函数"></a>简单的朴素贝叶斯分类器的模型函数</h4><p><img src="../assets/images/006tKfTcly1g0bkvcn4j5j30qa02ct8z.jpg" alt></p><p><img src="../assets/images/006tKfTcly1g0bkw3qtcaj31bg0h842t.jpg" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
     
-    <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第十一课(线性回归——梯度下降法求解目标函数)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E6%B1%82%E8%A7%A3%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html</url>
-      <content type="html"><![CDATA[<h2 id="待复习偏微分"><a href="#待复习偏微分" class="headerlink" title="待复习偏微分"></a>待复习偏微分</h2>]]></content>
-    </entry>
+    
     
     <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E4%BB%8E%E6%A8%A1%E5%9E%8B%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html</url>
-      <content type="html"><![CDATA[<h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/images/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt=""></p>
-<p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p>
-<p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p>
-<p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p>
-<p>我们要做的，就是找到最好的 a 和 b。</p>
-<h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p>
-<p>如下是一个二元四阶多项式：</p>
-<p><img src="../assets/images/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt=""></p>
-<h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p>
-<h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p>
-<p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p>
-<p>总结一下：特征是一维的，线性模型在二维空间构成一条直线；特征是二维的，线性模型在三维空间中构成一个平面；若特征是三维的，则最终模型在四维空间中构成一个体，以此类推。</p>
-<h4 id="用线性回归模型拟合非线性关系"><a href="#用线性回归模型拟合非线性关系" class="headerlink" title="用线性回归模型拟合非线性关系"></a>用线性回归模型拟合非线性关系</h4><p>可以通过多项式代替的方式将非线性关系（如多阶多元多项式）拟合为线性关系模型（线性函数）。</p>
-]]></content>
+      <title>初等数学-相关概念记录</title>
+      <link href="/%E6%95%B0%E5%AD%A6/2019-02-14-%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E8%AE%B0%E5%BD%95.html"/>
+      <url>/%E6%95%B0%E5%AD%A6/2019-02-14-%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E8%AE%B0%E5%BD%95.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="初等数学"><a href="#初等数学" class="headerlink" title="初等数学"></a>初等数学</h1><h2 id="有理数无理数"><a href="#有理数无理数" class="headerlink" title="有理数无理数"></a><a href="https://www.shuxuele.com/irrational-numbers.html" target="_blank" rel="noopener">有理数无理数</a></h2><h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p><img src="../assets/images/006tKfTcly1g06bdpxrwij30g80beaat.jpg" alt></p><h3 id="特殊角度的三角函数值表"><a href="#特殊角度的三角函数值表" class="headerlink" title="特殊角度的三角函数值表"></a>特殊角度的三角函数值表</h3><p><img src="../assets/images/006tKfTcly1g0ajpd019wj30e706igmp.jpg" alt></p><h3 id="正弦"><a href="#正弦" class="headerlink" title="正弦"></a>正弦</h3><p>sinΦ = 对边/斜边</p><h4 id="正弦定理"><a href="#正弦定理" class="headerlink" title="正弦定理"></a>正弦定理</h4><p><img src="../assets/images/006tKfTcgy1g06bnf2367j30za0rmdk4.jpg" alt></p><h4 id="正弦函数图像"><a href="#正弦函数图像" class="headerlink" title="正弦函数图像"></a>正弦函数图像</h4><p><img src="../assets/images/image-20190220153921694.png" alt></p><h3 id="余弦"><a href="#余弦" class="headerlink" title="余弦"></a>余弦</h3><p>cosΦ = 邻边/斜边</p><h4 id="余弦定理"><a href="#余弦定理" class="headerlink" title="余弦定理"></a>余弦定理</h4><p>三角形中任何一边的平方 = 其它两边的平方和减去这两边与它们的夹角的余弦的积的两倍。</p><p>$$<br>a^2 = b^2 + c^2 – 2bc  * cosA<br>$$</p><p>$$<br>b^2 = a^2 + c^2 –2ac  * cosB<br>$$</p><p>$$<br>c^2 = a^2 + b^2 – 2ab  * cosC<br>$$</p><p><img src="../assets/image-20190220161324089.png" alt="image-20190220161324089"></p><h4 id="余弦函数图像"><a href="#余弦函数图像" class="headerlink" title="余弦函数图像"></a>余弦函数图像</h4><p><img src="../assets/images/image-20190220154322852.png" alt="image-20190220154322852"></p><ul><li>cos x = sin (x + π/2)，即余弦函数的图像等于正弦函数向左平移 π/2 个单位长度。</li></ul><h3 id="正弦余弦函数图像动画"><a href="#正弦余弦函数图像动画" class="headerlink" title="正弦余弦函数图像动画"></a>正弦余弦函数图像动画</h3><iframe height="498" width="510" src="../assets/videos/sin_cos.mp4"></iframe><h3 id="正切"><a href="#正切" class="headerlink" title="正切"></a>正切</h3><p>tanΦ = 对边/邻边 = sinΦ/cosΦ</p><h3 id="余切"><a href="#余切" class="headerlink" title="余切"></a>余切</h3><h3 id="正割"><a href="#正割" class="headerlink" title="正割"></a>正割</h3><h3 id="余割"><a href="#余割" class="headerlink" title="余割"></a>余割</h3><h3 id="反正弦"><a href="#反正弦" class="headerlink" title="反正弦"></a>反正弦</h3><h3 id="反余弦"><a href="#反余弦" class="headerlink" title="反余弦"></a>反余弦</h3><h3 id="反正切"><a href="#反正切" class="headerlink" title="反正切"></a>反正切</h3><h3 id="反余切"><a href="#反余切" class="headerlink" title="反余切"></a>反余切</h3><h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p><img src="../assets/images/006tKfTcgy1g062lwzogdj30d001474g.jpg" alt></p><h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><p><img src="../assets/images/006tKfTcly1g062lj1e28j30cb01774h.jpg" alt></p><h3 id="幂函数运算"><a href="#幂函数运算" class="headerlink" title="幂函数运算"></a>幂函数运算</h3><h4 id="同底数幂函数运算"><a href="#同底数幂函数运算" class="headerlink" title="同底数幂函数运算"></a>同底数幂函数运算</h4><h4 id="同指数幂函数运算"><a href="#同指数幂函数运算" class="headerlink" title="同指数幂函数运算"></a>同指数幂函数运算</h4><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><p><img src="../assets/images/006tKfTcgy1g062mbl2t9j30qk013wf2.jpg" alt></p><h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p><a href="https://www.shuxuele.com/algebra/binomial-theorem.html" target="_blank" rel="noopener">最容易理解的二项式定理解释</a></p><h3 id="二项式展开与二项式系数"><a href="#二项式展开与二项式系数" class="headerlink" title="二项式展开与二项式系数"></a>二项式展开与二项式系数</h3><p><img src="../assets/images/006tNc79gy1g05pb8gww8j318c0ky41r.jpg" alt></p><ul><li>二项式系数等式</li></ul><p><img src="../assets/images/006tKfTcly1g05xkzwbz4j308p029mx2.jpg" alt></p><p>其中“!”代表 <a href="https://www.shuxuele.com/numbers/factorial.html" target="_blank" rel="noopener">阶乘</a>，例如 4！= 4*3*2*1 = 24</p><h2 id="欧拉常数"><a href="#欧拉常数" class="headerlink" title="欧拉常数"></a><a href="https://www.shuxuele.com/numbers/e-eulers-number.html" target="_blank" rel="noopener">欧拉常数</a></h2><h2 id="充分条件，必要条件"><a href="#充分条件，必要条件" class="headerlink" title="充分条件，必要条件"></a>充分条件，必要条件</h2><ul><li>假设 A 是条件，B 是结论: </li><li>由 A 可以推出B,由 B 可以推出A，则A是B的充要条件（充分且必要条件）。 </li><li>由 A 可以推出B,由 B 不可以推出A，则A是B的充分不必要条件。 </li><li>由 A 不可以推出 B, 由 B 可以推出A，则A是B的必要不充分条件。 </li><li>由 A 不可以推出 B, 由 B 不可以推出A，则A是B的不充分不必要条件。 </li><li>简单一点就是：由条件能推出结论，但由结论推不出这个条件，这个条件就是充分条件。 </li><li>如果能由结论推出条件，但由条件推不出结论,此条件为必要条件。 </li><li>如果既能由结论推出条件，又能有条件推出结论,此条件为充要条件。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
     
-    <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B9%9D%E8%AF%BE-%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95.html</url>
-      <content type="html"><![CDATA[<h4 id="目标函数，损失函数，代价函数"><a href="#目标函数，损失函数，代价函数" class="headerlink" title="目标函数，损失函数，代价函数"></a>目标函数，损失函数，代价函数</h4><p><a href="https://www.zhihu.com/question/52398145" target="_blank" rel="noopener">机器学习中的目标函数、损失函数、代价函数有什么区别</a></p>
-<h4 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h4><ul>
-<li>同济大学高等数学定义</li>
-</ul>
-<p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="../assets/images/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt=""></p>
-<p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="../assets/images/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt=""></p>
-<p>那么称 f(x) 在 I 上的图形是（向上）凸的（或凸弧）。</p>
-<p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="../assets/images/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前人的工作已经保证了经典机器学习模型的目标函数都是凸函数。未来在应用中构建自己的目标函数，那么千万记得在直接应用任何优化算法之前，应该先确定它是凸函数。</span><br></pre></td></tr></table></figure>
-<h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>算法不能学习，需要人为设定的参数，就叫做超参数。</p>
-]]></content>
-    </entry>
+    
     
     <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AB%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%B4%A8%E9%87%8F%E5%92%8C%E8%AF%84%E5%88%A4%E6%8C%87%E6%A0%87.html</url>
-      <content type="html"><![CDATA[<h3 id="分类模型的评判指标"><a href="#分类模型的评判指标" class="headerlink" title="分类模型的评判指标"></a>分类模型的评判指标</h3><h4 id="精准率-查准率（Precision）"><a href="#精准率-查准率（Precision）" class="headerlink" title="精准率/查准率（Precision）"></a>精准率/查准率（Precision）</h4><p>Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p>
-<p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。</p>
-<h4 id="召回率-查全率（Recall）"><a href="#召回率-查全率（Recall）" class="headerlink" title="召回率/查全率（Recall）"></a>召回率/查全率（Recall）</h4><p>Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p>
-<p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望尽可能的选出里面所有的好瓜，则个概念叫召回率/查全率</p>
-<h4 id="F1Score"><a href="#F1Score" class="headerlink" title="F1Score"></a>F1Score</h4><p>F1Score = 2<em>(Precision </em> Recall)/(Precision + Recall)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此处需要注意，P、R、F1Score 在分类问题中都是对某一个分类而言的。如针对一堆西瓜中的好瓜，有P,R,F1Score。对一堆西瓜中的熟瓜，也有P,R,F1Score。</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假设一个模型总共可以分10个类，那么对于每一个类都有一套独立的 P、R、F1Score 的值。衡量模型整体质量，要综合看所有10套指标，而不是只看一套。</span><br></pre></td></tr></table></figure>
-<h4 id="TP"><a href="#TP" class="headerlink" title="TP"></a>TP</h4><p>True Positive</p>
-<h4 id="TN"><a href="#TN" class="headerlink" title="TN"></a>TN</h4><p>True Negative</p>
-<h4 id="FP"><a href="#FP" class="headerlink" title="FP"></a>FP</h4><p>False Positive</p>
-<h4 id="FN"><a href="#FN" class="headerlink" title="FN"></a>FN</h4><p>False Positive</p>
-<h4 id="欠拟合（Underfitting）"><a href="#欠拟合（Underfitting）" class="headerlink" title="欠拟合（Underfitting）"></a>欠拟合（Underfitting）</h4><p>如果一个模型，在训练集上的预测结果就不佳，指标偏低，那一般是欠拟合的问题。</p>
-<p>欠拟合多数情况下是因为选定模型类型太过简单，特征选取不够导致的</p>
-<h4 id="过拟合（Overfitting）"><a href="#过拟合（Overfitting）" class="headerlink" title="过拟合（Overfitting）"></a>过拟合（Overfitting）</h4><p>训练过程中为了尽可能命中训练集所有标签，导致最后训练出来的模型对训练集的验证误差率很低，但是当使用该模型运用在其他验证集或者测试集上时，该模型的误差率陡然增高的现象。</p>
-<p>过拟合则可能是模型太过复杂，特征选择不当（过多或组合不当）造成的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无论是过拟合问题还是欠拟合问题，增大训练数据量都可能会有所帮助。</span><br></pre></td></tr></table></figure>
-]]></content>
+      <title>高等数学(同济大学第七版)学习笔记-第二章-导数与微分</title>
+      <link href="/%E6%95%B0%E5%AD%A6/2019-02-13-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%83%E7%89%88)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86.html"/>
+      <url>/%E6%95%B0%E5%AD%A6/2019-02-13-%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6(%E5%90%8C%E6%B5%8E%E5%A4%A7%E5%AD%A6%E7%AC%AC%E4%B8%83%E7%89%88)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="导数与微分"><a href="#导数与微分" class="headerlink" title="导数与微分"></a>导数与微分</h1><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="../assets/images/006tKfTcgy1g076b3nrg8j315m0gb41f.jpg" alt></p><p><img src="../assets/images/006tKfTcgy1g076gyjstbj314n06bdgq.jpg" alt></p><h3 id="导函数"><a href="#导函数" class="headerlink" title="导函数"></a>导函数</h3><p><img src="../assets/images/006tKfTcgy1g076h31f0rj31620l5djf.jpg" alt><br><img src="../assets/images/006tKfTcgy1g076io14cwj316008awfj.jpg" alt></p><h3 id="特殊函数的导数公式"><a href="#特殊函数的导数公式" class="headerlink" title="特殊函数的导数公式"></a>特殊函数的导数公式</h3><h4 id="幂函数的导数公式"><a href="#幂函数的导数公式" class="headerlink" title="幂函数的导数公式"></a>幂函数的导数公式</h4><p>幂函数f(x) = x<sup>n</sup> (n ϵ R ) 的导数公式：</p><p>(x<sup>n</sup>)<sup>‘</sup> = nx<sup>n-1</sup></p><h4 id="三角函数的导数公式"><a href="#三角函数的导数公式" class="headerlink" title="三角函数的导数公式"></a>三角函数的导数公式</h4><ul><li><p>正弦函数 f(x) = sin x  的导数公式</p><ul><li><p>(sin x)<sup>‘</sup> = cos x</p><p>即正弦函数的导数是余弦函数。</p></li></ul></li><li><p>余弦函数 f(x) = cos x  的导数公式：</p><ul><li><p>(cos x)<sup>‘</sup> = -sina x</p><p>即余弦函数的导数是负的正弦函数。</p></li></ul></li><li><p>正切函数 f(x) = tan x 的导数公式：</p><ul><li>(tan x)<sup>‘</sup> = sec<sup>2</sup>x</li></ul></li><li><p>余切函数 f(x) = cot x 的导数公式：</p><ul><li>(cot x)<sup>‘</sup> = - csc<sup>2</sup>x </li></ul></li><li><p>正割函数 f(x) = sec x 的导数公式：</p><ul><li>(sec x)<sup>‘</sup> = sec x * tan x</li></ul></li><li><p>余割函数 f(x) = csc x 的导数公式：</p><ul><li>(csc x)<sup>‘</sup> = - csc x * cot x</li></ul></li><li><p>反正弦函数 f(x) = arcsinx x 的导数公式：</p></li></ul><p><img src="../assets/images/006tKfTcgy1g076h6y89pj30xw03qq2u.jpg" alt></p><ul><li>反余弦函数 f(x) = arccos x 的导数公式：</li></ul><p><img src="../assets/images/006tKfTcgy1g076h9etdbj30q603umx2.jpg" alt></p><ul><li>反正切函数 f(x) = arctan x 的导数公式：</li></ul><p><img src="../assets/images/006tKfTcgy1g076hbuzcmj30ny03c745.jpg" alt></p><ul><li>反余切函数 f(x) = arccot x 的导数公式：</li></ul><p><img src="../assets/images/006tKfTcgy1g076hegnf8j30p603ejr9.jpg" alt></p><h4 id="指数函数的导数公式"><a href="#指数函数的导数公式" class="headerlink" title="指数函数的导数公式"></a>指数函数的导数公式</h4><p>指数函数f(x) = a<sup>x</sup> (a&gt;0,a≠1)的导数公式:</p><p><img src="../assets/images/006tKfTcgy1g076hhs0ytj312q06cjry.jpg" alt></p><h4 id="对数函数的导数公式"><a href="#对数函数的导数公式" class="headerlink" title="对数函数的导数公式"></a>对数函数的导数公式</h4><p>对数函数f(x) = log<sub>a</sub>x (a&gt;0,a≠1)的导数公式:</p><p><img src="../assets/images/006tKfTcgy1g076hk9t90j31dm0aiq3s.jpg" alt></p><h3 id="导数的几何意义"><a href="#导数的几何意义" class="headerlink" title="导数的几何意义"></a>导数的几何意义</h3><p><img src="../assets/images/006tKfTcgy1g076hn20abj314g0u0gqa.jpg" alt></p><h3 id="求导法则"><a href="#求导法则" class="headerlink" title="求导法则"></a>求导法则</h3><h4 id="函数的和，差，积，商的求导法则"><a href="#函数的和，差，积，商的求导法则" class="headerlink" title="函数的和，差，积，商的求导法则"></a>函数的和，差，积，商的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hs900rj31b40bs405.jpg" alt></p><h4 id="反函数的求导法则"><a href="#反函数的求导法则" class="headerlink" title="反函数的求导法则"></a>反函数的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hv4fr3j31bg098dgu.jpg" alt></p><ul><li>即反函数的导数等于直接函数导数的倒数。</li></ul><h4 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h4><p><img src="../assets/images/006tKfTcgy1g076hy586sj31d00723zg.jpg" alt><br><img src="../assets/images/006tKfTcgy1g076j5fi0uj31bc080wgn.jpg" alt></p><h3 id="基本初等函数的导数公式总结："><a href="#基本初等函数的导数公式总结：" class="headerlink" title="基本初等函数的导数公式总结："></a>基本初等函数的导数公式总结：</h3><p><img src="../assets/images/006tKfTcgy1g076i0o7afj30u00xxdj1.jpg" alt></p><h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><p><img src="../assets/images/006tKfTcgy1g076i4uh6fj31cw0u0wjs.jpg" alt></p><h2 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h2><p><img src="../assets/images/006tKfTcgy1g076i7mnl5j31cr0u041y.jpg" alt></p><h3 id="微分的几何意义"><a href="#微分的几何意义" class="headerlink" title="微分的几何意义"></a>微分的几何意义</h3><p><img src="../assets/images/006tKfTcgy1g076ialmgyj31840u0teu.jpg" alt></p><h3 id="基本初等函数的微分公式"><a href="#基本初等函数的微分公式" class="headerlink" title="基本初等函数的微分公式"></a>基本初等函数的微分公式</h3><p><img src="../assets/images/006tKfTcgy1g076til6x3j31n609q0wj.jpg" alt></p><p><img src="../assets/images/006tKfTcgy1g076uaa8gbj312v0u0av7.jpg" alt></p><p><img src="../assets/images/006tKfTcgy1g076uts9iej31na03uac2.jpg" alt></p><h3 id="函数和，差，积，商的积分法则"><a href="#函数和，差，积，商的积分法则" class="headerlink" title="函数和，差，积，商的积分法则"></a>函数和，差，积，商的积分法则</h3><p><img src="../assets/images/006tKfTcly1g0774zu78oj31n20gc7da.jpg" alt></p><h3 id="复合函数的微分法则"><a href="#复合函数的微分法则" class="headerlink" title="复合函数的微分法则"></a>复合函数的微分法则</h3><p><img src="../assets/images/006tKfTcly1g0779xuog7j31o80kcdyj.jpg" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数学,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
     
-    <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第七课(模型的获取和改进)]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%83%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%8E%B7%E5%8F%96%E5%92%8C%E6%94%B9%E8%BF%9B.html</url>
-      <content type="html"><![CDATA[<h4 id="构建模型的一般步骤"><a href="#构建模型的一般步骤" class="headerlink" title="构建模型的一般步骤"></a><span id="BuildModel">构建模型的一般步骤</span></h4><ul>
-<li><p>Step-1：数据准备。</p>
-<ul>
-<li>Step-1.1 数据预处理：收集数据、清洗数据、标注数据。</li>
-<li>Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。</li>
-<li>Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。</li>
-</ul>
-</li>
-<li><p><span id="Step2">Step-2</span>：训练——将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依据的算法进行运算。训练程序输出的结果，就是模型。</p>
-</li>
-<li><p>Step-3：测试——将测试集数据输入给训练获得的模型，得到预测结果；再将预测结果与这些数据原本预期的结果进行比较。</p>
-</li>
-</ul>
-<h4 id="有监督学习过程中对数据集的划分"><a href="#有监督学习过程中对数据集的划分" class="headerlink" title="有监督学习过程中对数据集的划分"></a>有监督学习过程中对数据集的划分</h4><ul>
-<li><p>训练集（Train Set）：用来做训练的数据的集合。</p>
-</li>
-<li><p>验证集（Validation Set）：在训练的过程中，每个训练轮次结束后用来验证当前模型性能，为进一步优化模型提供参考的数据的集合。</p>
-</li>
-<li><p>测试集（Test Set）：用来测试的数据的集合，用于检验最终得出的模型的性能。</p>
-</li>
-</ul>
-<p>每个集合都应当是独立的，和另外两个没有重叠。</p>
-<p>训练集是训练过程的基础，而验证和测试集则是在不同阶段用来评价训练结果的。</p>
-<h4 id="训练的过程"><a href="#训练的过程" class="headerlink" title="训练的过程"></a>训练的过程</h4><p><a href="#BuildModel">构建模型的</a>过程中<a href="#Step2">Step-2</a>训练，又可以细化为几个步骤。</p>
-<ul>
-<li><p>Step-2.1： 编写训练程序。</p>
-<ul>
-<li>Step-2.1.1： 选择模型类型；</li>
-<li>Step-2.1.2： 选择优化算法；</li>
-<li>Step-2.1.3： 根据模型类型和算法编写程序。</li>
-</ul>
-</li>
-<li><p>Step-2.2： 训练 -&gt; 获得临时模型。</p>
-</li>
-<li><p>Step-2.3： 在训练集上运行临时模型，获得训练集预测结果。</p>
-</li>
-<li><p>Step-2.4： 在验证集上运行临时模型，获得验证集预测结果。</p>
-</li>
-<li><p>Step-2.5： 综合参照 Step-2.3 和 Step-2.4 的预测结果，改进模型。</p>
-</li>
-<li><p>Step-2.6： Step-2.2 到 Step-2.5 反复迭代，直至获得让我们满意，或者已经无法继续优化的模型。</p>
-</li>
-</ul>
-<h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>超参数是需要模型训练者自己来设置和调整的。</p>
-]]></content>
-    </entry>
+    
     
     <entry>
-      <title><![CDATA[机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）]]></title>
-      <url>https://www.jacklee.work/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AD%E8%AF%BE%EF%BC%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%89%E8%A6%81%E7%B4%A0%E4%B9%8B%E6%95%B0%E6%8D%AE%E3%80%81%E6%A8%A1%E5%9E%8B%E3%80%81%E7%AE%97%E6%B3%95%EF%BC%89.html</url>
-      <content type="html"><![CDATA[<h4 id="向量空间模型-Vector-Space-Model，VSM"><a href="#向量空间模型-Vector-Space-Model，VSM" class="headerlink" title="向量空间模型(Vector Space Model，VSM)"></a>向量空间模型(Vector Space Model，VSM)</h4><ul>
-<li>向量指一个同时具有大小和方向的几何對象。</li>
-<li>向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。</li>
-</ul>
-<h4 id="特征向量-Feature-Vector"><a href="#特征向量-Feature-Vector" class="headerlink" title="特征向量(Feature Vector)"></a>特征向量(Feature Vector)</h4><p>描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量</p>
-<h4 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h4><p>特征工程，包括以下两个步骤：</p>
-<ol>
-<li>确定用哪些特征来表示数据；</li>
-<li>确定用什么方式表达这些特征。</li>
-</ol>
-<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><p>模型是机器学习的结果，这个学习过程，称为训练（Train）。</p>
-<p>一个已经训练好的模型，可以被理解成一个函数： y=f(x)。</p>
-<p>我们把数据（对应其中的 x）输入进去，得到输出结果（对应其中的 y）。</p>
-<p>这个输出结果可能是一个数值（回归），也可能是一个标签（分类），它会告诉我们一些事情。</p>
-<h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>训练就是：根据已经被指定的模型类型，结合训练数据，计算出其中各个参数的具体取值的过程。</p>
-<h4 id="损失函数（Loss-Function）"><a href="#损失函数（Loss-Function）" class="headerlink" title="损失函数（Loss Function）"></a>损失函数（Loss Function）</h4><p>在有监督学习过程中，经过对一份训练数据的学习后，得到一个模型y‘=f(x)，再对另外一份验证数据运用这个模型计算出来得到的标签值y’与验证数据正确的标签y的差别，记做L（y, y’）= L(y, f(x))。</p>
-<h4 id="代价函数（Cost-Function）"><a href="#代价函数（Cost-Function）" class="headerlink" title="代价函数（Cost Function）"></a>代价函数（Cost Function）</h4><p>代价函数一般写作：J（theta）。<br>???</p>
-]]></content>
+      <title>机器学习极简入门课学习笔记-第十一课(线性回归——梯度下降法求解目标函数)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E6%B1%82%E8%A7%A3%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E6%B1%82%E8%A7%A3%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="待复习偏微分"><a href="#待复习偏微分" class="headerlink" title="待复习偏微分"></a>待复习偏微分</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
     
-    <entry>
-      <title><![CDATA[（转载）股民何苦为难股民，技术分析是用来骗我的吗？]]></title>
-      <url>https://www.jacklee.work/%E8%B4%A2%E7%BB%8F/2018-10-12-%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89%E8%82%A1%E6%B0%91%E4%BD%95%E8%8B%A6%E4%B8%BA%E9%9A%BE%E8%82%A1%E6%B0%91%EF%BC%8C%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%E6%98%AF%E7%94%A8%E6%9D%A5%E9%AA%97%E6%88%91%E7%9A%84%E5%90%97%EF%BC%9F.html</url>
-      <content type="html"><![CDATA[<p>转载自雪球</p>
-<p>今天的市场气氛到达了新的一轮冰点，买？卖？价值投资？技术分析？</p>
-<p>雪球量化投资大V@许哲 讲述了他在追求技术指标路上的思考，最终的结论有些振聋发聩，在此分享给大家！</p>
-<p>作者：许哲</p>
-<p>我不知道诸位是如何接触到金融投机的。不知道你第一笔交易是如何完成的，第一个交易的品种是什么，第一次开仓的依据是何。  </p>
-<p>但有一点是可以肯定的，每个没有放弃在市场里搏杀，坚持不懈的朋友，都经历过很痛苦的阶段。如果你还没经历，请做好心理准备。  </p>
-<p>笔者并非金融专业出身，金融学知识和经济学知识都是大学毕业后才自学的。在学到这些非常必要的知识前，就因缘巧合接触到了金融投机。  </p>
-<p>第一次被神秘复杂的K线图和各种眼花缭乱的技术分析捕获眼球，就犹如被一种魔法诅咒着，从此难以抽身。  </p>
-<p>在了解了基本的常识后，用软件浏览了许多主流的技术指标们，回望过去，比比划划弄弄，似乎并不难。你瞧这里一个信号就很准，那里一个信号如果抓到那就发财了。每一次接触一种新的技术分析方法，就如同打开了一扇窗户，遥想着当年该交易体系的发明者如何叱诧风云，笑傲市场，壕取千金于万里之外，如探囊取物。  </p>
-<p>当然，兴奋完不久后，就会发现这些信号并不是次次百发百中，偶有失手再所难免，总有些例外情况。用肉眼目测了过往的情况，测算测算如果信号准确时的利润，似乎有些瑕疵也是可以接受的。  </p>
-<p>再多接触了几套交易系统之后，发现有两大派别，一种总是告诉你，快要粗大事了！准备好历史机遇。另外一派总是忧心忡忡，这涨得过头了吧，那个跌得已经离谱了，超买超卖好严重啊，赶快赶在市场修正错误前入场。到底谁说得对呢？<br>纸上得来终觉浅，绝知此事要躬行。开个实盘试试！  </p>
-<p>神奇的是，刚刚入场的肥羊，哦，不，是新手们总是能赚到不少钱的。我也不例外，在做肥羊的最初阶段，几周能就获得了翻倍的利润。  </p>
-<p>过了不久，咦？技术指标怎么接连失败。复盘的时候，明明很神奇，很威武的呀。</p>
-<p>肉眼复盘的时候，总发现有些指标在有些特定的时候特别神勇，而恰恰另外的指标会提醒我们时机未到，就好像有许多大臣在给国王提建议，或许，兼听则明，偏听则暗？  </p>
-<p>单个指标总是有缺陷的嘛，人无完人，指标也无万能的，我们要构建自己的交易系统，多个指标取长补短，认真复盘，认真思考，秘密一定就在细节里。  </p>
-<p>艰苦卓越的复盘，指标组合，反复琢磨，反复咀嚼，我不知道有多少人花了多少个不眠夜，苦苦上下而求索。我反正是陷进去了。  </p>
-<p>日复一日，有时间也不看美剧了，游戏也不打了，全世界最最神秘的，最有趣的事情，就是技术分析的有效性。盯住屏幕，反复掂量，反复推敲。  </p>
-<p>推敲推敲再推敲，无数次似乎顿悟来临，无数次希望破灭，人如同着魔一般，偏不信唯独我，不能拥有属于自己的交易系统，独步江湖。天道酬勤，功夫不负有心人，学海无涯苦作舟，反复激励着自己，顽强得度过一个个不眠夜。  </p>
-<p>市面上的交易系统，没有没学过的。  </p>
-<p>什么线都画过，什么多周期共振分析，还买了多屏一起看。  </p>
-<p>上图是网上找来的，不过绝非个案，这样做的交易员比比皆是。  </p>
-<p>艰苦卓绝的奋斗并没有带来让我真正的收获，有的只是一次次希望化成泡影而已。如果说这条路，我因为不够努力，所以没有走通，我想我的生理极限已经不能支持我做下去了。  </p>
-<p>到底有没有用？为什么看着总有效而用着用着总出问题？  </p>
-<p><strong>昨夜西风凋碧树。独上高楼，望尽天涯路。欲寄彩笺兼尺素。山长水阔知何处。</strong>  </p>
-<p>后来我学习了心理学和神经科学的一些知识后，知道人拥有无法克服的自利偏差和后视偏差。自利偏差意味着你一定会朝自己有利的方向产生偏见，<strong>一旦你对某技术指标产生信心后，你会强化它的优势，而忽视它的缺陷。</strong>  </p>
-<p>后视偏差，会造成大量的事后诸葛亮的情境，把未来的信息不自觉得带入进去。这些是人性，人性是客观存在的，和人性斗争是很艰难的事情。  </p>
-<p>《海龟交易法则》还宣扬了一种理念，不是系统不OK，是你的心态不OK。学会冷酷机械得操作，把仓位资金管理做成机器人一般，就能获得成功，打败市场。  </p>
-<p>一群毫无交易经验的年轻人，因为崇拜，言听计从，从而笑傲华尔街。  </p>
-<p><strong>击败人性就击败了市场，战胜自己，就能赢得未来。听上去好有道理，但机械执行好难啊，心里好煎熬啊。</strong>  </p>
-<p>好在，我是码农出身，会写代码（大学期间还拿过全国性比赛的前三名，拿过风投，技术勉强还算靠谱），何不用计算机来克服人性呢？计算机不会有自利偏差和后视偏差（前提是你的程序不能使用未来信息）。况且，组合出来的技术指标组合浩瀚如海，如何能用人力去做这些事情呢？况且做得还不好。  </p>
-<p>海龟交易法则那个时代，可没那么好的IT技术。  </p>
-<p>想到这一点，再次扎入代码中，开始艰苦卓绝地架构，coding，debug，历史回测，分析效果，想办法提高计算效率，如何利用并行计算让能用得上的所有计算设备一起没日没夜得跑起来。如此循环往复，不知疲倦。<br>编程，真是现代人处理信息的必备技能，编程赋予人很大的自由，在处理信息的过程中，不再受制于许多软件的不称心，上限多半在于你的编程技能，而非他人。  </p>
-<p>从满屏幕的技术指标，变回了满屏幕的各种代码，CPU 永远满转。没日没夜得比划果然不如没日没夜得coding来得高效。那我收获了“圣杯”吗？  </p>
-<p>我曾经以为我收获了。此时的我，已经不是一个人在奋斗了，有一群志同道合的小伙伴们和我一起探索着这诱人的谜题，我们为了洞悉那牵扯着千万人的奥秘，无数人魂牵梦绕的圣杯，不知疲倦得做着工作。  </p>
-<p>对几乎所有可行的，有确定性描述的技术体系，进行分析后，我们获得了很多有意思的统计结果。动用了大量的计算资源，弄废了若干可怜的硬盘后，对着统计数据，有些怪样的感受。  </p>
-<p>比较知名的技术指标，MACD 能勉强超过50%的准确率，只是勉强超过而已，如果没有交易成本和流动性问题，冷血得执行该指标提示的方法，能不能赢钱还得靠运气。  </p>
-<p>RSI 的表现极不稳定，胜率总算过半，而KDJ的表现糟糕得让人难以置信。  </p>
-<p>胜率超过50%的技术分析策略虽然多，但出现的频次和分布都非常不均匀。曲线非常不平滑，或者说，夏普率非常低。我们在进行着技术指标的整合的时候，运用了统筹规划的一些数学技巧。  </p>
-<p>在大量的统计结果和有序的规划后，我们获得了一个在回测上近乎完美的技术分析体系，曲线的平滑程度让人心醉，收益之高，让人惊鄂。200%的年化回报，是在有资金管理和风险控制的前提下可以预期的。  </p>
-<p>将所有可得到技术指标进行到冷酷无情，毫无人性的计算机系统统计，毫无偏见的，赤裸裸的数据。加上数学上的统筹规划，无可置疑的客观性。</p>
-<p>技术分析，简直是做绝了。系统上线运行，神勇一如预期，收益的速度和历史回测完全一致。似乎，熬到头了。  </p>
-<p>系统有效了小半年，开始出现难熬的回撤，当然，对于回撤我们是有心理准备的。不久后系统又恢复了盈利，似乎又回归正常的状态中。  </p>
-<p>然而，一次又一次不明原因偏离预期，让我信心产生了动摇。  </p>
-<p>我相信，技术指标类体系，我们近乎一网打尽，在客观性和准确性方面已经做到极限。彼时，我无法再想象还能如何提高系统的有效性。  </p>
-<p>问题出在哪里？到底哪里做得不够好？这问题为何如此难解？或许，这问题有答案吗？这个无数先辈反复琢磨的圣杯，存在吗？  </p>
-<p>是鲁棒性不好吗？学习集和测试集反复互相倒腾，无时不刻担心过度学习的问题。到底是哪里没做好？</p>
-<p>有人误会，认为不需要预测价格，其实只要一个正预期收益的系统就OK了。然而一个正预期收益的系统需要的是概率。而统计能给出的，只是频率而已。概率和历史出现频率，是两码事情。  </p>
-<p>既然所有技术指标都是过去价格或者交易量的汇总分析，所有的技术指标都是对过去历史价格的一种解释。那么从信息的角度来说，技术分析的任意组合不可能突破价格所包含的信息。  </p>
-<p>这里有篇科普文，解释为什么一种叫神经元网络的东西，能够拟合出任意函数：Neural networks and deep   learning。  </p>
-<p>对，神经元网络，无论指标如何玩花活，都是历史价格的函数，他们到底能不能预示未来？或者一定程度上获得置信区间？  </p>
-<p>神经元网络的灵感来自于人类大脑，这一技术已经拥有了非常丰富的技术积累和现成工具。动用自己的编程技能，开始捣鼓了起来。  </p>
-<p>一遍遍调参数，看结果。已经习惯了打击。  </p>
-<p>难道过去的价格，并不包含未来的价格走向吗？<strong>光看这个论点，似乎不至于振聋发聩，然而，世面上几乎所有的技术分析，都是根据历史价格来敲定的。</strong>  </p>
-<p>这是一个多么不一样的世界，在我学习计算机科学技术的时候，书上告诉你的东西，或许不准确，但你实践后，按照书上的代码上机后多半是实践成功的。  </p>
-<p>电视上，杂志上，网络上大家讨论的东西，都是确定的。上编译器确认一下，你就会发现，虽然有大量的偏见，至少不是在争吵着子虚乌有的东西。  </p>
-<p>可如果过去的历史价格，并不是未来价格的一种预言。那所有的相关书籍，无数人讨论得热烈无比的技术，电视上专家的口若悬河，难道完全是扯淡？  </p>
-<p>全世界都在瞎扯淡，就你聪明？我还不至于狂妄自大到这个程度，总觉得问题出在自己这里，神经元网络也不是万能的嘛，换一换它的强劲对手SVM，支持向量机。光听名字就高大上啊。  </p>
-<p>支持向量机作为人工智能另外一个很有前途的领域，被广泛看好。当然深度学习的火热是后来的事情了，当年并没有听说过。  </p>
-<p>感谢开源世界，让我得以方便得使用前人的智慧。  </p>
-<p>一遍一遍又一遍，挑灯夜战已经习以为常，失望，也已经习以为常。  </p>
-<p>模型的维度越来越高，复杂程度已经失控。不变的是，过去的历史价格作为输入。我是有多不愿意承认，过去的价格并不包含对未来的预言。  </p>
-<p>否定这个，就是否定了自己过去那么多不眠夜，那么多废寝忘食，那么多心血，那么多努力，那么多那么多东西。  </p>
-<p>难熬，真的难熬。  </p>
-<p>短暂的逃避后，重新开始思考，在推翻一切之前，让我再回望一下我心血凝结的尸体，回眸一下那曾经妩媚的身影，究竟是倒毙于自身的缺陷，还是所有的一切，终究不过是黄粱一梦。  </p>
-<p>我为何从这条路开始探索下去的？对，我是受了软件的暗示，似乎技术指标蕴藏着奥秘，只要解开，就能获得财务自由。从一开始，我就被引导着。  </p>
-<p>不要听信任何人的指引，我会怎么做？如果我从来不知道技术分析这回事情，我会怎么办？我将如何面对市场？  </p>
-<p>在放下所有，放空自己，摈除所有偏见后，开始思考最本初的一些疑问。  </p>
-<p>下面大量内容引述自果壳网的多篇文章，我之前在知乎的交流中也大量使用。我们且放下市场，做个小小的旅行。  </p>
-<p>说两个段子：  </p>
-<p>“指导员做战前动员，称“只要冲锋足够快，就不会受伤”。你拼尽全力冲锋，可战后却浑身血淋淋地被抬了回来。  </p>
-<p>你说指导员的话不对，指导员却说：“那是因为你冲得不够快，否则就不会受伤了，记着下次冲快点啊。”面对这么流氓的解释，你只能哑口无言。但你已经知道了他是个骗子，原因在于他根本就没有给出冲锋足够快的标准，无论你冲得有多快，只要你受伤了，他永远可以称原因是你不够快，他的说法“永远正确”。”  </p>
-<p>李大娘相信黄大仙，她认为世上万事万物，包括你我的思想都是由一只超级黄鼠狼完全控制着，当然包括我这篇文章的写作。依托这只黄鼠狼，李大娘可以解释一切，下雨是它流鼻涕，打雷是它打喷嚏。你还别跟李大娘较劲，因为你永远都无法证明这个黄鼠狼是不存在的。  </p>
-<p>指导员和李大娘的说法有一个共性，那就是说法本身根本就没有可以否定它的途径，用科学哲学的术语说，就是该说法本身不具有“可证伪性”。  </p>
-<p><strong>如果你数了上五浪后做空失败了，是你对浪的界定出问题了，我们时间拉得更长点你就发现，果然可以解释得通。第三浪最强，可你发现突然转向了，其实你看的是最后一浪了。下三浪还没完怎么就结束了呢？其实三浪早结束了，你数错了。</strong>  </p>
-<p>各位知道我在说什么吗？这种理论永远不会错！怎么说都说得圆。  </p>
-<p>我们再来假设一个场景：</p>
-<p>A、B两人对于太阳升起分别提出了两种观点：<br>A：太阳从东边升起。<br>B：太阳从所有方向升起。</p>
-<p>其中，A是可以被证明是假的，只要我们找到一次太阳不是从东边升起的情况，就可以证明A是错的了。  </p>
-<p>但是B的理论可以说是完美，根本找不到任何方法证明他是错的。</p>
-<p>实际上A和B都没有办法证明他们的理论是正确的。  </p>
-<p>A的理论，完整看是这样的：从人类确立方向开始，太阳都是从东边升起的，从而推知太阳从地球形成到消亡，都会从东边升起。<br>B的完整理论是：从地球形成以来，太阳就可能从任意方向升起，从人类确立方向以来，太阳都是从东边升起的，并且会在未来的某个时间改变。  </p>
-<p>如果A和B要证明自己正确，那么就需要有地球从形成到消亡，所有的太阳升起方位的证据，这是不可能的。  </p>
-<p>大家都有的证据就只有从人类记录太阳升起以来的资料，也就是有限的证据，单靠这些证据，两人都无法证明自己的观点是正确的。  </p>
-<p>都无法证明，两者的理论全部都是不可靠的。  </p>
-<p>一万个例子都无法证明，只用一个真实的反例就足够证伪。前提是，该问题是可以证伪的。<strong>如果一个理论，不可证伪，那压根就没有任何科学价值。  
-</strong><br>太多太多的技术分析流派，宣示的理论，连可证伪性都不具备。这和指导员和李大娘没有任何本质区别，拥有的，<strong>不过是一大堆图形拼凑起来的迷信罢了。</strong>  </p>
-<p>某形态出现后，是庄家入场了，这里暗示着投资者情绪的发酵。这些言论听着都很有可能性。是的，有可能性而已，如何证明这条K线不是庄家买入的呢？如何证明不是情绪的躁动呢？我反正是没办法指出他们错在哪里的，永远有可能。  </p>
-<p>每当他们的技术分析失效时，他们总是会告诉你忽略了什么东西，不管他之前有没有说明过，或许，是他的最新发现呢，系统终于得到修复，呵呵。  </p>
-<p>那我们之前做的统计分析是可证伪的吗？是的，成不成，看多看空都是确定的，没法作弊的。要么盈利，要么亏损，不存在模棱两可。  </p>
-<p>在了解了不可证伪就是耍流氓，就是迷信后，我们再回顾一下，人类的思维方法，<br>人类得出结论分两种方法：演绎法与归纳法。</p>
-<p>我们熟悉的三段论是个好例子：</p>
-<p>A 所有人都会死<br>B 苏格拉底是人<br>C 苏格拉底会死  </p>
-<p>这个推论就是演绎法，我们通过已知的普遍规律和一个事实，能推断出一个确定的结论。这种方法叫做演绎。  </p>
-<p>归纳法不一样</p>
-<p>A 柏拉图最后死了<br>B 苏格拉底最后也死了<br>C 人最后都会死  </p>
-<p>归纳法的出发点不是确定性的规律，而是观察到的现象，我们观察到现象并且从中总结出一些可能的规律。最后形成我们对规律的总结。  </p>
-<p>关于这些哲学问题，推荐阅读 《科学哲学》。  </p>
-<p>休谟的论断虽然古老，但至今仍然是个魔咒。演绎的法则是可靠的，而所有的归纳都是不可靠的。因为归纳法有个终极的缺陷，我们无法得到所有的样本。  </p>
-<p>就算我们获取了历史上的所有样本，我们也无法避免未来太阳突然从西北方向升起，因为一个样本的例外就足够证伪，就算之前的一亿个成功样本，都没办法。  </p>
-<p>之前人们看到的天鹅都是白色的，黑天鹅一词基本等同于“龟毛兔角”，意喻不存在的事情。直到大航海时代，人们在澳洲真的发现了黑色的天鹅。  </p>
-<p>归纳法永远无法摆脱这个宿命，黑天鹅一词也从龟毛兔角的涵义变化为历史上从未发生过的事情的比喻。任何以归纳法作为根基的策略，都逃不出这个宿命。  </p>
-<p>演绎法则是严格可靠的。  </p>
-<p>在粗浅得学习了哲学后，猛然发现我大学里学习的数理逻辑学，原来是那么得有智慧。我忽略了太多东西。哲学，特别是科学哲学，应该是在学习任何技巧前都应该好好过一遍的东西，而之前的我，愚蠢得看到前人的经验就迫不及待得去了解，连对经验应该抱有什么样的态度都不知道，蠢死了。  </p>
-<p>也怪我之前学习的是计算机科学，似乎知识都是可靠的，至少不会太不靠谱，甚至完全不着边际。  </p>
-<p>而一切一切我看到的技术分析，都没有逃离归纳法的诅咒范围。且不论它们自身永世无法脱离归纳法永恒的缺陷，就归纳本身而言，它们都算不上好的归纳。</p>
-<p>摆脱一切我以前相信的东西之后，学习真正的知识，见识到人类智慧的可悲局限的时候，我终于获得了释然，彻底的释放。  </p>
-<p><strong>是的，就算是归纳，这些技术分析都谈不上上档次。  
-</strong><br>居然被骗那么久，只怪自己蠢，自己太心急，急于看出点什么东西。人类的大脑是个模式识别器，而且进化总要求你快速得识别模式。  </p>
-<p>以至于当我看到花花绿绿的技术分析后，总是急于给出自己的模式识别。  </p>
-<p>蠢即是恶，要为自己的愚昧付出代价，无数的日日夜夜就是代价。我一点都不冤枉。  </p>
-<p>自此，脱胎换骨。  </p>
-<p>恨自己没有早些学习哲学，恨自己急于获取可见的知识，而没有深入思考思考这东西。恨自己以为勤奋和刻苦就能有回报。  </p>
-<p>没有眼睛，狂奔在走向毁灭的道路上，是不会有上帝来怜惜的。自己背负因果，没人可以代替。  </p>
-<p>不再纠结于神经元网络或者SVM是不是冤枉了技术分析的能力，从可证伪性和演绎归纳的区别性质上，已经足够洞见差别。  </p>
-<p>重新审视策略，原来多年牛角尖钻错了地方。外加在探索的过程中学习了大量的金融学知识，极大得拓宽了眼界。不再把自己困在单个市场上价格的猜涨猜跌中。事实上，我已经彻底放弃了价格的猜测，本来以为只有猜价格才是获利的唯一方法，这就是不学习的罪恶，无知就是罪恶。  </p>
-<p>重新启程，摆脱思维习惯，以可证伪性为基本条件，严格的演绎作为推论方式，规避归纳法，重新制定策略。  </p>
-<p>天可怜见，走了老大的弯路，总算踏上了正途。  </p>
-<p>当初想要学习和了解哲学方面的知识，并没有带着强烈的目的性。谁曾料想，猛然触及到了那么多时间挣扎深陷的问题之症结所在。犹如在他乡的远足中，偶遇知音。  </p>
-]]></content>
-    </entry>
+    
     
     <entry>
-      <title><![CDATA[（转载）这个时代没有怀才不遇]]></title>
-      <url>https://www.jacklee.work/%E8%B4%A2%E7%BB%8F/2018-10-10-%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89%E8%BF%99%E4%B8%AA%E6%97%B6%E4%BB%A3%E6%B2%A1%E6%9C%89%E6%80%80%E6%89%8D%E4%B8%8D%E9%81%87.html</url>
-      <content type="html"><![CDATA[<p><img src="https://xqimg.imedao.com/16658d38d02be83fdbe00cf7.jpg" alt=""></p>
-<p>假期里Boy 的微信读者群好不热闹，大家每天都在讨论各种职场成长的深度问题。前几天有人问道：</p>
-<p>总是觉得自己怀才不遇，没人赏识自己，每天只能埋头苦干的人想要飞黄腾达出路在哪里？</p>
-<p>今天的文章，我就来聊聊这个话题。在正式开始之前，我先抛出观点：</p>
-<p>这个时代已经没有什么怀才不遇。所谓的怀才不遇，只是你的才能还不够罢了。</p>
-<p>为了清晰说明这个问题，下面我从三点来分别解释。</p>
-<p><strong>01</strong></p>
-<p><strong>时代大趋势</strong></p>
-<p>世界正变得越来越扁平。</p>
-<p>如果你留意了最近的商业经济新闻，你会发现越来越多的公司都开始强调“无边界组织”。</p>
-<p>这个概念最初来源于通用电气的CEO杰克韦尔奇，后来经过互联网时代的发展，逐渐升级变成许多大公司内部推行的一种组织架构革命。</p>
-<p>什么叫无边界组织呢？</p>
-<p>简单来说，就是企业不再按照传统的职能属性来划分部门，而是将它们糅合在一起，每个员工都可以和拥有不同技能的人在一个单元组织里共同协作，彼此之间没有边界，无障碍交流。</p>
-<p>比如产品研发，销售，传播，公关甚至是财务都被放在一起，组成一个团队，共同攻克一个项目目标。等到目标达成，这些人又被打散到其他的单元组织里，为新的项目工作。</p>
-<p>像谷歌、亚马逊、阿里巴巴、腾讯等许多互联网公司已经开始推行这种工作模式，并由此延伸出一套内部竞争机制。</p>
-<p>他们让公司内部不同的团队共同PK一个项目，然后选出一个最佳方案，最后集中公司资源来帮助它迅速成长。团队里的每个人都对项目的最终结果负责，各自的才能被尽善其用，不存在谁职位高谁就能一言九鼎的情况。</p>
-<p>许多我们熟知的互联网产品，例如微信、王者荣耀等就是腾讯内部竞争的产物。而它们的最初构想，都来源于最普通的员工。</p>
-<p>这么做的好处，是能够迅速应对外界环境的变化，一旦出现新的竞争对手或市场风向改变，可以灵活迅速地制定对策并执行。你不需要拿着一份计划书从地区汇报到中央，再从中央汇报到全球总部。等到兜一圈下来终于决定做了，黄花菜都凉了。</p>
-<p>无边界组织以目标为导向，强调“快、准、狠”。即：快速嗅到风向变化，准确把握市场需求，狠下手来全力以赴。</p>
-<p>它并不遵循传统企业的金字塔式结构，不需要层层上报给大老板，也没有诸如总监、经理、主管的层级壁垒，更不会受制于庞大人员规模所带来的效率递减。无边界组织更像是企业内部一个个小的作战单元，可以随时组装，随时打散。</p>
-<p>在这种扁平化的管理模式下，作为员工的每一个个体，不用担心自己的才能被埋没。因为这种组织的目的，就是让最有价值的想法能够最快地被接受和执行。</p>
-<p>用大白话来说，这是一种“你行你上”的工作模式。它让最优秀的人才，在最短的时间里完成最有挑战的事情。</p>
-<p>传统企业是存量思维，一个萝卜一个坑，越往金字塔顶端，机会越少；而扁平化组织是增量思维，它每时每刻都在创造新的机会。</p>
-<p>比如现在很流行的众包工作模式，就是扁平化组织的一种应用。客户将项目需求发布在网上，全世界各地拥有相应技能的人聚集在一起，利用网络进行项目沟通与协作。</p>
-<p>而每一次众包机会你都可以尝试不同的角色。例如今天你在这个项目做的是营销公关，下次可以去另一个项目做商务拓展，再过段时间去做产品经理也没问题。</p>
-<p>只要你的能力足够强，机会总是源源不断。</p>
-<p><img src="https://xqimg.imedao.com/16658d3c58dbef3fe15020e8.jpg" alt=""></p>
-<p><strong>02</strong></p>
-<p><strong>展示才能的出口越来越多</strong></p>
-<p>我们身边你能展示才能的出口越来越多。</p>
-<p>如今除了写微信公众号，还有各种各样的职业社交网站，专业技能论坛等供你展现自己的才能。</p>
-<p>比如Linkedin 领英或者脉脉。这些地方每天聚集着各行各业的职场精英人士，你可以花时间去研究一下如何在上面优化自己的职业档案，加入某些主题讨论或者发布职业需求。</p>
-<p>比如GitHub, 这里是程序员的天堂。每天都有各路好手在GitHub上交流技术经验，发布项目心得，你在这里能认识许多顶级互联网公司的大牛。</p>
-<p>再比如像36Kr、知乎等这种商业科技泛知识类平台，现在也能开通个人专栏。你对某个领域有什么见解，就坚持不懈写下去，只要内容够好就一定能吸引与你志同道合的人。</p>
-<p>总之，只要用心去找，你一定能找到可以展现自己才能的出口。</p>
-<p>那些只会埋头苦干却不懂展示自己的人，是一定要被淘汰的。因为你需要花更久的时间，被动地让别人去了解你，接受你，赏识你。</p>
-<p>但这个世界已经没有那么多时间去等你。</p>
-<p>得益于互联网的飞速发展，怀才不再像怀孕，非得时间久了才能看得出来。一个人有没有才能，他说几句话，写几篇文章，发表几个观点就能看得出来。</p>
-<p>刘备三顾茅庐的故事，现在基本不可能。除非你真有诸葛亮一般经天纬地之才，值得有人为你苦苦等待。否则，还是主动一点。</p>
-<p>我有个朋友，在简历上就会放自己的作品集网站和公众号链接。每次面试的时候，面试官都会问他这是什么。这就打开了场面，接下来他能滔滔不绝和对方聊好久。</p>
-<p>你看，主动一点，机会就能多一点。</p>
-<p>以上两点，都是外面的变化，给你带来的机遇。这些近在眼前的机会如果还抓不住，那就真的不是怀才不遇的问题了。</p>
-<p><img src="https://xqimg.imedao.com/16658d3d8f4a7f3feaef1439.jpg" alt=""></p>
-<p><strong>03</strong></p>
-<p><strong>如何让自己脱颖而出</strong></p>
-<p>大家说几个小建议。没有花里胡哨的办法，只有最淳朴的七个字：</p>
-<p>会写，会说，敢表现。</p>
-<p>之所以说淳朴，是因为每个人都知道，但并不是每个人都能做到。下面我分别来讲。</p>
-<p><strong>a）会写：勤于记录，积少成多</strong></p>
-<p>能够把你的所思所想用逻辑清晰、精炼的文字准确表达出来，这就叫会写。</p>
-<p>写作是成本最低的才能展示方法，也是未来每个人都要具备的底层核心能力。写作能力提高了，你的思维和表达能力也能够提升。</p>
-<p>那么如何训练呢？最简单的办法，就是写“日志”。</p>
-<p>注意，这个日志可不是朋友圈里的美食打卡或心情分享，而是你对时事热点的观察与思考。</p>
-<p>比如，为什么范冰冰补缴了8亿罚款就可以不被追究刑事责任？这背后的法律考量是怎样的？税法这么规定对以后的行业发展有什么指导意义？</p>
-<p>再比如，特斯拉的CEO 马斯克被迫退出董事会，这会对特斯拉未来的发展产生什么影响？为什么马斯克对特斯拉如此重要？他的接任者该如何处理接下来的烂摊子？</p>
-<p>这些问题都是很好的思维锻炼与写作的素材。大家可以把自己的思考从50字100字写起，然后逐渐扩充篇幅，从写几句话，变成慢慢写几段话，最后再扩充成文章。</p>
-<p>你写的篇幅越多，经验才会越足，对文字的驾驭能力也会越强。</p>
-<p>可能这时有些朋友会问：我很想写，但是文笔不好写不出来怎么办呢？</p>
-<p>这时你要去阅读。去找那些你认为写得好的作者的文章，耳濡目染地去感受他的写作思路和手法。时间久了，你写出来的东西就会带有这些人的印记。</p>
-<p>打个不恰当的比方，这就好像你看郭敬明的文章多了，你写出来的文字也会“悲伤逆流成河”。参照物的力量都是潜移默化地影响着你。</p>
-<p>当积累写到10万字的时候，你的写作能力会有一个质的飞跃。这时，你就拥有了展示自我才能的第一件武器。</p>
-<p><strong>b）会说：放大声量，刻意练习</strong></p>
-<p>能够把自己的观点声情并茂地讲出来，吸引听众的注意，这就是会说。</p>
-<p>你有没有发现，口才好的人在职场上往往占尽先机。即使你脑子里有一大套东西，可是讲不出来，一样是白搭。</p>
-<p>而那些会说的人，哪怕观点待斟酌，逻辑有问题，可在他的舌灿莲花下，这些瑕疵都能被掩饰过去。听众如果不仔细分析，很容易就被他这么带过去了。</p>
-<p>也许你会认为这是忽悠，但会忽悠的人，同样有本事。你可以学其精华，去其糟粕。</p>
-<p>怎么去做呢？最简单的方法，就是大声朗读。</p>
-<p>你可以把你喜欢的书籍或文章，在家对着镜子大声朗读出来，提高自己的演讲临场感。</p>
-<p>这个方法，来源于美国教授斯蒂夫卢卡斯写的《演讲的艺术》。在书中，他用这个简单的办法帮助了超过1000名“演讲恐惧者”克服障碍，流利演说。</p>
-<p><img src="https://xqimg.imedao.com/16658d3ec4d9fd3fe2d749d3.jpg" alt=""></p>
-<p>这里的秘诀在于，当你在大声朗读的时候，才能找到属于自己的说话节奏、习惯甚至毛病，这是除你之外其他人不可能知道的。只有通过亲身实践，你才可以找到最适合自己的演讲风格。</p>
-<p>更进一步，你还可以大声朗读自己写的作品。这时你会发现，文字写出来和说出来，是完全不同的感觉。这个就留待大家去实践琢磨，你会发现许多意外惊喜。</p>
-<p>除此之外，在日常生活中，你可以抓住任何交谈的机会，来锻炼自己的口才。比如拿奇葩说里的议题和朋友讨论，或者就某个新闻话题展开一番“小辩论”。这里并不用得出什么结论，而是在过程中不断练习说话的技巧。</p>
-<p>最后完毕了，再做一番简单的复盘，总结一下自己讲话的语气、动作、声量、节奏都有哪些特点，通过朋友的反馈来帮助你更好了解自己，提升讲话的能力。</p>
-<p>总之，用刻意练习的方法给自己创造机会多去说，它和写作一样都没有捷径，唯手熟尔。</p>
-<p><strong>c）敢表现：放下脸面，不怕冒头</strong></p>
-<p>上面两点说的都是技巧，最后这一点说的是心态。</p>
-<p>这个时代比的不再是谁更有才，而是谁更有胆。如今许多人即使有才也不表现出来，他这不是怀才不遇，而是怀才不敢。</p>
-<p>中国人都说枪打出头鸟，可看看我们周围那些闯出一番成绩的人，有哪个不是出头鸟？那些拼了命打压、嘲讽你的人，要么是自己也不敢，要么是害怕你比他还敢。而只有那些做不到的人，才会怂恿其他人也不要做到。</p>
-<p>《权力的游戏》里，狮家的主人泰温兰尼斯特有句话说的很对：</p>
-<p>“狮子从来不会去问羊的意见。”</p>
-<p><img src="https://xqimg.imedao.com/16658d40708bf63f7941eb6f.jpg" alt=""></p>
-<p>你如果真有一身才干，就不要去考虑那些懦弱胆小者的看法，而是去想如何利用大环境、渠道和资源来让自己的才能得到充分展现。</p>
-<p>还记得文章最开头说的无边界组织吗？这就是一个很好的征兆。未来社会给予人才的平台只会越来越多，竞争也会越来越激烈，再也不会有“酒香不怕巷子深”。</p>
-<p>所以请主动一点，不要像羊群一样永远呆在一个区域。而是运用互联网络、社交媒体等这些时代赋予你的武器，去开拓自己的视野与出口，像狮子一样去找寻猎物。</p>
-<p>以上就是今天的内容，最后简单总结一下：</p>
-<p>这个时代已经没有什么怀才不遇。</p>
-<p>世界正变得越来越扁平，身边能够展示才能的出口也越来越多。想要脱颖而出，最简单的办法就是培养自己写作和说话的能力，最后再加上充分的胆量，不要偏安一隅。</p>
-<p>记住，绵羊永远不可能成为狮子。</p>
-<p>各位共勉。</p>
-<p>作者：张良计</p>
-<p>本文来源：张良计（ID:zhang_liangj）</p>
-]]></content>
+      <title>机器学习极简入门课学习笔记-第十课(线性回归——从模型函数到目标函数)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E4%BB%8E%E6%A8%A1%E5%9E%8B%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E8%AF%BE-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E4%BB%8E%E6%A8%A1%E5%9E%8B%E5%87%BD%E6%95%B0%E5%88%B0%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="线性回归模型目标函数的一般形式"><a href="#线性回归模型目标函数的一般形式" class="headerlink" title="线性回归模型目标函数的一般形式"></a>线性回归模型目标函数的一般形式</h4><p><img src="../assets/images/006tNc79gy1fzmb3efunij30m401nq31.jpg" alt></p><p>上图公式中m为样本个数,y为样本真实标签值(如预测年薪与工作年份关系问题中的真实年薪）。</p><p>在 y = a + bx 这个模型函数中，a 和 b 是常量参数，x 是自变量，而 y 是因变量。</p><p>但到了 J(a,b) 中，x<sup>(i)</sup> 和 y<sup>(i)</sup>是常量参数（也就是 m 个样本各自的 x 和 y 值），而 a 和 b 成了自变量，J(a,b) 是因变量。能够让因变量 J(a, b) 取值最小的自变量 a 和 b，就是最好的 a 和 b。</p><p>我们要做的，就是找到最好的 a 和 b。</p><h4 id="多项式的阶"><a href="#多项式的阶" class="headerlink" title="多项式的阶"></a>多项式的阶</h4><p>多项式最高次项的幂次，就是多项式的次数(阶数)。</p><p>如下是一个二元四阶多项式：</p><p><img src="../assets/images/006tNc79ly1fzma4k26rnj30ab01w748.jpg" alt></p><h4 id="线性函数"><a href="#线性函数" class="headerlink" title="线性函数"></a>线性函数</h4><p>一阶（或更低阶）多项式，或零多项式。</p><h4 id="特征与线性模型之间的关系"><a href="#特征与线性模型之间的关系" class="headerlink" title="特征与线性模型之间的关系"></a>特征与线性模型之间的关系</h4><p>直角坐标系中，除了平行于 y 轴的那些直线之外，所有的直线都可以对应一个一维特征（自变量）的线性回归模型(一元多项式函数)。</p><p>但如果样本特征本身是多维的，则最终的线性模型函数是一个多维空间内的[一阶|零阶|零]多项式。</p><p>总结一下：特征是一维的，线性模型在二维空间构成一条直线；特征是二维的，线性模型在三维空间中构成一个平面；若特征是三维的，则最终模型在四维空间中构成一个体，以此类推。</p><h4 id="用线性回归模型拟合非线性关系"><a href="#用线性回归模型拟合非线性关系" class="headerlink" title="用线性回归模型拟合非线性关系"></a>用线性回归模型拟合非线性关系</h4><p>可以通过多项式代替的方式将非线性关系（如多阶多元多项式）拟合为线性关系模型（线性函数）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
     
+    
+    
     <entry>
-      <title><![CDATA[详解Android利用AIDL实现进程间通信]]></title>
-      <url>https://www.jacklee.work/Android-Development/2016-08-30-%E8%AF%A6%E8%A7%A3Android%E5%88%A9%E7%94%A8AIDL%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1.html</url>
-      <content type="html"><![CDATA[<h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。<br>在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对象的代码单调又难于开发，好在Android为我们提供了AIDL处理这些功能。</p>
-<h2 id="什么场合下用AIDL？"><a href="#什么场合下用AIDL？" class="headerlink" title="什么场合下用AIDL？"></a>什么场合下用AIDL？</h2><p>直接看官方指南:<a href="https://developer.android.com/guide/components/aidl.html的这段话：" target="_blank" rel="noopener">https://developer.android.com/guide/components/aidl.html的这段话：</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Note: Using AIDL is necessary only if you allow clients from different applications </span><br><span class="line">to access your service for IPC and want to handle multithreading in your service. </span><br><span class="line">If you do not need to perform concurrent IPC across different applications, you </span><br><span class="line">should create your interface by implementing a Binder or, if you want to perform </span><br><span class="line">IPC, but do not need to handle multithreading, implement your interface using a </span><br><span class="line">Messenger.</span><br></pre></td></tr></table></figure>
-<p>只有在你允许多个应用程序访问你提供的服务进行进程间通信，并且在提供的服务中涉及到多线程处理的时候才需要使用到AIDL。如果你无需处理多应用并发通信，你应该采用Binder进行进程间通信。如果你实现的进程间通信未涉及多线程处理，你需要采用Messenger进行进程间通信。<br>一般适用于为其它应用程序提供公共服务的Service，这种Service即为系统常驻的Service(如：天气服务，日历服务等)。</p>
-<h2 id="选择AIDL进行进程间通信有什么优缺点"><a href="#选择AIDL进行进程间通信有什么优缺点" class="headerlink" title="选择AIDL进行进程间通信有什么优缺点?"></a>选择AIDL进行进程间通信有什么优缺点?</h2><p>优点:<br>1.AIDL有自己的独立进程，不会受到其它进程的影响；<br>2.可以被其它进程复用，提供公共服务；<br>3.具有很高的灵活性。<br>4.相比Messenger,可以传输的数据量大。<br>缺点:<br>1.相对普通服务，占用系统资源较多，使用AIDL进行IPC也相对麻烦。</p>
-<h2 id="AIDL如何使用？"><a href="#AIDL如何使用？" class="headerlink" title="AIDL如何使用？"></a>AIDL如何使用？</h2><p>既然用AIDL的最终目标是进行不同进程间通信，那这里咱们搞两个APP，一个Server,提供一个Service，用来对传入的参数做加法运算，另外一个Client,调用Server提供的Service。</p>
-<h3 id="Server端实现"><a href="#Server端实现" class="headerlink" title="Server端实现"></a>Server端实现</h3><p>1.建立一个工程，命名:AIDLServer<br>2.新建AIDL文件,命名:IMyAidlInterface<br><img src="../assets/images/Create_AIDL_File.png" alt=""><br>3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。<br><img src="../assets/images/AIDL_File.png" alt=""><br>4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击<img src="../assets/images/SYNC.png" alt="">，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：<br><img src="../assets/images/AIDL_JAVA_File.png" alt=""><br>5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlserver;</span><br><span class="line">import android.app.Service;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.annotation.Nullable;</span><br><span class="line"></span><br><span class="line">public class AIDLService extends Service</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public class MyAidlImpl extends IMyAidlInterface.Stub</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public int add(int value1, int value2) throws RemoteException &#123;</span><br><span class="line">            return value1 + value2;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException &#123;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Nullable</span><br><span class="line">    @Override</span><br><span class="line">    public IBinder onBind(Intent intent) &#123;</span><br><span class="line">        return new MyAidlImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>6.注册AIDLService,在AndroidManifest里面加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;service android:name=&quot;jackleeforce.aidlserver.AIDLService&quot;</span><br><span class="line">            android:exported=&quot;true&quot;&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure></p>
-<p>Server端口开发到此结束，实际上就三步，新增AIDL文件，然后创建绑定服务，在服务内实现我们要对外暴露的接口，然后注册服务，大家注意注册服务时我们写的name值，后面要用到，android:exported=”true”表示导出这个服务接口。接下来我们实现客户端。</p>
-<h3 id="Client端实现"><a href="#Client端实现" class="headerlink" title="Client端实现"></a>Client端实现</h3><p>1.建立一个工程，命名:AIDLClient<br>2.把刚才在AIDLServer工程里面建的IMyAidlInterface.aidl文件拷贝过来，这里注意包名，一定要跟Server端的一致，可以直接从AIDLServer文件夹里面连同AIDL目录一起拷过来，然后在AS里面刷新一下文件就出现了,如图4:<br><br>3.我们刚才在服务端定义了一个add计算两个数字和的接口，现在在客户端要使用这个接口，为了演示，这里做个简单计算器好了，MainActivity布局文件如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    android:padding=&quot;16dp&quot;</span><br><span class="line">    tools:context=&quot;.MainActivity&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_a&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:inputType=&quot;number&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;+&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_b&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:inputType=&quot;number&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;=&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_result&quot;</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:enabled=&quot;false&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=&quot;@+id/calculate&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:onClick=&quot;onCalculate&quot;</span><br><span class="line">        android:text=&quot;计算&quot; /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure>
-<p>MainActivity.java代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlclient;</span><br><span class="line"></span><br><span class="line">import android.content.ComponentName;</span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.content.ServiceConnection;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.EditText;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line">import jackleeforce.aidlserver.IMyAidlInterface;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class MainActivity extends AppCompatActivity implements View.OnClickListener &#123;</span><br><span class="line"></span><br><span class="line">    private EditText et_a;</span><br><span class="line">    private EditText et_b;</span><br><span class="line">    private EditText et_result;</span><br><span class="line">    private Button btn_calc;</span><br><span class="line">    private IMyAidlInterface mService;</span><br><span class="line">    private AddServiceConnect mServiceConnect;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    </span><br><span class="line">        initUI();</span><br><span class="line">    </span><br><span class="line">        connectService();</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">    </span><br><span class="line">        releaseService();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void initUI()</span><br><span class="line">    &#123;</span><br><span class="line">        et_a = (EditText)findViewById(R.id.et_a);</span><br><span class="line">        et_b = (EditText)findViewById(R.id.et_b);</span><br><span class="line">        et_result = (EditText)findViewById(R.id.et_result);</span><br><span class="line">        btn_calc = (Button)findViewById(R.id.calculate);</span><br><span class="line">    </span><br><span class="line">        btn_calc.setOnClickListener(this);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">        switch (v.getId())</span><br><span class="line">        &#123;</span><br><span class="line">            case R.id.calculate:</span><br><span class="line">                calc();</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                break;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void calc()</span><br><span class="line">    &#123;</span><br><span class="line">        int a = Integer.parseInt(et_a.getText().toString());</span><br><span class="line">        int b = Integer.parseInt(et_b.getText().toString());</span><br><span class="line">    </span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            int result = mService.add(a, b);</span><br><span class="line">    </span><br><span class="line">            et_result.setText(String.valueOf(result));</span><br><span class="line">        &#125;</span><br><span class="line">        catch (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    class AddServiceConnect implements ServiceConnection</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onServiceConnected(ComponentName name, IBinder service) &#123;</span><br><span class="line">            mService = IMyAidlInterface.Stub.asInterface(service);</span><br><span class="line">    </span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;onServiceConnected&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void onServiceDisconnected(ComponentName name) &#123;</span><br><span class="line">            mService = null;</span><br><span class="line">    </span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;onServiceDisconnected&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void connectService()</span><br><span class="line">    &#123;</span><br><span class="line">        mServiceConnect = new AddServiceConnect();</span><br><span class="line">        Intent i = new Intent();</span><br><span class="line">    </span><br><span class="line">        i.setComponent(new ComponentName(&quot;jackleeforce.aidlserver&quot;,&quot;jackleeforce.aidlserver.AIDLService&quot;));</span><br><span class="line">        i.setPackage(getPackageName());</span><br><span class="line">    </span><br><span class="line">        boolean result = getApplicationContext().bindService(i,mServiceConnect, Context.BIND_AUTO_CREATE);</span><br><span class="line">        if (!result)</span><br><span class="line">        &#123;</span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;bindService failed&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void releaseService()</span><br><span class="line">    &#123;</span><br><span class="line">        unbindService(mServiceConnect);</span><br><span class="line">        mServiceConnect = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以看到MainActivity起来的时候调用我们实现的connectService去连接服务端提供的服务，咱们看一下上面的connectService函数，第104行创建一个AddServiceConnect对象，从85行可以看到AddServiceConnect是一个内部类，实现了ServiceConnection接口，一看重载的两个方法名字就能明白，这是一个回调接口，当服务成功连接上了会调用onServiceConnected方法，89行我在onServiceConnected方法中，将返回的Binder对象转换成AIDL接口，以后就可以通过这个AIDL接口去调用服务端暴露出来的Service（在服务端实现的add）。当服务端因异常或者主动断开后，会执行onServiceDisConnected方法，表示已经断开连接。<br>接下来再回到connectService函数，第105行创建了一个Intent对象，接下来107和108两行代码非常关键，可以说是一个大坑，照着网络上大部分博文学习AIDL，最后无法成功绑定服务就是因为写错，107行设置Intent对象的ComponentName，第一个参数服务端的包名，第二个参数服务端暴露的Service名字,也就是前面实现服务端代码时在AndroidManifest里面注册的Service Name，这里是jackleeforce.aidlserver.AIDLService，由于Andorid 5.0以后不允许使用匿名Intent对象，这里在108行通过setPackage方法设置包名。然后在110行通过bindService函数去绑定服务。</p>
-<p>到这里我们Server端与Client端代码都实现完成了，这里总结一下：<br>服务端<br>1.定义AIDL文件。<br>2.定义要暴露的的Service，并在里面实现AIDL文件中声明的方法。<br>3.注册Service，明确Service Name，并将Service声明成Export。</p>
-<p>客户端<br>1.引入AIDL文件。<br>2.通过bindService函数去绑定服务端暴露的Service,系统会通过我们指定的Service Name找到这个Service，成功连接了以后会返回一个Binder对象，我们要用Stub.asInterface将这个Binder对象转换成我们需要的AIDL对象，这个AIDL对象的类实现代码就是系统自动为我们引入的AIDL文件生成的JAVA文件。<br>3.有了AIDL对象，我们就可以调用里面暴露的接口了。</p>
-<p>分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：<br><img src="../assets/images/Result.gif" alt=""></p>
-<p>以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。</p>
-<p>本文中的两个工程例子在此：<a href="https://github.com/lijiahua/AIDL_Test" target="_blank" rel="noopener">https://github.com/lijiahua/AIDL_Test</a></p>
-]]></content>
+      <title>机器学习极简入门课学习笔记-第九课(最常用的优化算法——梯度下降法)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B9%9D%E8%AF%BE-%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-28-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B9%9D%E8%AF%BE-%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="目标函数，损失函数，代价函数"><a href="#目标函数，损失函数，代价函数" class="headerlink" title="目标函数，损失函数，代价函数"></a>目标函数，损失函数，代价函数</h4><p><a href="https://www.zhihu.com/question/52398145" target="_blank" rel="noopener">机器学习中的目标函数、损失函数、代价函数有什么区别</a></p><h4 id="凸函数"><a href="#凸函数" class="headerlink" title="凸函数"></a>凸函数</h4><ul><li>同济大学高等数学定义</li></ul><p>设 f(x) 在区间 I 上连续，如果对 I 上任意两点 x_1,x_2 ，恒有<br><img src="../assets/images/006tNc79ly1fzm5cg0apyj30go01nq33.jpg" alt></p><p>那么称 f(x) 在 I 上的图形是（向上）凹的（或凹弧）；如果恒有<br><img src="../assets/images/006tNc79ly1fzm5dm8d45j30go01nq33.jpg" alt></p><p>那么称 f(x) 在 I 上的图形是（向上）凸的（或凸弧）。</p><p>这个定义是直接从几何直观上得来的。如果在曲线弧上面任意取两点，连接这两点的弦总是在弧段的上方，那么曲线就是（向上）凹的，反之也有可类比的结论。取一个特殊的点，即弦的中点，曲线的凹凸性可以用弦的中点与曲线弧上具有相同坐标的点的位置关系来描述。<br><img src="../assets/images/006tNc79ly1fzm5epe4q9j30d705s3z3.jpg" alt></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">前人的工作已经保证了经典机器学习模型的目标函数都是凸函数。未来在应用中构建自己的目标函数，那么千万记得在直接应用任何优化算法之前，应该先确定它是凸函数。</span><br></pre></td></tr></table></figure><h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>算法不能学习，需要人为设定的参数，就叫做超参数。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
     </entry>
+    
+    
+    
+    <entry>
+      <title>机器学习极简入门课学习笔记-第八课(模型的质量和评判指标)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AB%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%B4%A8%E9%87%8F%E5%92%8C%E8%AF%84%E5%88%A4%E6%8C%87%E6%A0%87.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AB%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%B4%A8%E9%87%8F%E5%92%8C%E8%AF%84%E5%88%A4%E6%8C%87%E6%A0%87.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="分类模型的评判指标"><a href="#分类模型的评判指标" class="headerlink" title="分类模型的评判指标"></a>分类模型的评判指标</h3><h4 id="精准率-查准率（Precision）"><a href="#精准率-查准率（Precision）" class="headerlink" title="精准率/查准率（Precision）"></a>精准率/查准率（Precision）</h4><p>Precision=TP/（TP+FP），即在所有被预测为 Class_A 的测试数据中，预测正确的比率。</p><p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望选出来认为是好瓜的准确率尽可能高，则这个概念叫精准率/查准率。</p><h4 id="召回率-查全率（Recall）"><a href="#召回率-查全率（Recall）" class="headerlink" title="召回率/查全率（Recall）"></a>召回率/查全率（Recall）</h4><p>Recall=TP/（TP+FN），即在所有实际为 Class_A 的测试数据中，预测正确的比率。</p><p>如&lt;&lt;机器学习&gt;&gt;(周志华)中的描述，对一堆西瓜进行分类为好瓜和坏瓜，希望尽可能的选出里面所有的好瓜，则个概念叫召回率/查全率</p><h4 id="F1Score"><a href="#F1Score" class="headerlink" title="F1Score"></a>F1Score</h4><p>F1Score = 2<em>(Precision </em> Recall)/(Precision + Recall)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">此处需要注意，P、R、F1Score 在分类问题中都是对某一个分类而言的。如针对一堆西瓜中的好瓜，有P,R,F1Score。对一堆西瓜中的熟瓜，也有P,R,F1Score。</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">假设一个模型总共可以分10个类，那么对于每一个类都有一套独立的 P、R、F1Score 的值。衡量模型整体质量，要综合看所有10套指标，而不是只看一套。</span><br></pre></td></tr></table></figure><h4 id="TP"><a href="#TP" class="headerlink" title="TP"></a>TP</h4><p>True Positive</p><h4 id="TN"><a href="#TN" class="headerlink" title="TN"></a>TN</h4><p>True Negative</p><h4 id="FP"><a href="#FP" class="headerlink" title="FP"></a>FP</h4><p>False Positive</p><h4 id="FN"><a href="#FN" class="headerlink" title="FN"></a>FN</h4><p>False Positive</p><h4 id="欠拟合（Underfitting）"><a href="#欠拟合（Underfitting）" class="headerlink" title="欠拟合（Underfitting）"></a>欠拟合（Underfitting）</h4><p>如果一个模型，在训练集上的预测结果就不佳，指标偏低，那一般是欠拟合的问题。</p><p>欠拟合多数情况下是因为选定模型类型太过简单，特征选取不够导致的</p><h4 id="过拟合（Overfitting）"><a href="#过拟合（Overfitting）" class="headerlink" title="过拟合（Overfitting）"></a>过拟合（Overfitting）</h4><p>训练过程中为了尽可能命中训练集所有标签，导致最后训练出来的模型对训练集的验证误差率很低，但是当使用该模型运用在其他验证集或者测试集上时，该模型的误差率陡然增高的现象。</p><p>过拟合则可能是模型太过复杂，特征选择不当（过多或组合不当）造成的。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">无论是过拟合问题还是欠拟合问题，增大训练数据量都可能会有所帮助。</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>机器学习极简入门课学习笔记-第七课(模型的获取和改进)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%83%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%8E%B7%E5%8F%96%E5%92%8C%E6%94%B9%E8%BF%9B.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%83%E8%AF%BE-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%8E%B7%E5%8F%96%E5%92%8C%E6%94%B9%E8%BF%9B.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="构建模型的一般步骤"><a href="#构建模型的一般步骤" class="headerlink" title="构建模型的一般步骤"></a><span id="BuildModel">构建模型的一般步骤</span></h4><ul><li><p>Step-1：数据准备。</p><ul><li>Step-1.1 数据预处理：收集数据、清洗数据、标注数据。</li><li>Step-1.2 构建数据的向量空间模型（将文本、图片、音频、视频等格式的数据转换为向量）。</li><li>Step-1.3 将构建好向量空间模型的数据分为训练集、验证集和测试集。</li></ul></li><li><p><span id="Step2">Step-2</span>：训练——将训练集输入给训练程序，进行运算。训练程序的核心是算法，所有输入的向量化数据都会按该训练程序所依据的算法进行运算。训练程序输出的结果，就是模型。</p></li><li><p>Step-3：测试——将测试集数据输入给训练获得的模型，得到预测结果；再将预测结果与这些数据原本预期的结果进行比较。</p></li></ul><h4 id="有监督学习过程中对数据集的划分"><a href="#有监督学习过程中对数据集的划分" class="headerlink" title="有监督学习过程中对数据集的划分"></a>有监督学习过程中对数据集的划分</h4><ul><li><p>训练集（Train Set）：用来做训练的数据的集合。</p></li><li><p>验证集（Validation Set）：在训练的过程中，每个训练轮次结束后用来验证当前模型性能，为进一步优化模型提供参考的数据的集合。</p></li><li><p>测试集（Test Set）：用来测试的数据的集合，用于检验最终得出的模型的性能。</p></li></ul><p>每个集合都应当是独立的，和另外两个没有重叠。</p><p>训练集是训练过程的基础，而验证和测试集则是在不同阶段用来评价训练结果的。</p><h4 id="训练的过程"><a href="#训练的过程" class="headerlink" title="训练的过程"></a>训练的过程</h4><p><a href="#BuildModel">构建模型的</a>过程中<a href="#Step2">Step-2</a>训练，又可以细化为几个步骤。</p><ul><li><p>Step-2.1： 编写训练程序。</p><ul><li>Step-2.1.1： 选择模型类型；</li><li>Step-2.1.2： 选择优化算法；</li><li>Step-2.1.3： 根据模型类型和算法编写程序。</li></ul></li><li><p>Step-2.2： 训练 -&gt; 获得临时模型。</p></li><li><p>Step-2.3： 在训练集上运行临时模型，获得训练集预测结果。</p></li><li><p>Step-2.4： 在验证集上运行临时模型，获得验证集预测结果。</p></li><li><p>Step-2.5： 综合参照 Step-2.3 和 Step-2.4 的预测结果，改进模型。</p></li><li><p>Step-2.6： Step-2.2 到 Step-2.5 反复迭代，直至获得让我们满意，或者已经无法继续优化的模型。</p></li></ul><h4 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h4><p>超参数是需要模型训练者自己来设置和调整的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>机器学习极简入门课学习笔记-第六课（机器学习三要素之数据、模型、算法）</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AD%E8%AF%BE%EF%BC%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%89%E8%A6%81%E7%B4%A0%E4%B9%8B%E6%95%B0%E6%8D%AE%E3%80%81%E6%A8%A1%E5%9E%8B%E3%80%81%E7%AE%97%E6%B3%95%EF%BC%89.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-01-25-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%85%AD%E8%AF%BE%EF%BC%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%89%E8%A6%81%E7%B4%A0%E4%B9%8B%E6%95%B0%E6%8D%AE%E3%80%81%E6%A8%A1%E5%9E%8B%E3%80%81%E7%AE%97%E6%B3%95%EF%BC%89.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="向量空间模型-Vector-Space-Model，VSM"><a href="#向量空间模型-Vector-Space-Model，VSM" class="headerlink" title="向量空间模型(Vector Space Model，VSM)"></a>向量空间模型(Vector Space Model，VSM)</h4><ul><li>向量指一个同时具有大小和方向的几何對象。</li><li>向量空间模型负责将格式（文字、图片、音频、视频）转化为一个个向量，即将真实世界里的各种对象转换为计算机可以识别的数值。</li></ul><h4 id="特征向量-Feature-Vector"><a href="#特征向量-Feature-Vector" class="headerlink" title="特征向量(Feature Vector)"></a>特征向量(Feature Vector)</h4><p>描述一份样本数据中所有的特征所转换出来的向量叫做这份数据的特征向量</p><h4 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h4><p>特征工程，包括以下两个步骤：</p><ol><li>确定用哪些特征来表示数据；</li><li>确定用什么方式表达这些特征。</li></ol><h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><p>模型是机器学习的结果，这个学习过程，称为训练（Train）。</p><p>一个已经训练好的模型，可以被理解成一个函数： y=f(x)。</p><p>我们把数据（对应其中的 x）输入进去，得到输出结果（对应其中的 y）。</p><p>这个输出结果可能是一个数值（回归），也可能是一个标签（分类），它会告诉我们一些事情。</p><h4 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h4><p>训练就是：根据已经被指定的模型类型，结合训练数据，计算出其中各个参数的具体取值的过程。</p><h4 id="损失函数（Loss-Function）"><a href="#损失函数（Loss-Function）" class="headerlink" title="损失函数（Loss Function）"></a>损失函数（Loss Function）</h4><p>在有监督学习过程中，经过对一份训练数据的学习后，得到一个模型y‘=f(x)，再对另外一份验证数据运用这个模型计算出来得到的标签值y’与验证数据正确的标签y的差别，记做L（y, y’）= L(y, f(x))。</p><h4 id="代价函数（Cost-Function）"><a href="#代价函数（Cost-Function）" class="headerlink" title="代价函数（Cost Function）"></a>代价函数（Cost Function）</h4><p>代价函数一般写作：J（theta）。<br>???</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>（转载）股民何苦为难股民，技术分析是用来骗我的吗？</title>
+      <link href="/%E8%B4%A2%E7%BB%8F/2018-10-12-%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89%E8%82%A1%E6%B0%91%E4%BD%95%E8%8B%A6%E4%B8%BA%E9%9A%BE%E8%82%A1%E6%B0%91%EF%BC%8C%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%E6%98%AF%E7%94%A8%E6%9D%A5%E9%AA%97%E6%88%91%E7%9A%84%E5%90%97%EF%BC%9F.html"/>
+      <url>/%E8%B4%A2%E7%BB%8F/2018-10-12-%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89%E8%82%A1%E6%B0%91%E4%BD%95%E8%8B%A6%E4%B8%BA%E9%9A%BE%E8%82%A1%E6%B0%91%EF%BC%8C%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90%E6%98%AF%E7%94%A8%E6%9D%A5%E9%AA%97%E6%88%91%E7%9A%84%E5%90%97%EF%BC%9F.html</url>
+      
+        <content type="html"><![CDATA[<p>转载自雪球</p><p>今天的市场气氛到达了新的一轮冰点，买？卖？价值投资？技术分析？</p><p>雪球量化投资大V@许哲 讲述了他在追求技术指标路上的思考，最终的结论有些振聋发聩，在此分享给大家！</p><p>作者：许哲</p><p>我不知道诸位是如何接触到金融投机的。不知道你第一笔交易是如何完成的，第一个交易的品种是什么，第一次开仓的依据是何。  </p><p>但有一点是可以肯定的，每个没有放弃在市场里搏杀，坚持不懈的朋友，都经历过很痛苦的阶段。如果你还没经历，请做好心理准备。  </p><p>笔者并非金融专业出身，金融学知识和经济学知识都是大学毕业后才自学的。在学到这些非常必要的知识前，就因缘巧合接触到了金融投机。  </p><p>第一次被神秘复杂的K线图和各种眼花缭乱的技术分析捕获眼球，就犹如被一种魔法诅咒着，从此难以抽身。  </p><p>在了解了基本的常识后，用软件浏览了许多主流的技术指标们，回望过去，比比划划弄弄，似乎并不难。你瞧这里一个信号就很准，那里一个信号如果抓到那就发财了。每一次接触一种新的技术分析方法，就如同打开了一扇窗户，遥想着当年该交易体系的发明者如何叱诧风云，笑傲市场，壕取千金于万里之外，如探囊取物。  </p><p>当然，兴奋完不久后，就会发现这些信号并不是次次百发百中，偶有失手再所难免，总有些例外情况。用肉眼目测了过往的情况，测算测算如果信号准确时的利润，似乎有些瑕疵也是可以接受的。  </p><p>再多接触了几套交易系统之后，发现有两大派别，一种总是告诉你，快要粗大事了！准备好历史机遇。另外一派总是忧心忡忡，这涨得过头了吧，那个跌得已经离谱了，超买超卖好严重啊，赶快赶在市场修正错误前入场。到底谁说得对呢？<br>纸上得来终觉浅，绝知此事要躬行。开个实盘试试！  </p><p>神奇的是，刚刚入场的肥羊，哦，不，是新手们总是能赚到不少钱的。我也不例外，在做肥羊的最初阶段，几周能就获得了翻倍的利润。  </p><p>过了不久，咦？技术指标怎么接连失败。复盘的时候，明明很神奇，很威武的呀。</p><p>肉眼复盘的时候，总发现有些指标在有些特定的时候特别神勇，而恰恰另外的指标会提醒我们时机未到，就好像有许多大臣在给国王提建议，或许，兼听则明，偏听则暗？  </p><p>单个指标总是有缺陷的嘛，人无完人，指标也无万能的，我们要构建自己的交易系统，多个指标取长补短，认真复盘，认真思考，秘密一定就在细节里。  </p><p>艰苦卓越的复盘，指标组合，反复琢磨，反复咀嚼，我不知道有多少人花了多少个不眠夜，苦苦上下而求索。我反正是陷进去了。  </p><p>日复一日，有时间也不看美剧了，游戏也不打了，全世界最最神秘的，最有趣的事情，就是技术分析的有效性。盯住屏幕，反复掂量，反复推敲。  </p><p>推敲推敲再推敲，无数次似乎顿悟来临，无数次希望破灭，人如同着魔一般，偏不信唯独我，不能拥有属于自己的交易系统，独步江湖。天道酬勤，功夫不负有心人，学海无涯苦作舟，反复激励着自己，顽强得度过一个个不眠夜。  </p><p>市面上的交易系统，没有没学过的。  </p><p>什么线都画过，什么多周期共振分析，还买了多屏一起看。  </p><p>上图是网上找来的，不过绝非个案，这样做的交易员比比皆是。  </p><p>艰苦卓绝的奋斗并没有带来让我真正的收获，有的只是一次次希望化成泡影而已。如果说这条路，我因为不够努力，所以没有走通，我想我的生理极限已经不能支持我做下去了。  </p><p>到底有没有用？为什么看着总有效而用着用着总出问题？  </p><p><strong>昨夜西风凋碧树。独上高楼，望尽天涯路。欲寄彩笺兼尺素。山长水阔知何处。</strong>  </p><p>后来我学习了心理学和神经科学的一些知识后，知道人拥有无法克服的自利偏差和后视偏差。自利偏差意味着你一定会朝自己有利的方向产生偏见，<strong>一旦你对某技术指标产生信心后，你会强化它的优势，而忽视它的缺陷。</strong>  </p><p>后视偏差，会造成大量的事后诸葛亮的情境，把未来的信息不自觉得带入进去。这些是人性，人性是客观存在的，和人性斗争是很艰难的事情。  </p><p>《海龟交易法则》还宣扬了一种理念，不是系统不OK，是你的心态不OK。学会冷酷机械得操作，把仓位资金管理做成机器人一般，就能获得成功，打败市场。  </p><p>一群毫无交易经验的年轻人，因为崇拜，言听计从，从而笑傲华尔街。  </p><p><strong>击败人性就击败了市场，战胜自己，就能赢得未来。听上去好有道理，但机械执行好难啊，心里好煎熬啊。</strong>  </p><p>好在，我是码农出身，会写代码（大学期间还拿过全国性比赛的前三名，拿过风投，技术勉强还算靠谱），何不用计算机来克服人性呢？计算机不会有自利偏差和后视偏差（前提是你的程序不能使用未来信息）。况且，组合出来的技术指标组合浩瀚如海，如何能用人力去做这些事情呢？况且做得还不好。  </p><p>海龟交易法则那个时代，可没那么好的IT技术。  </p><p>想到这一点，再次扎入代码中，开始艰苦卓绝地架构，coding，debug，历史回测，分析效果，想办法提高计算效率，如何利用并行计算让能用得上的所有计算设备一起没日没夜得跑起来。如此循环往复，不知疲倦。<br>编程，真是现代人处理信息的必备技能，编程赋予人很大的自由，在处理信息的过程中，不再受制于许多软件的不称心，上限多半在于你的编程技能，而非他人。  </p><p>从满屏幕的技术指标，变回了满屏幕的各种代码，CPU 永远满转。没日没夜得比划果然不如没日没夜得coding来得高效。那我收获了“圣杯”吗？  </p><p>我曾经以为我收获了。此时的我，已经不是一个人在奋斗了，有一群志同道合的小伙伴们和我一起探索着这诱人的谜题，我们为了洞悉那牵扯着千万人的奥秘，无数人魂牵梦绕的圣杯，不知疲倦得做着工作。  </p><p>对几乎所有可行的，有确定性描述的技术体系，进行分析后，我们获得了很多有意思的统计结果。动用了大量的计算资源，弄废了若干可怜的硬盘后，对着统计数据，有些怪样的感受。  </p><p>比较知名的技术指标，MACD 能勉强超过50%的准确率，只是勉强超过而已，如果没有交易成本和流动性问题，冷血得执行该指标提示的方法，能不能赢钱还得靠运气。  </p><p>RSI 的表现极不稳定，胜率总算过半，而KDJ的表现糟糕得让人难以置信。  </p><p>胜率超过50%的技术分析策略虽然多，但出现的频次和分布都非常不均匀。曲线非常不平滑，或者说，夏普率非常低。我们在进行着技术指标的整合的时候，运用了统筹规划的一些数学技巧。  </p><p>在大量的统计结果和有序的规划后，我们获得了一个在回测上近乎完美的技术分析体系，曲线的平滑程度让人心醉，收益之高，让人惊鄂。200%的年化回报，是在有资金管理和风险控制的前提下可以预期的。  </p><p>将所有可得到技术指标进行到冷酷无情，毫无人性的计算机系统统计，毫无偏见的，赤裸裸的数据。加上数学上的统筹规划，无可置疑的客观性。</p><p>技术分析，简直是做绝了。系统上线运行，神勇一如预期，收益的速度和历史回测完全一致。似乎，熬到头了。  </p><p>系统有效了小半年，开始出现难熬的回撤，当然，对于回撤我们是有心理准备的。不久后系统又恢复了盈利，似乎又回归正常的状态中。  </p><p>然而，一次又一次不明原因偏离预期，让我信心产生了动摇。  </p><p>我相信，技术指标类体系，我们近乎一网打尽，在客观性和准确性方面已经做到极限。彼时，我无法再想象还能如何提高系统的有效性。  </p><p>问题出在哪里？到底哪里做得不够好？这问题为何如此难解？或许，这问题有答案吗？这个无数先辈反复琢磨的圣杯，存在吗？  </p><p>是鲁棒性不好吗？学习集和测试集反复互相倒腾，无时不刻担心过度学习的问题。到底是哪里没做好？</p><p>有人误会，认为不需要预测价格，其实只要一个正预期收益的系统就OK了。然而一个正预期收益的系统需要的是概率。而统计能给出的，只是频率而已。概率和历史出现频率，是两码事情。  </p><p>既然所有技术指标都是过去价格或者交易量的汇总分析，所有的技术指标都是对过去历史价格的一种解释。那么从信息的角度来说，技术分析的任意组合不可能突破价格所包含的信息。  </p><p>这里有篇科普文，解释为什么一种叫神经元网络的东西，能够拟合出任意函数：Neural networks and deep   learning。  </p><p>对，神经元网络，无论指标如何玩花活，都是历史价格的函数，他们到底能不能预示未来？或者一定程度上获得置信区间？  </p><p>神经元网络的灵感来自于人类大脑，这一技术已经拥有了非常丰富的技术积累和现成工具。动用自己的编程技能，开始捣鼓了起来。  </p><p>一遍遍调参数，看结果。已经习惯了打击。  </p><p>难道过去的价格，并不包含未来的价格走向吗？<strong>光看这个论点，似乎不至于振聋发聩，然而，世面上几乎所有的技术分析，都是根据历史价格来敲定的。</strong>  </p><p>这是一个多么不一样的世界，在我学习计算机科学技术的时候，书上告诉你的东西，或许不准确，但你实践后，按照书上的代码上机后多半是实践成功的。  </p><p>电视上，杂志上，网络上大家讨论的东西，都是确定的。上编译器确认一下，你就会发现，虽然有大量的偏见，至少不是在争吵着子虚乌有的东西。  </p><p>可如果过去的历史价格，并不是未来价格的一种预言。那所有的相关书籍，无数人讨论得热烈无比的技术，电视上专家的口若悬河，难道完全是扯淡？  </p><p>全世界都在瞎扯淡，就你聪明？我还不至于狂妄自大到这个程度，总觉得问题出在自己这里，神经元网络也不是万能的嘛，换一换它的强劲对手SVM，支持向量机。光听名字就高大上啊。  </p><p>支持向量机作为人工智能另外一个很有前途的领域，被广泛看好。当然深度学习的火热是后来的事情了，当年并没有听说过。  </p><p>感谢开源世界，让我得以方便得使用前人的智慧。  </p><p>一遍一遍又一遍，挑灯夜战已经习以为常，失望，也已经习以为常。  </p><p>模型的维度越来越高，复杂程度已经失控。不变的是，过去的历史价格作为输入。我是有多不愿意承认，过去的价格并不包含对未来的预言。  </p><p>否定这个，就是否定了自己过去那么多不眠夜，那么多废寝忘食，那么多心血，那么多努力，那么多那么多东西。  </p><p>难熬，真的难熬。  </p><p>短暂的逃避后，重新开始思考，在推翻一切之前，让我再回望一下我心血凝结的尸体，回眸一下那曾经妩媚的身影，究竟是倒毙于自身的缺陷，还是所有的一切，终究不过是黄粱一梦。  </p><p>我为何从这条路开始探索下去的？对，我是受了软件的暗示，似乎技术指标蕴藏着奥秘，只要解开，就能获得财务自由。从一开始，我就被引导着。  </p><p>不要听信任何人的指引，我会怎么做？如果我从来不知道技术分析这回事情，我会怎么办？我将如何面对市场？  </p><p>在放下所有，放空自己，摈除所有偏见后，开始思考最本初的一些疑问。  </p><p>下面大量内容引述自果壳网的多篇文章，我之前在知乎的交流中也大量使用。我们且放下市场，做个小小的旅行。  </p><p>说两个段子：  </p><p>“指导员做战前动员，称“只要冲锋足够快，就不会受伤”。你拼尽全力冲锋，可战后却浑身血淋淋地被抬了回来。  </p><p>你说指导员的话不对，指导员却说：“那是因为你冲得不够快，否则就不会受伤了，记着下次冲快点啊。”面对这么流氓的解释，你只能哑口无言。但你已经知道了他是个骗子，原因在于他根本就没有给出冲锋足够快的标准，无论你冲得有多快，只要你受伤了，他永远可以称原因是你不够快，他的说法“永远正确”。”  </p><p>李大娘相信黄大仙，她认为世上万事万物，包括你我的思想都是由一只超级黄鼠狼完全控制着，当然包括我这篇文章的写作。依托这只黄鼠狼，李大娘可以解释一切，下雨是它流鼻涕，打雷是它打喷嚏。你还别跟李大娘较劲，因为你永远都无法证明这个黄鼠狼是不存在的。  </p><p>指导员和李大娘的说法有一个共性，那就是说法本身根本就没有可以否定它的途径，用科学哲学的术语说，就是该说法本身不具有“可证伪性”。  </p><p><strong>如果你数了上五浪后做空失败了，是你对浪的界定出问题了，我们时间拉得更长点你就发现，果然可以解释得通。第三浪最强，可你发现突然转向了，其实你看的是最后一浪了。下三浪还没完怎么就结束了呢？其实三浪早结束了，你数错了。</strong>  </p><p>各位知道我在说什么吗？这种理论永远不会错！怎么说都说得圆。  </p><p>我们再来假设一个场景：</p><p>A、B两人对于太阳升起分别提出了两种观点：<br>A：太阳从东边升起。<br>B：太阳从所有方向升起。</p><p>其中，A是可以被证明是假的，只要我们找到一次太阳不是从东边升起的情况，就可以证明A是错的了。  </p><p>但是B的理论可以说是完美，根本找不到任何方法证明他是错的。</p><p>实际上A和B都没有办法证明他们的理论是正确的。  </p><p>A的理论，完整看是这样的：从人类确立方向开始，太阳都是从东边升起的，从而推知太阳从地球形成到消亡，都会从东边升起。<br>B的完整理论是：从地球形成以来，太阳就可能从任意方向升起，从人类确立方向以来，太阳都是从东边升起的，并且会在未来的某个时间改变。  </p><p>如果A和B要证明自己正确，那么就需要有地球从形成到消亡，所有的太阳升起方位的证据，这是不可能的。  </p><p>大家都有的证据就只有从人类记录太阳升起以来的资料，也就是有限的证据，单靠这些证据，两人都无法证明自己的观点是正确的。  </p><p>都无法证明，两者的理论全部都是不可靠的。  </p><p>一万个例子都无法证明，只用一个真实的反例就足够证伪。前提是，该问题是可以证伪的。<strong>如果一个理论，不可证伪，那压根就没有任何科学价值。  </strong><br>太多太多的技术分析流派，宣示的理论，连可证伪性都不具备。这和指导员和李大娘没有任何本质区别，拥有的，<strong>不过是一大堆图形拼凑起来的迷信罢了。</strong>  </p><p>某形态出现后，是庄家入场了，这里暗示着投资者情绪的发酵。这些言论听着都很有可能性。是的，有可能性而已，如何证明这条K线不是庄家买入的呢？如何证明不是情绪的躁动呢？我反正是没办法指出他们错在哪里的，永远有可能。  </p><p>每当他们的技术分析失效时，他们总是会告诉你忽略了什么东西，不管他之前有没有说明过，或许，是他的最新发现呢，系统终于得到修复，呵呵。  </p><p>那我们之前做的统计分析是可证伪的吗？是的，成不成，看多看空都是确定的，没法作弊的。要么盈利，要么亏损，不存在模棱两可。  </p><p>在了解了不可证伪就是耍流氓，就是迷信后，我们再回顾一下，人类的思维方法，<br>人类得出结论分两种方法：演绎法与归纳法。</p><p>我们熟悉的三段论是个好例子：</p><p>A 所有人都会死<br>B 苏格拉底是人<br>C 苏格拉底会死  </p><p>这个推论就是演绎法，我们通过已知的普遍规律和一个事实，能推断出一个确定的结论。这种方法叫做演绎。  </p><p>归纳法不一样</p><p>A 柏拉图最后死了<br>B 苏格拉底最后也死了<br>C 人最后都会死  </p><p>归纳法的出发点不是确定性的规律，而是观察到的现象，我们观察到现象并且从中总结出一些可能的规律。最后形成我们对规律的总结。  </p><p>关于这些哲学问题，推荐阅读 《科学哲学》。  </p><p>休谟的论断虽然古老，但至今仍然是个魔咒。演绎的法则是可靠的，而所有的归纳都是不可靠的。因为归纳法有个终极的缺陷，我们无法得到所有的样本。  </p><p>就算我们获取了历史上的所有样本，我们也无法避免未来太阳突然从西北方向升起，因为一个样本的例外就足够证伪，就算之前的一亿个成功样本，都没办法。  </p><p>之前人们看到的天鹅都是白色的，黑天鹅一词基本等同于“龟毛兔角”，意喻不存在的事情。直到大航海时代，人们在澳洲真的发现了黑色的天鹅。  </p><p>归纳法永远无法摆脱这个宿命，黑天鹅一词也从龟毛兔角的涵义变化为历史上从未发生过的事情的比喻。任何以归纳法作为根基的策略，都逃不出这个宿命。  </p><p>演绎法则是严格可靠的。  </p><p>在粗浅得学习了哲学后，猛然发现我大学里学习的数理逻辑学，原来是那么得有智慧。我忽略了太多东西。哲学，特别是科学哲学，应该是在学习任何技巧前都应该好好过一遍的东西，而之前的我，愚蠢得看到前人的经验就迫不及待得去了解，连对经验应该抱有什么样的态度都不知道，蠢死了。  </p><p>也怪我之前学习的是计算机科学，似乎知识都是可靠的，至少不会太不靠谱，甚至完全不着边际。  </p><p>而一切一切我看到的技术分析，都没有逃离归纳法的诅咒范围。且不论它们自身永世无法脱离归纳法永恒的缺陷，就归纳本身而言，它们都算不上好的归纳。</p><p>摆脱一切我以前相信的东西之后，学习真正的知识，见识到人类智慧的可悲局限的时候，我终于获得了释然，彻底的释放。  </p><p><strong>是的，就算是归纳，这些技术分析都谈不上上档次。  </strong><br>居然被骗那么久，只怪自己蠢，自己太心急，急于看出点什么东西。人类的大脑是个模式识别器，而且进化总要求你快速得识别模式。  </p><p>以至于当我看到花花绿绿的技术分析后，总是急于给出自己的模式识别。  </p><p>蠢即是恶，要为自己的愚昧付出代价，无数的日日夜夜就是代价。我一点都不冤枉。  </p><p>自此，脱胎换骨。  </p><p>恨自己没有早些学习哲学，恨自己急于获取可见的知识，而没有深入思考思考这东西。恨自己以为勤奋和刻苦就能有回报。  </p><p>没有眼睛，狂奔在走向毁灭的道路上，是不会有上帝来怜惜的。自己背负因果，没人可以代替。  </p><p>不再纠结于神经元网络或者SVM是不是冤枉了技术分析的能力，从可证伪性和演绎归纳的区别性质上，已经足够洞见差别。  </p><p>重新审视策略，原来多年牛角尖钻错了地方。外加在探索的过程中学习了大量的金融学知识，极大得拓宽了眼界。不再把自己困在单个市场上价格的猜涨猜跌中。事实上，我已经彻底放弃了价格的猜测，本来以为只有猜价格才是获利的唯一方法，这就是不学习的罪恶，无知就是罪恶。  </p><p>重新启程，摆脱思维习惯，以可证伪性为基本条件，严格的演绎作为推论方式，规避归纳法，重新制定策略。  </p><p>天可怜见，走了老大的弯路，总算踏上了正途。  </p><p>当初想要学习和了解哲学方面的知识，并没有带着强烈的目的性。谁曾料想，猛然触及到了那么多时间挣扎深陷的问题之症结所在。犹如在他乡的远足中，偶遇知音。  </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 财经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 转载,投资,技术,财经 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>（转载）这个时代没有怀才不遇</title>
+      <link href="/%E8%B4%A2%E7%BB%8F/2018-10-10-%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89%E8%BF%99%E4%B8%AA%E6%97%B6%E4%BB%A3%E6%B2%A1%E6%9C%89%E6%80%80%E6%89%8D%E4%B8%8D%E9%81%87.html"/>
+      <url>/%E8%B4%A2%E7%BB%8F/2018-10-10-%EF%BC%88%E8%BD%AC%E8%BD%BD%EF%BC%89%E8%BF%99%E4%B8%AA%E6%97%B6%E4%BB%A3%E6%B2%A1%E6%9C%89%E6%80%80%E6%89%8D%E4%B8%8D%E9%81%87.html</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://xqimg.imedao.com/16658d38d02be83fdbe00cf7.jpg" alt></p><p>假期里Boy 的微信读者群好不热闹，大家每天都在讨论各种职场成长的深度问题。前几天有人问道：</p><p>总是觉得自己怀才不遇，没人赏识自己，每天只能埋头苦干的人想要飞黄腾达出路在哪里？</p><p>今天的文章，我就来聊聊这个话题。在正式开始之前，我先抛出观点：</p><p>这个时代已经没有什么怀才不遇。所谓的怀才不遇，只是你的才能还不够罢了。</p><p>为了清晰说明这个问题，下面我从三点来分别解释。</p><p><strong>01</strong></p><p><strong>时代大趋势</strong></p><p>世界正变得越来越扁平。</p><p>如果你留意了最近的商业经济新闻，你会发现越来越多的公司都开始强调“无边界组织”。</p><p>这个概念最初来源于通用电气的CEO杰克韦尔奇，后来经过互联网时代的发展，逐渐升级变成许多大公司内部推行的一种组织架构革命。</p><p>什么叫无边界组织呢？</p><p>简单来说，就是企业不再按照传统的职能属性来划分部门，而是将它们糅合在一起，每个员工都可以和拥有不同技能的人在一个单元组织里共同协作，彼此之间没有边界，无障碍交流。</p><p>比如产品研发，销售，传播，公关甚至是财务都被放在一起，组成一个团队，共同攻克一个项目目标。等到目标达成，这些人又被打散到其他的单元组织里，为新的项目工作。</p><p>像谷歌、亚马逊、阿里巴巴、腾讯等许多互联网公司已经开始推行这种工作模式，并由此延伸出一套内部竞争机制。</p><p>他们让公司内部不同的团队共同PK一个项目，然后选出一个最佳方案，最后集中公司资源来帮助它迅速成长。团队里的每个人都对项目的最终结果负责，各自的才能被尽善其用，不存在谁职位高谁就能一言九鼎的情况。</p><p>许多我们熟知的互联网产品，例如微信、王者荣耀等就是腾讯内部竞争的产物。而它们的最初构想，都来源于最普通的员工。</p><p>这么做的好处，是能够迅速应对外界环境的变化，一旦出现新的竞争对手或市场风向改变，可以灵活迅速地制定对策并执行。你不需要拿着一份计划书从地区汇报到中央，再从中央汇报到全球总部。等到兜一圈下来终于决定做了，黄花菜都凉了。</p><p>无边界组织以目标为导向，强调“快、准、狠”。即：快速嗅到风向变化，准确把握市场需求，狠下手来全力以赴。</p><p>它并不遵循传统企业的金字塔式结构，不需要层层上报给大老板，也没有诸如总监、经理、主管的层级壁垒，更不会受制于庞大人员规模所带来的效率递减。无边界组织更像是企业内部一个个小的作战单元，可以随时组装，随时打散。</p><p>在这种扁平化的管理模式下，作为员工的每一个个体，不用担心自己的才能被埋没。因为这种组织的目的，就是让最有价值的想法能够最快地被接受和执行。</p><p>用大白话来说，这是一种“你行你上”的工作模式。它让最优秀的人才，在最短的时间里完成最有挑战的事情。</p><p>传统企业是存量思维，一个萝卜一个坑，越往金字塔顶端，机会越少；而扁平化组织是增量思维，它每时每刻都在创造新的机会。</p><p>比如现在很流行的众包工作模式，就是扁平化组织的一种应用。客户将项目需求发布在网上，全世界各地拥有相应技能的人聚集在一起，利用网络进行项目沟通与协作。</p><p>而每一次众包机会你都可以尝试不同的角色。例如今天你在这个项目做的是营销公关，下次可以去另一个项目做商务拓展，再过段时间去做产品经理也没问题。</p><p>只要你的能力足够强，机会总是源源不断。</p><p><img src="https://xqimg.imedao.com/16658d3c58dbef3fe15020e8.jpg" alt></p><p><strong>02</strong></p><p><strong>展示才能的出口越来越多</strong></p><p>我们身边你能展示才能的出口越来越多。</p><p>如今除了写微信公众号，还有各种各样的职业社交网站，专业技能论坛等供你展现自己的才能。</p><p>比如Linkedin 领英或者脉脉。这些地方每天聚集着各行各业的职场精英人士，你可以花时间去研究一下如何在上面优化自己的职业档案，加入某些主题讨论或者发布职业需求。</p><p>比如GitHub, 这里是程序员的天堂。每天都有各路好手在GitHub上交流技术经验，发布项目心得，你在这里能认识许多顶级互联网公司的大牛。</p><p>再比如像36Kr、知乎等这种商业科技泛知识类平台，现在也能开通个人专栏。你对某个领域有什么见解，就坚持不懈写下去，只要内容够好就一定能吸引与你志同道合的人。</p><p>总之，只要用心去找，你一定能找到可以展现自己才能的出口。</p><p>那些只会埋头苦干却不懂展示自己的人，是一定要被淘汰的。因为你需要花更久的时间，被动地让别人去了解你，接受你，赏识你。</p><p>但这个世界已经没有那么多时间去等你。</p><p>得益于互联网的飞速发展，怀才不再像怀孕，非得时间久了才能看得出来。一个人有没有才能，他说几句话，写几篇文章，发表几个观点就能看得出来。</p><p>刘备三顾茅庐的故事，现在基本不可能。除非你真有诸葛亮一般经天纬地之才，值得有人为你苦苦等待。否则，还是主动一点。</p><p>我有个朋友，在简历上就会放自己的作品集网站和公众号链接。每次面试的时候，面试官都会问他这是什么。这就打开了场面，接下来他能滔滔不绝和对方聊好久。</p><p>你看，主动一点，机会就能多一点。</p><p>以上两点，都是外面的变化，给你带来的机遇。这些近在眼前的机会如果还抓不住，那就真的不是怀才不遇的问题了。</p><p><img src="https://xqimg.imedao.com/16658d3d8f4a7f3feaef1439.jpg" alt></p><p><strong>03</strong></p><p><strong>如何让自己脱颖而出</strong></p><p>大家说几个小建议。没有花里胡哨的办法，只有最淳朴的七个字：</p><p>会写，会说，敢表现。</p><p>之所以说淳朴，是因为每个人都知道，但并不是每个人都能做到。下面我分别来讲。</p><p><strong>a）会写：勤于记录，积少成多</strong></p><p>能够把你的所思所想用逻辑清晰、精炼的文字准确表达出来，这就叫会写。</p><p>写作是成本最低的才能展示方法，也是未来每个人都要具备的底层核心能力。写作能力提高了，你的思维和表达能力也能够提升。</p><p>那么如何训练呢？最简单的办法，就是写“日志”。</p><p>注意，这个日志可不是朋友圈里的美食打卡或心情分享，而是你对时事热点的观察与思考。</p><p>比如，为什么范冰冰补缴了8亿罚款就可以不被追究刑事责任？这背后的法律考量是怎样的？税法这么规定对以后的行业发展有什么指导意义？</p><p>再比如，特斯拉的CEO 马斯克被迫退出董事会，这会对特斯拉未来的发展产生什么影响？为什么马斯克对特斯拉如此重要？他的接任者该如何处理接下来的烂摊子？</p><p>这些问题都是很好的思维锻炼与写作的素材。大家可以把自己的思考从50字100字写起，然后逐渐扩充篇幅，从写几句话，变成慢慢写几段话，最后再扩充成文章。</p><p>你写的篇幅越多，经验才会越足，对文字的驾驭能力也会越强。</p><p>可能这时有些朋友会问：我很想写，但是文笔不好写不出来怎么办呢？</p><p>这时你要去阅读。去找那些你认为写得好的作者的文章，耳濡目染地去感受他的写作思路和手法。时间久了，你写出来的东西就会带有这些人的印记。</p><p>打个不恰当的比方，这就好像你看郭敬明的文章多了，你写出来的文字也会“悲伤逆流成河”。参照物的力量都是潜移默化地影响着你。</p><p>当积累写到10万字的时候，你的写作能力会有一个质的飞跃。这时，你就拥有了展示自我才能的第一件武器。</p><p><strong>b）会说：放大声量，刻意练习</strong></p><p>能够把自己的观点声情并茂地讲出来，吸引听众的注意，这就是会说。</p><p>你有没有发现，口才好的人在职场上往往占尽先机。即使你脑子里有一大套东西，可是讲不出来，一样是白搭。</p><p>而那些会说的人，哪怕观点待斟酌，逻辑有问题，可在他的舌灿莲花下，这些瑕疵都能被掩饰过去。听众如果不仔细分析，很容易就被他这么带过去了。</p><p>也许你会认为这是忽悠，但会忽悠的人，同样有本事。你可以学其精华，去其糟粕。</p><p>怎么去做呢？最简单的方法，就是大声朗读。</p><p>你可以把你喜欢的书籍或文章，在家对着镜子大声朗读出来，提高自己的演讲临场感。</p><p>这个方法，来源于美国教授斯蒂夫卢卡斯写的《演讲的艺术》。在书中，他用这个简单的办法帮助了超过1000名“演讲恐惧者”克服障碍，流利演说。</p><p><img src="https://xqimg.imedao.com/16658d3ec4d9fd3fe2d749d3.jpg" alt></p><p>这里的秘诀在于，当你在大声朗读的时候，才能找到属于自己的说话节奏、习惯甚至毛病，这是除你之外其他人不可能知道的。只有通过亲身实践，你才可以找到最适合自己的演讲风格。</p><p>更进一步，你还可以大声朗读自己写的作品。这时你会发现，文字写出来和说出来，是完全不同的感觉。这个就留待大家去实践琢磨，你会发现许多意外惊喜。</p><p>除此之外，在日常生活中，你可以抓住任何交谈的机会，来锻炼自己的口才。比如拿奇葩说里的议题和朋友讨论，或者就某个新闻话题展开一番“小辩论”。这里并不用得出什么结论，而是在过程中不断练习说话的技巧。</p><p>最后完毕了，再做一番简单的复盘，总结一下自己讲话的语气、动作、声量、节奏都有哪些特点，通过朋友的反馈来帮助你更好了解自己，提升讲话的能力。</p><p>总之，用刻意练习的方法给自己创造机会多去说，它和写作一样都没有捷径，唯手熟尔。</p><p><strong>c）敢表现：放下脸面，不怕冒头</strong></p><p>上面两点说的都是技巧，最后这一点说的是心态。</p><p>这个时代比的不再是谁更有才，而是谁更有胆。如今许多人即使有才也不表现出来，他这不是怀才不遇，而是怀才不敢。</p><p>中国人都说枪打出头鸟，可看看我们周围那些闯出一番成绩的人，有哪个不是出头鸟？那些拼了命打压、嘲讽你的人，要么是自己也不敢，要么是害怕你比他还敢。而只有那些做不到的人，才会怂恿其他人也不要做到。</p><p>《权力的游戏》里，狮家的主人泰温兰尼斯特有句话说的很对：</p><p>“狮子从来不会去问羊的意见。”</p><p><img src="https://xqimg.imedao.com/16658d40708bf63f7941eb6f.jpg" alt></p><p>你如果真有一身才干，就不要去考虑那些懦弱胆小者的看法，而是去想如何利用大环境、渠道和资源来让自己的才能得到充分展现。</p><p>还记得文章最开头说的无边界组织吗？这就是一个很好的征兆。未来社会给予人才的平台只会越来越多，竞争也会越来越激烈，再也不会有“酒香不怕巷子深”。</p><p>所以请主动一点，不要像羊群一样永远呆在一个区域。而是运用互联网络、社交媒体等这些时代赋予你的武器，去开拓自己的视野与出口，像狮子一样去找寻猎物。</p><p>以上就是今天的内容，最后简单总结一下：</p><p>这个时代已经没有什么怀才不遇。</p><p>世界正变得越来越扁平，身边能够展示才能的出口也越来越多。想要脱颖而出，最简单的办法就是培养自己写作和说话的能力，最后再加上充分的胆量，不要偏安一隅。</p><p>记住，绵羊永远不可能成为狮子。</p><p>各位共勉。</p><p>作者：张良计</p><p>本文来源：张良计（ID:zhang_liangj）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 财经 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 转载,职业,鸡汤,投资 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>详解Android利用AIDL实现进程间通信</title>
+      <link href="/Android-Development/2016-08-30-%E8%AF%A6%E8%A7%A3Android%E5%88%A9%E7%94%A8AIDL%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1.html"/>
+      <url>/Android-Development/2016-08-30-%E8%AF%A6%E8%A7%A3Android%E5%88%A9%E7%94%A8AIDL%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。<br>在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对象的代码单调又难于开发，好在Android为我们提供了AIDL处理这些功能。</p><h2 id="什么场合下用AIDL？"><a href="#什么场合下用AIDL？" class="headerlink" title="什么场合下用AIDL？"></a>什么场合下用AIDL？</h2><p>直接看官方指南:<a href="https://developer.android.com/guide/components/aidl.html的这段话：" target="_blank" rel="noopener">https://developer.android.com/guide/components/aidl.html的这段话：</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Note: Using AIDL is necessary only if you allow clients from different applications </span><br><span class="line">to access your service for IPC and want to handle multithreading in your service. </span><br><span class="line">If you do not need to perform concurrent IPC across different applications, you </span><br><span class="line">should create your interface by implementing a Binder or, if you want to perform </span><br><span class="line">IPC, but do not need to handle multithreading, implement your interface using a </span><br><span class="line">Messenger.</span><br></pre></td></tr></table></figure><p>只有在你允许多个应用程序访问你提供的服务进行进程间通信，并且在提供的服务中涉及到多线程处理的时候才需要使用到AIDL。如果你无需处理多应用并发通信，你应该采用Binder进行进程间通信。如果你实现的进程间通信未涉及多线程处理，你需要采用Messenger进行进程间通信。<br>一般适用于为其它应用程序提供公共服务的Service，这种Service即为系统常驻的Service(如：天气服务，日历服务等)。</p><h2 id="选择AIDL进行进程间通信有什么优缺点"><a href="#选择AIDL进行进程间通信有什么优缺点" class="headerlink" title="选择AIDL进行进程间通信有什么优缺点?"></a>选择AIDL进行进程间通信有什么优缺点?</h2><p>优点:<br>1.AIDL有自己的独立进程，不会受到其它进程的影响；<br>2.可以被其它进程复用，提供公共服务；<br>3.具有很高的灵活性。<br>4.相比Messenger,可以传输的数据量大。<br>缺点:<br>1.相对普通服务，占用系统资源较多，使用AIDL进行IPC也相对麻烦。</p><h2 id="AIDL如何使用？"><a href="#AIDL如何使用？" class="headerlink" title="AIDL如何使用？"></a>AIDL如何使用？</h2><p>既然用AIDL的最终目标是进行不同进程间通信，那这里咱们搞两个APP，一个Server,提供一个Service，用来对传入的参数做加法运算，另外一个Client,调用Server提供的Service。</p><h3 id="Server端实现"><a href="#Server端实现" class="headerlink" title="Server端实现"></a>Server端实现</h3><p>1.建立一个工程，命名:AIDLServer<br>2.新建AIDL文件,命名:IMyAidlInterface<br><img src="../assets/images/Create_AIDL_File.png" alt><br>3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。<br><img src="../assets/images/AIDL_File.png" alt><br>4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击<img src="../assets/images/SYNC.png" alt>，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：<br><img src="../assets/images/AIDL_JAVA_File.png" alt><br>5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlserver;</span><br><span class="line">import android.app.Service;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.annotation.Nullable;</span><br><span class="line"></span><br><span class="line">public class AIDLService extends Service</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public class MyAidlImpl extends IMyAidlInterface.Stub</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public int add(int value1, int value2) throws RemoteException &#123;</span><br><span class="line">            return value1 + value2;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException &#123;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Nullable</span><br><span class="line">    @Override</span><br><span class="line">    public IBinder onBind(Intent intent) &#123;</span><br><span class="line">        return new MyAidlImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>6.注册AIDLService,在AndroidManifest里面加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;service android:name=&quot;jackleeforce.aidlserver.AIDLService&quot;</span><br><span class="line">            android:exported=&quot;true&quot;&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure></p><p>Server端口开发到此结束，实际上就三步，新增AIDL文件，然后创建绑定服务，在服务内实现我们要对外暴露的接口，然后注册服务，大家注意注册服务时我们写的name值，后面要用到，android:exported=”true”表示导出这个服务接口。接下来我们实现客户端。</p><h3 id="Client端实现"><a href="#Client端实现" class="headerlink" title="Client端实现"></a>Client端实现</h3><p>1.建立一个工程，命名:AIDLClient<br>2.把刚才在AIDLServer工程里面建的IMyAidlInterface.aidl文件拷贝过来，这里注意包名，一定要跟Server端的一致，可以直接从AIDLServer文件夹里面连同AIDL目录一起拷过来，然后在AS里面刷新一下文件就出现了,如图4:<br><br>3.我们刚才在服务端定义了一个add计算两个数字和的接口，现在在客户端要使用这个接口，为了演示，这里做个简单计算器好了，MainActivity布局文件如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    android:padding=&quot;16dp&quot;</span><br><span class="line">    tools:context=&quot;.MainActivity&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_a&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:inputType=&quot;number&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;+&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_b&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:inputType=&quot;number&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;=&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_result&quot;</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:enabled=&quot;false&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=&quot;@+id/calculate&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:onClick=&quot;onCalculate&quot;</span><br><span class="line">        android:text=&quot;计算&quot; /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure><p>MainActivity.java代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlclient;</span><br><span class="line"></span><br><span class="line">import android.content.ComponentName;</span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.content.ServiceConnection;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.EditText;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line">import jackleeforce.aidlserver.IMyAidlInterface;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class MainActivity extends AppCompatActivity implements View.OnClickListener &#123;</span><br><span class="line"></span><br><span class="line">    private EditText et_a;</span><br><span class="line">    private EditText et_b;</span><br><span class="line">    private EditText et_result;</span><br><span class="line">    private Button btn_calc;</span><br><span class="line">    private IMyAidlInterface mService;</span><br><span class="line">    private AddServiceConnect mServiceConnect;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    </span><br><span class="line">        initUI();</span><br><span class="line">    </span><br><span class="line">        connectService();</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">    </span><br><span class="line">        releaseService();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void initUI()</span><br><span class="line">    &#123;</span><br><span class="line">        et_a = (EditText)findViewById(R.id.et_a);</span><br><span class="line">        et_b = (EditText)findViewById(R.id.et_b);</span><br><span class="line">        et_result = (EditText)findViewById(R.id.et_result);</span><br><span class="line">        btn_calc = (Button)findViewById(R.id.calculate);</span><br><span class="line">    </span><br><span class="line">        btn_calc.setOnClickListener(this);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">        switch (v.getId())</span><br><span class="line">        &#123;</span><br><span class="line">            case R.id.calculate:</span><br><span class="line">                calc();</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                break;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void calc()</span><br><span class="line">    &#123;</span><br><span class="line">        int a = Integer.parseInt(et_a.getText().toString());</span><br><span class="line">        int b = Integer.parseInt(et_b.getText().toString());</span><br><span class="line">    </span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            int result = mService.add(a, b);</span><br><span class="line">    </span><br><span class="line">            et_result.setText(String.valueOf(result));</span><br><span class="line">        &#125;</span><br><span class="line">        catch (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    class AddServiceConnect implements ServiceConnection</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onServiceConnected(ComponentName name, IBinder service) &#123;</span><br><span class="line">            mService = IMyAidlInterface.Stub.asInterface(service);</span><br><span class="line">    </span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;onServiceConnected&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void onServiceDisconnected(ComponentName name) &#123;</span><br><span class="line">            mService = null;</span><br><span class="line">    </span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;onServiceDisconnected&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void connectService()</span><br><span class="line">    &#123;</span><br><span class="line">        mServiceConnect = new AddServiceConnect();</span><br><span class="line">        Intent i = new Intent();</span><br><span class="line">    </span><br><span class="line">        i.setComponent(new ComponentName(&quot;jackleeforce.aidlserver&quot;,&quot;jackleeforce.aidlserver.AIDLService&quot;));</span><br><span class="line">        i.setPackage(getPackageName());</span><br><span class="line">    </span><br><span class="line">        boolean result = getApplicationContext().bindService(i,mServiceConnect, Context.BIND_AUTO_CREATE);</span><br><span class="line">        if (!result)</span><br><span class="line">        &#123;</span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;bindService failed&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void releaseService()</span><br><span class="line">    &#123;</span><br><span class="line">        unbindService(mServiceConnect);</span><br><span class="line">        mServiceConnect = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可以看到MainActivity起来的时候调用我们实现的connectService去连接服务端提供的服务，咱们看一下上面的connectService函数，第104行创建一个AddServiceConnect对象，从85行可以看到AddServiceConnect是一个内部类，实现了ServiceConnection接口，一看重载的两个方法名字就能明白，这是一个回调接口，当服务成功连接上了会调用onServiceConnected方法，89行我在onServiceConnected方法中，将返回的Binder对象转换成AIDL接口，以后就可以通过这个AIDL接口去调用服务端暴露出来的Service（在服务端实现的add）。当服务端因异常或者主动断开后，会执行onServiceDisConnected方法，表示已经断开连接。<br>接下来再回到connectService函数，第105行创建了一个Intent对象，接下来107和108两行代码非常关键，可以说是一个大坑，照着网络上大部分博文学习AIDL，最后无法成功绑定服务就是因为写错，107行设置Intent对象的ComponentName，第一个参数服务端的包名，第二个参数服务端暴露的Service名字,也就是前面实现服务端代码时在AndroidManifest里面注册的Service Name，这里是jackleeforce.aidlserver.AIDLService，由于Andorid 5.0以后不允许使用匿名Intent对象，这里在108行通过setPackage方法设置包名。然后在110行通过bindService函数去绑定服务。</p><p>到这里我们Server端与Client端代码都实现完成了，这里总结一下：<br>服务端<br>1.定义AIDL文件。<br>2.定义要暴露的的Service，并在里面实现AIDL文件中声明的方法。<br>3.注册Service，明确Service Name，并将Service声明成Export。</p><p>客户端<br>1.引入AIDL文件。<br>2.通过bindService函数去绑定服务端暴露的Service,系统会通过我们指定的Service Name找到这个Service，成功连接了以后会返回一个Binder对象，我们要用Stub.asInterface将这个Binder对象转换成我们需要的AIDL对象，这个AIDL对象的类实现代码就是系统自动为我们引入的AIDL文件生成的JAVA文件。<br>3.有了AIDL对象，我们就可以调用里面暴露的接口了。</p><p>分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：<br><img src="../assets/images/Result.gif" alt></p><p>以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。</p><p>本文中的两个工程例子在此：<a href="https://github.com/lijiahua/AIDL_Test" target="_blank" rel="noopener">https://github.com/lijiahua/AIDL_Test</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android Development </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android,AIDL,进程间通信,技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
     
   
   
