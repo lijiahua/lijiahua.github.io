@@ -1,4 +1,5 @@
-https://www.jacklee.work/uncategorized/2019-02-20-机器学习极简入门课学习笔记-第十四课-逻辑回归——非线性逻辑函数的由来.html
+https://www.jacklee.work/人工智能/2019-02-21-机器学习极简入门课学习笔记-第十五课-逻辑回归——用来做分类的回归模型.html
+https://www.jacklee.work/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十四课-逻辑回归——非线性逻辑函数的由来.html
 https://www.jacklee.work/人工智能/2019-02-20-机器学习极简入门课学习笔记-第十三课-朴素贝叶斯分类器——条件概率的参数估计.html
 https://www.jacklee.work/人工智能/2019-02-19-机器学习极简入门课学习笔记-第十二课-朴素贝叶斯分类器——从贝叶斯定理到分类模型.html
 https://www.jacklee.work/数学/2019-02-14-初等数学-相关概念记录.html
