@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>机器学习极简入门课学习笔记-第十六课(决策树——既能分类又能回归的模型)</title>
+      <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-22-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E5%85%AD%E8%AF%BE-%E5%86%B3%E7%AD%96%E6%A0%91%E2%80%94%E2%80%94%E6%97%A2%E8%83%BD%E5%88%86%E7%B1%BB%E5%8F%88%E8%83%BD%E5%9B%9E%E5%BD%92%E7%9A%84%E6%A8%A1%E5%9E%8B.html"/>
+      <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-22-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E5%85%AD%E8%AF%BE-%E5%86%B3%E7%AD%96%E6%A0%91%E2%80%94%E2%80%94%E6%97%A2%E8%83%BD%E5%88%86%E7%B1%BB%E5%8F%88%E8%83%BD%E5%9B%9E%E5%BD%92%E7%9A%84%E6%A8%A1%E5%9E%8B.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h4><p>决策树是一种非常基础又常见的机器学习模型。</p><p>一棵决策树（Decision Tree）是一个树结构（可以是二叉树或非二叉树），每个非叶节点对应一个特征，该节点的每个分支代表这个特征的一个取值，而每个叶节点存放一个类别或一个回归函数。</p><p>使用决策树进行决策的过程就是从根节点开始，提取出待分类项中相应的特征，按照其值选择输出分支，依次向下，直到到达叶子节点，将叶子节点存放的类别或者回归函数的运算结果作为输出（决策）结果。</p><h4 id="构建决策树"><a href="#构建决策树" class="headerlink" title="构建决策树"></a>构建决策树</h4><ol><li><p>准备若干的训练数据（假设有 m 个样本）；</p></li><li><p>标明每个样本预期的类别；</p></li><li><p>人为选取一些特征（即决策条件）；</p></li><li><p>为每个训练样本对应所有需要的特征生成相应值——数值化特征；</p></li><li><p>将通过上面的1-4步获得的训练数据输入给训练算法，训练算法通过一定的原则，决定各个特征的重要性程度，然后按照决策重要性从高到底，生成决策树。</p></li></ol><h4 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h4><p><strong>一条信息的信息量和它的不确定性有着直接的关系，而信息熵就是用来衡量不确定性的程度</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">熵：表示随机变量的不确定性。</span><br><span class="line">条件熵：在一个条件下，随机变量的不确定性。</span><br><span class="line">信息增益：熵 - 条件熵在一个条件下，信息不确定性减少的程度！</span><br><span class="line"></span><br><span class="line">通俗地讲，X(明天下雨)是一个随机变量，X的熵可以算出来， Y(明天阴天)也是随机变量，在阴天情况下下雨的信息熵我们如果也知道的话（此处需要知道其联合概率分布或是通过数据估计）即是条件熵。两者相减就是信息增益！原来明天下雨例如信息熵是2，条件熵是0.01（因为如果是阴天就下雨的概率很大，信息就少了），这样相减后为1.99，在获得阴天这个信息后，下雨信息不确定性减少了1.99！是很多的！所以信息增益大！也就是说，阴天这个信息对下雨来说是很重要的！所以在特征选择的时候常常用信息增益，如果IG（信息增益大）的话那么这个特征对于分类来说很关键~~ 决策树就是这样来找特征的！</span><br><span class="line"></span><br><span class="line">作者：卡伊粥</span><br><span class="line">链接：https://www.zhihu.com/question/22104055/answer/67014456</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习,人工智能,AI,学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>机器学习极简入门课学习笔记-第十五课(逻辑回归——用来做分类的回归模型)</title>
       <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-21-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%94%E8%AF%BE-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E7%94%A8%E6%9D%A5%E5%81%9A%E5%88%86%E7%B1%BB%E7%9A%84%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B.html"/>
       <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-02-21-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%9E%81%E7%AE%80%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%8D%81%E4%BA%94%E8%AF%BE-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E7%94%A8%E6%9D%A5%E5%81%9A%E5%88%86%E7%B1%BB%E7%9A%84%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B.html</url>
