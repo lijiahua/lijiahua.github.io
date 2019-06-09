@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Set up the ladder</title>
+      <link href="/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2019-06-09-Set%20up%20the%20ladder.html"/>
+      <url>/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2019-06-09-Set%20up%20the%20ladder.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Set-up-the-ladder"><a href="#Set-up-the-ladder" class="headerlink" title="Set up the ladder"></a>Set up the ladder</h1><h2 id="Install-v-two-ray-on-linux-server"><a href="#Install-v-two-ray-on-linux-server" class="headerlink" title="Install v[two]ray on linux server"></a>Install v[two]ray on linux server</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br><span class="line"></span><br><span class="line">bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure><p>The script installs the following files.</p><ul><li><code>/usr/bin/v[two]ray/v[two]ray</code>: v[two]ray executable</li><li><code>/usr/bin/v[two]ray/v[two]ctl</code>: Utility</li><li><code>/etc/v[two]ray/config.json</code>: Config file</li><li><code>/usr/bin/v[two]ray/geoip.dat</code>: IP data file</li><li><code>/usr/bin/v[two]ray/geosite.dat</code>: domain data file</li></ul><p>This script also configures v[two]ray to run as service, if systemd is available.</p><p>After installation, we will need to:</p><ol><li>Update <code>/etc/v[two]ray/config.json</code> file for your own scenario.</li><li>Run <code>service v[two]ray start</code> command to start v[two]ray.</li><li>Optionally run <code>service v[two]ray start|stop|status|reload|restart|force-reload</code> to control v[two]ray service.</li></ol><h2 id="Configuration-the-v-two-ray"><a href="#Configuration-the-v-two-ray" class="headerlink" title="Configuration the v[two]ray"></a>Configuration the v[two]ray</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/v[two]ray/config.json</span><br></pre></td></tr></table></figure><h3 id="modify-listening-port"><a href="#modify-listening-port" class="headerlink" title="modify listening port"></a>modify listening port</h3><p><img src="../assets/images/image-20190609085834426.png" alt="image-20190609085834426"></p><h3 id="add-client-uuid"><a href="#add-client-uuid" class="headerlink" title="add client uuid"></a>add client uuid</h3><p><img src="../assets/images/image-20190609090011450.png" alt="image-20190609090011450"></p><ul><li><p>Each client user uses one line of configuration markup.</p></li><li><p>you can copy the following content and modiy your own uuid and name:</p><ul><li>{“id”: “xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx”,”level”: 1,”alterId”: 64,”name”: “xxxx”}</li></ul></li><li><p>uuid can generate from <a href="https://www.uuidgenerator.net/" target="_blank" rel="noopener">uuid generator</a></p></li></ul><h2 id="use-v-two-ray-on-mac-osx"><a href="#use-v-two-ray-on-mac-osx" class="headerlink" title="use v[two]ray on mac osx"></a>use v[two]ray on mac osx</h2><h3 id="download"><a href="#download" class="headerlink" title="download"></a>download</h3><p>download from <a href="https://github.com/jackleeforce/V2RayX/releases" target="_blank" rel="noopener">V2RayX</a></p><h3 id="configuration"><a href="#configuration" class="headerlink" title="configuration"></a>configuration</h3><p><img src="../assets/images/image-20190609091022597.png" alt="image-20190609091022597"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Understanding the Mathematics behind Gradient Descent</title>
       <link href="/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-03-28-Understanding%20the%20Mathematics%20behind%20Gradient%20Descent.html"/>
       <url>/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/2019-03-28-Understanding%20the%20Mathematics%20behind%20Gradient%20Descent.html</url>
