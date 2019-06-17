@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>躺在沙发上看电影的正确姿势</title>
+      <link href="/%E6%95%99%E7%A8%8B/2019-06-17-%E8%BA%BA%E5%9C%A8%E6%B2%99%E5%8F%91%E4%B8%8A%E7%9C%8B%E7%94%B5%E5%BD%B1%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF.html"/>
+      <url>/%E6%95%99%E7%A8%8B/2019-06-17-%E8%BA%BA%E5%9C%A8%E6%B2%99%E5%8F%91%E4%B8%8A%E7%9C%8B%E7%94%B5%E5%BD%B1%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="躺在沙发上看电影的正确姿势"><a href="#躺在沙发上看电影的正确姿势" class="headerlink" title="躺在沙发上看电影的正确姿势"></a>躺在沙发上看电影的正确姿势</h2><h3 id="解决什么问题"><a href="#解决什么问题" class="headerlink" title="解决什么问题"></a>解决什么问题</h3><p>自己平时通过自己组装的一台 NAS 下载电影，这台 NAS运行着Ubuntu Desktop系统，<br>电影下载完了以后，由 Nas 上面的 VLC 播放后通过 HDMI 显示在电视上。问题来了，观看的过程中<br>如果需要暂停，快进等操作，需要从沙发上爬起来跑到电视旁边用鼠标操作，非常反人类。</p><h3 id="解决途经"><a href="#解决途经" class="headerlink" title="解决途经"></a>解决途经</h3><p>发现 VLC 是可以通过一些 VLC Remote 软件进行远程控制的，这样躺沙发上，可以通过手机上的应用远程控制NAS上面的 VLC，实现进度拖拉，换片，暂停播放等操作。</p><h3 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件"></a>需要的软件</h3><h4 id="被控制端："><a href="#被控制端：" class="headerlink" title="被控制端："></a>被控制端：</h4><p><a href="https://www.videolan.org/vlc/index.html" target="_blank" rel="noopener">VLC</a> 播放应用, 目前看官网，基本全平台支持。</p><p> <img src="../assets/images/image-20190617163432663.png" alt="image-20190617163432663"></p><h4 id="控制端"><a href="#控制端" class="headerlink" title="控制端:"></a>控制端:</h4><ul><li>收费<ul><li>IOS: <a href="https://apps.apple.com/us/app/vlc-remote/id297244048" target="_blank" rel="noopener">VLC Remote</a></li><li>Android: <a href="https://play.google.com/store/apps/details?id=com.hobbyistsoftware.android.vlcremote_us" target="_blank" rel="noopener">VLC Remote</a></li></ul></li><li><p>免费</p><ul><li><p>IOS: <a href="https://apps.apple.com/us/app/vlc-remote-lite/id299344206" target="_blank" rel="noopener">VLC Remote Lite</a></p></li><li><p>Android: <a href="https://play.google.com/store/apps/details?id=com.hobbyistsoftware.android.vlcremote_usfree" target="_blank" rel="noopener">VLC Remote Free</a></p></li></ul></li></ul><h4 id="确保被控制端与控制端处于同一网段"><a href="#确保被控制端与控制端处于同一网段" class="headerlink" title="确保被控制端与控制端处于同一网段"></a>确保被控制端与控制端处于同一网段</h4><h3 id="安装设置"><a href="#安装设置" class="headerlink" title="安装设置"></a>安装设置</h3><p>被控制端 </p><ul><li><p>打开VLC 工具 -&gt; 首选项 -&gt; Interface</p><p><img src="../assets/images/prepare-remote-control-vlc1.png" alt="img"></p></li></ul><ul><li><p>默认VLC显示的是简单设置选项。这里我们需要打开高级设置选项，在屏幕底部，单选 All。</p><p><img src="../assets/images/prepare-remote-control-vlc2.png" alt="img"></p></li></ul><ul><li><p>点击Main interfaces 菜单</p><p><img src="../assets/images/prepare-remote-control-vlc3.png" alt="img"></p></li></ul><ul><li><p>选中 Web</p><p><img src="../assets/images/prepare-remote-control-vlc4.png" alt="img"></p></li><li><p>设置 Web 的访问密码，这个密码后续在控制端应用需要输入</p><p><img src="../assets/images/image-20190617174104010.png" alt="image-20190617174104010"></p></li><li><p>保存，并重启VLC应用</p></li><li><p>确保控制端没有防火墙，或者已经针对 VLC 配置了防火墙入站策略</p></li><li><p>打开手机端 VLC Remote 应用，不出意外，应该会自动发现同一网段内运行VLC的机器，点击即可进行控制</p></li><li><p>躺沙发上，欣赏电影吧^_^</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Set up the ladder</title>
       <link href="/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2019-06-09-Set%20up%20the%20ladder.html"/>
       <url>/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2019-06-09-Set%20up%20the%20ladder.html</url>
