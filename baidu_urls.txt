@@ -1,3 +1,4 @@
+https://www.jacklee.work/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html
 https://www.jacklee.work/教程/2019-06-17-躺在沙发上看电影的正确姿势.html
 https://www.jacklee.work/操作记录/2019-06-09-Set up the ladder.html
 https://www.jacklee.work/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html

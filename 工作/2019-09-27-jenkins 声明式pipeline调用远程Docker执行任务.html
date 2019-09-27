@@ -98,45 +98,28 @@
 
 
 
-  <meta name="description" content="Understanding the Mathematics behind Gradient DescentA simple mathematical intuition behind one of the commonly used optimisation algorithms in Machine Learning.  “Premature optimization is the root o">
-<meta name="keywords" content="机器学习,人工智能,AI">
+  <meta name="description" content="jenkins 声明式pipeline调用远程Docker执行任务调用远程服务器执行任务的好处 一些 CPU 密集计算型任务，比如编译，静态扫描等等，放在单独的服务器上执行，不会对 Jenkins 所在服务器造成性能负担。 通过配置多台同样标签的子节点服务器，可以将多个任务分配到这些子节点上并行处理。  将任务执行环境采用 docker 部署而不是直接安装的好处 什么是 Docker ？容器对应用">
+<meta name="keywords" content="Jenkins,持续集成,CI&#x2F;CD,自动化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Understanding the Mathematics behind Gradient Descent">
-<meta property="og:url" content="https://www.jacklee.work/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html">
+<meta property="og:title" content="jenkins 声明式pipeline调用远程Docker执行任务">
+<meta property="og:url" content="https://www.jacklee.work/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="Understanding the Mathematics behind Gradient DescentA simple mathematical intuition behind one of the commonly used optimisation algorithms in Machine Learning.  “Premature optimization is the root o">
+<meta property="og:description" content="jenkins 声明式pipeline调用远程Docker执行任务调用远程服务器执行任务的好处 一些 CPU 密集计算型任务，比如编译，静态扫描等等，放在单独的服务器上执行，不会对 Jenkins 所在服务器造成性能负担。 通过配置多台同样标签的子节点服务器，可以将多个任务分配到这些子节点上并行处理。  将任务执行环境采用 docker 部署而不是直接安装的好处 什么是 Docker ？容器对应用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*4VbVds8vD-CgAiOWTrs_Vw.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*ZEIXhLHr99IK7qVSZJlyJg.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*FevGteEfXxQ6nUFiqgSN4A.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*y0ME9Nfr962OLad60mpfiw.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*6bTrn65AGt01MwoYTkvLMw.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*ItujOVbVS683btoMNcSrWw.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*wOcqaaLlNo7X56PJ-lYFqQ.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*C8YyXxRnpyKJuyUUFPNjag.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*LHfPH8izBeLiN3BucwDofg.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*vKWlgvHgO6Yl_c2PYuSGPQ.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*9C5uOCz9-biIz8ynLauQOg.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*lx58ZcrrILLX6I-ZCDN93w.gif">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*YsjwGDKD2JzM5KYuAAeNYg.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*e6Epzbmngh2a50WUrKleUA.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*pEVVCEGBgnUp9n_GFtnoCA.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*2HHOcNqN2IB3Hn0NwjKofQ.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*bA3RTXbN36FITpwpHKDHdA.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*wFNHPg59MDlY2FV4CEPwNw.png">
-<meta property="og:image" content="https://www.jacklee.work/assets/images/1*H4W0YR1jVTWyQboPnSZPjQ.png">
-<meta property="og:updated_time" content="2019-03-28T09:29:42.414Z">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/006y8mN6ly1g7dw7qmy0bj30q00fm760.jpg">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20190927110849522.png">
+<meta property="og:updated_time" content="2019-09-27T03:23:52.613Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Understanding the Mathematics behind Gradient Descent">
-<meta name="twitter:description" content="Understanding the Mathematics behind Gradient DescentA simple mathematical intuition behind one of the commonly used optimisation algorithms in Machine Learning.  “Premature optimization is the root o">
-<meta name="twitter:image" content="https://www.jacklee.work/assets/images/1*4VbVds8vD-CgAiOWTrs_Vw.png">
+<meta name="twitter:title" content="jenkins 声明式pipeline调用远程Docker执行任务">
+<meta name="twitter:description" content="jenkins 声明式pipeline调用远程Docker执行任务调用远程服务器执行任务的好处 一些 CPU 密集计算型任务，比如编译，静态扫描等等，放在单独的服务器上执行，不会对 Jenkins 所在服务器造成性能负担。 通过配置多台同样标签的子节点服务器，可以将多个任务分配到这些子节点上并行处理。  将任务执行环境采用 docker 部署而不是直接安装的好处 什么是 Docker ？容器对应用">
+<meta name="twitter:image" content="https://www.jacklee.work/assets/images/006y8mN6ly1g7dw7qmy0bj30q00fm760.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html">
+  <link rel="canonical" href="https://www.jacklee.work/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html">
 
 
 
@@ -146,7 +129,7 @@
   };
 </script>
 
-  <title>Understanding the Mathematics behind Gradient Descent | JackLee</title>
+  <title>jenkins 声明式pipeline调用远程Docker执行任务 | JackLee</title>
   
 
 
@@ -344,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackLee">
@@ -361,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Understanding the Mathematics behind Gradient Descent
+          <h1 class="post-title" itemprop="name headline">jenkins 声明式pipeline调用远程Docker执行任务
 
               
             
@@ -387,7 +370,7 @@
                 
               
 
-              <time title="创建时间：2019-03-28 16:55:19 / 修改时间：17:29:42" itemprop="dateCreated datePublished" datetime="2019-03-28T16:55:19+08:00">2019-03-28</time>
+              <time title="创建时间：2019-09-27 10:23:03 / 修改时间：11:23:52" itemprop="dateCreated datePublished" datetime="2019-09-27T10:23:03+08:00">2019-09-27</time>
             
 
             
@@ -409,7 +392,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工作/" itemprop="url" rel="index"><span itemprop="name">工作</span></a></span>
 
                 
                 
@@ -428,8 +411,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html" itemprop="commentCount"></span>
+                <a href="/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -437,7 +420,7 @@
 
           
           
-            <span id="/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html" class="leancloud_visitors" data-flag-title="Understanding the Mathematics behind Gradient Descent">
+            <span id="/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html" class="leancloud_visitors" data-flag-title="jenkins 声明式pipeline调用远程Docker执行任务">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -468,117 +451,34 @@
       
 
       
-        <h2 id="Understanding-the-Mathematics-behind-Gradient-Descent"><a href="#Understanding-the-Mathematics-behind-Gradient-Descent" class="headerlink" title="Understanding the Mathematics behind Gradient Descent"></a>Understanding the Mathematics behind Gradient Descent</h2><p>A simple mathematical intuition behind one of the commonly used optimisation algorithms in Machine Learning.</p>
-<blockquote>
-<p>“Premature optimization is the root of all evil.”<br>― Donald Ervin Knuth</p>
-</blockquote>
-<p><a href="http://en.wikipedia.org/wiki/Agile_software_development" target="_blank" rel="noopener"><strong>Agile</strong></a> is a pretty well-known term in the software development process. The basic idea behind it is simple: build something quickly ➡️ get it out there ➡️ get some feedback ➡️ make changes depending upon the feedback ➡️ repeat the process. The <strong>goal</strong> is to get the product near the user and let the user guide you with the <strong>feedback</strong> to obtain the best possible product with the <strong>least error</strong>. Also, the <strong>steps</strong> taken for improvement need to be small and should constantly involve the user. In a way, an Agile software development process involves rapid iterations. The idea of — start with a solution as soon as possible, measure and iterate as frequently as possible, is basically <a href="https://hackernoon.com/life-is-gradient-descent-880c60ac1be8" target="_blank" rel="noopener">Gradient descen</a>t under the hood.</p>
-<hr>
-<h3 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h3><p>Gradient descent algorithm is an iterative process that takes us to the minimum of a function(barring some caveats). The formula below sums up the entire Gradient Descent algorithm in a single line.</p>
-<p><img src="../assets/images/1*4VbVds8vD-CgAiOWTrs_Vw.png" alt="img"></p>
-<p>​                    <a href="https://www.coursehero.com/file/27927651/Gradient-Descentpdf/" target="_blank" rel="noopener">https://www.coursehero.com/file/27927651/Gradient-Descentpdf/</a></p>
-<p>But how do we arrive at this formula? Well, It is actually very simple and just includes some high school maths. Through this article, we shall try to understand as well as recreate this formula in the context of a Linear Regression model.</p>
-<hr>
-<h3 id="A-Machine-Learning-Model"><a href="#A-Machine-Learning-Model" class="headerlink" title="A Machine Learning Model"></a>A Machine Learning Model</h3><ul>
-<li>Consider a bunch of data points in a 2 D space. Assume that the data is related to the height and weight of a group of students. We are trying to predict some kind of relationship between these quantities so that we could predict the weight of some new students afterwards. This is essentially a simple example of a supervised Machine Learning technique.</li>
-<li>Let us now draw an arbitrary line in space that passes through some of these data points. The equation of this straight line would be <code>**Y = mX + b**</code>where <strong>m</strong> is the slope and <strong>b</strong> is its intercept on the Y-axis.</li>
+        <h1 id="jenkins-声明式pipeline调用远程Docker执行任务"><a href="#jenkins-声明式pipeline调用远程Docker执行任务" class="headerlink" title="jenkins 声明式pipeline调用远程Docker执行任务"></a>jenkins 声明式pipeline调用远程Docker执行任务</h1><h2 id="调用远程服务器执行任务的好处"><a href="#调用远程服务器执行任务的好处" class="headerlink" title="调用远程服务器执行任务的好处"></a>调用远程服务器执行任务的好处</h2><ul>
+<li>一些 CPU 密集计算型任务，比如编译，静态扫描等等，放在单独的服务器上执行，不会对 Jenkins 所在服务器造成性能负担。</li>
+<li>通过配置多台同样标签的子节点服务器，可以将多个任务分配到这些子节点上并行处理。</li>
 </ul>
-<p><img src="../assets/images/1*ZEIXhLHr99IK7qVSZJlyJg.png" alt="img"></p>
-<h4 id="Predictions"><a href="#Predictions" class="headerlink" title="Predictions"></a>Predictions</h4><p>Given a known set of inputs and their corresponding outputs, A machine learning model tries to make some predictions for a new set of inputs.</p>
-<p><img src="../assets/images/1*FevGteEfXxQ6nUFiqgSN4A.png" alt="img"></p>
-<p>ML process</p>
-<p>The Error would be the difference between the two predictions.</p>
-<p>This relates to the idea of a <strong>Cost function or Loss function.</strong></p>
-<hr>
-<h3 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h3><p>A <strong>Cost Function/Loss Function</strong> evaluates the performance of our Machine Learning Algorithm. The <strong>Loss function</strong> computes the error for a single training example while the <strong>Cost functi</strong>on is the average of the loss functions for all the training examples. Henceforth, I shall be using both the terms interchangeably.</p>
-<blockquote>
-<p>A Cost function basically tells us ‘ how good’ our model is at making predictions for a given value of m and b.</p>
-</blockquote>
-<p>Let’s say, there are a total of ’N’ points in the dataset and for all those ’N’ data points we want to minimize the error. So the Cost function would be the total squared error i.e</p>
-<p><img src="../assets/images/1*y0ME9Nfr962OLad60mpfiw.png" alt="img"></p>
-<p>Cost function for N data points</p>
-<blockquote>
-<p>Why do we take the squared differences and simply not the absolute differences? Because the squared differences make it easier to derive a regression line. Indeed, to find that line we need to compute the first derivative of the Cost function, and it is much harder to compute the derivative of absolute values than squared values. Also, the squared differences increase the error distance, thus, making the bad predictions more pronounced than the good ones.</p>
-</blockquote>
-<h4 id="Minimizing-the-Cost-Function"><a href="#Minimizing-the-Cost-Function" class="headerlink" title="Minimizing the Cost Function"></a>Minimizing the Cost Function</h4><blockquote>
-<p>The goal of any Machine Learning Algorithm is to minimize the Cost Function.</p>
-</blockquote>
-<p>This is because a lower error between the actual and the predicted values signifies that the algorithm has done a good job in learning. Since we want the lowest error value, we want those‘ <strong>m’</strong> and ‘<strong>b’</strong> values which give the smallest possible error.</p>
-<h4 id="How-do-we-actually-minimize-any-function"><a href="#How-do-we-actually-minimize-any-function" class="headerlink" title="How do we actually minimize any function?"></a>How do we actually minimize any function?</h4><p>If we look carefully, our <strong>Cost function</strong> is of the form <code>**Y = X²**</code>. In a Cartesian coordinate system, this is an equation for a parabola and can be graphically represented as :</p>
-<p><img src="../assets/images/1*6bTrn65AGt01MwoYTkvLMw.png" alt="img"></p>
-<p>Parabola</p>
-<p>To minimise the function above, we need to find <strong>that value of</strong> <code>**X**</code> <strong>that produces the lowest value of</strong> <code>**Y**</code>which is the <strong>red dot.</strong> It is quite easy to locate the minima here since it is a 2D graph but this may not always be the case especially in case of higher dimensions. For those cases, we need to devise an algorithm to locate the minima, and that algorithm is called<strong>Gradient Descent.</strong></p>
-<hr>
-<h3 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h3><p><strong>Gradient descent</strong> is one of the most popular algorithms to perform optimization and by far the most common way to optimize neural networks. It is an iterative optimisation algorithm used to find the minimum value for a function.</p>
-<h4 id="Intuition"><a href="#Intuition" class="headerlink" title="Intuition"></a>Intuition</h4><p>Consider that you are walking along the graph below, and you are currently at the ‘<strong>green</strong>’ dot. Your aim is to reach the minimum i.e the ‘red’ dot, but from your position, you are unable to view it.</p>
-<p><img src="../assets/images/1*ItujOVbVS683btoMNcSrWw.png" alt="img"></p>
-<p>Figure 2</p>
-<p><strong>Possible actions would be:</strong></p>
+<h2 id="将任务执行环境采用-docker-部署而不是直接安装的好处"><a href="#将任务执行环境采用-docker-部署而不是直接安装的好处" class="headerlink" title="将任务执行环境采用 docker 部署而不是直接安装的好处"></a>将任务执行环境采用 docker 部署而不是直接安装的好处</h2><ul>
+<li><a href="https://www.ibm.com/developerworks/community/blogs/3302cc3b-074e-44da-90b1-5055f1dc0d9c/entry/what-is-docker-containers?lang=en" target="_blank" rel="noopener">什么是 Docker ？容器对应用程序的好处</a></li>
+<li><a href="https://www.zhihu.com/question/22871084" target="_blank" rel="noopener">Docker 有什么优势</a></li>
+</ul>
+<h2 id="Jenkins-配置任务在远程服务器-Docker-容器中执行"><a href="#Jenkins-配置任务在远程服务器-Docker-容器中执行" class="headerlink" title="Jenkins 配置任务在远程服务器 Docker 容器中执行"></a>Jenkins 配置任务在远程服务器 Docker 容器中执行</h2><h3 id="1-配置-Jenkins-子节点"><a href="#1-配置-Jenkins-子节点" class="headerlink" title="1. 配置 Jenkins 子节点"></a>1. 配置 Jenkins 子节点</h3><ul>
+<li><a href="https://wiki.jenkins.io/pages/viewpage.action?pageId=75893612" target="_blank" rel="noopener">Step by step guide to set up master and slave machines</a></li>
+</ul>
+<p>配置完后效果如下图，这里我配置了两台 Slave 节点：epay_compile 和 sonarqube_scanner。分别用来做编译和sonarqube 代码静态扫描<br><img src="../assets/images/006y8mN6ly1g7dw7qmy0bj30q00fm760.jpg" alt></p>
+<p>我们使用 sonarqube_scanner 这台服务器做演示，注意这台服务器的标签: sonarqube ,后续我们将使用这个标签。</p>
+<p><img src="../assets/images/image-20190927110849522.png" alt="image-20190927110849522"></p>
+<h3 id="2-远程服务器上镜像构建"><a href="#2-远程服务器上镜像构建" class="headerlink" title="2. 远程服务器上镜像构建"></a>2. 远程服务器上镜像构建</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> ubuntu:<span class="number">16.04</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> jacklee &lt;jackleeforce@gmail.com&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span> apt-get update -qq \</span><br><span class="line">  &amp;&amp; apt-get install -y cppcheck unzip wget \</span><br><span class="line">  &amp;&amp; apt-get clean \</span><br><span class="line">  &amp;&amp; wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744-linux.zip -O sonarqube-scanner.zip \</span><br><span class="line">  &amp;&amp; unzip sonarqube-scanner.zip \</span><br><span class="line">  &amp;&amp; mv sonar-scanner-4.0.0.1744-linux sonarqube-scanner \</span><br><span class="line">  &amp;&amp; rm sonarqube-scanner.zip</span><br><span class="line"></span><br><span class="line">ENV PATH=/sonarqube-scanner/bin:$PATH</span><br></pre></td></tr></table></figure>
 <ul>
-<li>You might go upward or downward</li>
-<li>If you decide on which way to go, you might take a bigger step or a little step to reach your destination.</li>
+<li>我们在ubuntu 16.04的基础上构建了一个安装好 <a href="http://cppcheck.sourceforge.net/" target="_blank" rel="noopener">cppcheck</a>和<a href="https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/" target="_blank" rel="noopener">sonarqube-scanner</a>的镜像，以后只要启动这个镜像的容器，就可以使用  <a href="http://cppcheck.sourceforge.net/" target="_blank" rel="noopener">cppcheck</a>和 <a href="https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/" target="_blank" rel="noopener">sonarqube-scanner</a> 这两个工具。</li>
 </ul>
-<blockquote>
-<p>Essentially, there are two things that you should know to reach the minima, i.e. which way to go and how big a step to take.</p>
-</blockquote>
-<p>Gradient Descent Algorithm helps us to make these decisions efficiently and effectively with the use of derivatives. A <strong>derivative</strong> is a term that comes from calculus and is calculated as the slope of the graph at a particular point. The slope is described by drawing a tangent line to the graph at the point. So, if we are able to compute this tangent line, we might be able to compute the desired direction to reach the minima. We will talk about this in more detail in the later part of the article.</p>
-<h4 id="The-Minimum-Value"><a href="#The-Minimum-Value" class="headerlink" title="The Minimum Value"></a>The Minimum Value</h4><p>In the same figure, if we draw a tangent at the green point, we know that if we are moving upwards, we are moving away from the minima and vice versa. Also, the tangent gives us a sense of the steepness of the slope.</p>
-<p><img src="../assets/images/1*wOcqaaLlNo7X56PJ-lYFqQ.png" alt="img"></p>
-<p>The slope at the blue point is less steep than that at the green point which means it will take much smaller <strong>steps</strong> to reach the minimum from the blue point than from the green point.</p>
-<hr>
-<h4 id="Mathematical-Interpretation-of-Cost-Function"><a href="#Mathematical-Interpretation-of-Cost-Function" class="headerlink" title="Mathematical Interpretation of Cost Function"></a>Mathematical Interpretation of Cost Function</h4><p>Let us now put all these learnings into a mathematical formula. In the equation, <code>y = mX+b</code>, ‘m’ and ‘b’ are its parameters. During the training process, there will be a small change in their values. Let that small change be denoted by δ<strong>.</strong> The value of parameters will be updated as <strong>m=m-δm</strong><code></code>and<strong>b=b-δb</strong> respectively. Our aim here is to find those values of m and b in<code>y = mx+b</code> , for which the error is minimum i.e values which minimize the cost function.</p>
-<p>Rewriting the cost function:</p>
-<p><img src="../assets/images/1*C8YyXxRnpyKJuyUUFPNjag.png" alt="img"></p>
-<blockquote>
-<p>The idea is that by being able to compute the derivative/slope of the function, we can find the minimum of a function.</p>
-</blockquote>
-<hr>
-<h3 id="The-Learning-rate"><a href="#The-Learning-rate" class="headerlink" title="The Learning rate"></a>The Learning rate</h3><p>This size of steps taken to reach the minimum or bottom is called <strong>Learning Rate</strong>. We can cover more area with larger steps/higher learning rate but are at the risk of overshooting the minima. On the other hand, small steps/smaller learning rates will consume a lot of time to reach the lowest point.</p>
-<p>The visualisations below give an idea about the Learning Rate concept. <strong>See how in the third figure, we reach the minimum point with the minimum number of steps. This is the optimum learning rate for this problem.</strong></p>
-<p><img src="../assets/images/1*LHfPH8izBeLiN3BucwDofg.png" alt="img"><img src="../assets/images/1*vKWlgvHgO6Yl_c2PYuSGPQ.png" alt="img"><img src="../assets/images/1*9C5uOCz9-biIz8ynLauQOg.png" alt="img"></p>
-<p>​                    <a href="https://developers.google.com/machine-learning/crash-course/fitter/graph" target="_blank" rel="noopener">Source</a></p>
-<p>We saw that when the learning rate is too low, it takes a lot of steps to converge. On the other hand, when the learning rate is too high, Gradient Descent fails to reach the minimum as can be seen in the visualisation below.</p>
-<p><img src="../assets/images/1*lx58ZcrrILLX6I-ZCDN93w.gif" alt="img"></p>
-<p><a href="https://developers.google.com/machine-learning/crash-course/fitter/graph" target="_blank" rel="noopener">Source</a></p>
-<p>Experiment with different learning rates by visiting the link below.</p>
-<p><a href="https://developers.google.com/machine-learning/crash-course/fitter/graph" target="_blank" rel="noopener"><strong>Optimizing Learning Rate | Machine Learning Crash Course | Google Developers</strong><br><em>Can you reach the minimum more quickly with a higher learning rate? Set a learning rate of 1, and keep hitting STEP…</em>developers.google.com</a></p>
-<hr>
-<h3 id="Derivatives"><a href="#Derivatives" class="headerlink" title="Derivatives"></a>Derivatives</h3><p>Machine learning uses derivatives in optimization problems. Optimization algorithms like <em>gradient descent</em> use derivates to actually decide whether to increase or decrease the weights in order to increase or decrease any objective function.</p>
-<blockquote>
-<p>If we are able to compute the derivative of a function, we know in which direction to proceed to minimize it.</p>
-</blockquote>
-<p>Primarily we shall be dealing with two concepts from calculus :</p>
+<p>执行如下命令，构建镜像:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t sonarqube-scanner:latest .</span><br></pre></td></tr></table></figure>
 <ul>
-<li><strong>Power Rule</strong></li>
+<li>经过上面的步骤后，我们在 sonarqube_scanner 这个子节点服务器上有了一个标签为 sonarqube-scanner 的 docker 镜像。</li>
 </ul>
-<p>Power rule calculates the derivative of a variable raised to a power.</p>
-<p><img src="../assets/images/1*YsjwGDKD2JzM5KYuAAeNYg.png" alt="img"></p>
+<h3 id="3-pipeline-配置"><a href="#3-pipeline-配置" class="headerlink" title="3. pipeline 配置"></a>3. pipeline 配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">stage(&apos;code quality check&apos;) &#123;</span><br><span class="line">                    agent &#123; </span><br><span class="line">                        docker &#123;</span><br><span class="line">                            image &apos;sonarqube-scanner&apos;</span><br><span class="line">                            label &apos;sonarqube&apos; </span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125; </span><br><span class="line">                    steps &#123;</span><br><span class="line">                        sh &apos;cppcheck --enable=all --xml-version=2 . 2&gt; test.sonarqube.report.xml&apos;</span><br><span class="line">                        withSonarQubeEnv(&apos;cell_sonarqube&apos;) &#123;</span><br><span class="line">                            sh &quot;sonar-scanner -Dsonar.projectKey=$&#123;module_name&#125; \</span><br><span class="line">                            -Dsonar.sources=. -Dsonar.host.url=$(你的sonarqube URL) -Dsonar.login=$&#123;在sonarqube上创建的项目token&#125;&quot;</span><br><span class="line">                        &#125;</span><br><span class="line">                        timeout(time: 10, unit: &apos;MINUTES&apos;) &#123;</span><br><span class="line">                            waitForQualityGate abortPipeline: true</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><strong>Chain Rule</strong></li>
+<li>可以看到，要在 Jenkins Pipeline 中让任务在远程服务器上执行，关键是在任务中按照以下写法配置好 agent，其中 <code>image</code> 是远程子节点服务器上的 docker image 名称，<code>label</code>是远程子节点服务器的标签。</li>
 </ul>
-<p>The <strong>chain rule</strong> is used for calculating the derivative of composite functions. The chain rule can also be expressed in <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation" target="_blank" rel="noopener">Leibniz’s notation</a> as follows:</p>
-<p>If a variable <strong>z</strong> depends on the variable <strong>y</strong>, which itself depends on the variable <strong>x</strong>, so that <em>y</em> and <em>z</em> are dependent variables, then <em>z</em>, via the intermediate variable of <em>y</em>, depends on <em>x</em> as well. This is called the <a href="https://en.wikipedia.org/wiki/Chain_rule" target="_blank" rel="noopener">chain rule</a> and is mathematically written as,</p>
-<p>Let us understand it through an example:</p>
-<p><img src="../assets/images/1*e6Epzbmngh2a50WUrKleUA.png" alt="img"></p>
-<ul>
-<li>Using the <strong>Power</strong> and <strong>Chain</strong> Rule for derivatives, let’s calculate how Cost function changes relative to m and c. This deals with the concept of <strong>partial derivatives</strong> which says that if there is a function of two variables, then to find the partial derivative of that function w.r.t to one variable, treat the other variable as constant. This will be more clear with an example:</li>
-</ul>
-<p><img src="../assets/images/1*pEVVCEGBgnUp9n_GFtnoCA.png" alt="img"></p>
-<h4 id="Calculating-Gradient-Descent"><a href="#Calculating-Gradient-Descent" class="headerlink" title="Calculating Gradient Descent"></a>Calculating Gradient Descent</h4><p>Let us now apply the knowledge of these rules of calculus in our original equation and find the derivative of the Cost Function w.r.t to both <strong>‘m’</strong> and <strong>‘b’</strong>. Revising the Cost Function equation :</p>
-<p>For simplicity, let us get rid of the summation sign. The summation part is important, especially with the concept of <strong>Stochastic gradient descent (SGD )</strong> vs <strong>batch gradient descent</strong>. During the <strong>batch gradient descent</strong>, we look at the error of all the training examples at once while in the <strong>SGD</strong> we look at each error at a time. However, just to keep things simple, we will assume that we are looking at each error one at a time.</p>
-<p><img src="../assets/images/1*2HHOcNqN2IB3Hn0NwjKofQ.png" alt="img"></p>
-<p>Now let’s calculate the gradient of Error w.r.t to both m and b :</p>
-<p><img src="../assets/images/1*bA3RTXbN36FITpwpHKDHdA.png" alt="img"></p>
-<p>Plugging the values back in the cost function and multiplying it with the learning rate:</p>
-<p><img src="../assets/images/1*wFNHPg59MDlY2FV4CEPwNw.png" alt="img"></p>
-<p>Now, this <strong>2</strong> in this equation isn’t that significant since it just says that we have a learning rate twice as big or half as big. So let’s just get rid of it too. So, Ultimately, this entire article boils down to two simple equations which represent the equations for Gradient Descent.</p>
-<p><img src="../assets/images/1*H4W0YR1jVTWyQboPnSZPjQ.png" alt="img"></p>
-<p>m¹,b¹ = next position parameters; m⁰,b⁰ = current position parameters</p>
-<blockquote>
-<p>Hence,to solve for the gradient, we iterate through our data points using our new m and b values and compute the partial derivatives. This new gradient tells us the slope of our cost function at our current position and the direction we should move to update our parameters. The size of our update is controlled by the learning rate.</p>
-</blockquote>
-<hr>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>The point of this article was to demonstrate the concept of gradient descent. We used gradient descent as our optimization strategy for linear regression. by drawing the line of best fit to measure the relationship between student heights and weights. However, it is important to note here that the linear regression example has been chosen for simplicity but can be used with other Machine Learning techniques too.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">agent &#123; </span><br><span class="line">  docker &#123;</span><br><span class="line">    image &apos;sonarqube-scanner&apos;</span><br><span class="line">    label &apos;sonarqube&apos; </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -602,7 +502,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习-人工智能-AI/" rel="tag"># 机器学习,人工智能,AI</a>
+            <a href="/tags/Jenkins-持续集成-CI-CD-自动化/" rel="tag"># Jenkins,持续集成,CI/CD,自动化</a>
           
         </div>
       
@@ -635,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/想法/2019-03-05-远程智能儿童监控系统.html" rel="next" title="远程儿童监控系统">
-                <i class="fa fa-chevron-left"></i> 远程儿童监控系统
+              <a href="/教程/2019-06-17-躺在沙发上看电影的正确姿势.html" rel="next" title="躺在沙发上看电影的正确姿势">
+                <i class="fa fa-chevron-left"></i> 躺在沙发上看电影的正确姿势
               </a>
             
           </div>
@@ -644,10 +544,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/操作记录/2019-06-09-Set up the ladder.html" rel="prev" title="Set up the ladder">
-                Set up the ladder <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -845,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Understanding-the-Mathematics-behind-Gradient-Descent"><span class="nav-number">1.</span> <span class="nav-text">Understanding the Mathematics behind Gradient Descent</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective"><span class="nav-number">1.1.</span> <span class="nav-text">Objective</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Machine-Learning-Model"><span class="nav-number">1.2.</span> <span class="nav-text">A Machine Learning Model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Predictions"><span class="nav-number">1.2.1.</span> <span class="nav-text">Predictions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cost-Function"><span class="nav-number">1.3.</span> <span class="nav-text">Cost Function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Minimizing-the-Cost-Function"><span class="nav-number">1.3.1.</span> <span class="nav-text">Minimizing the Cost Function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How-do-we-actually-minimize-any-function"><span class="nav-number">1.3.2.</span> <span class="nav-text">How do we actually minimize any function?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Descent"><span class="nav-number">1.4.</span> <span class="nav-text">Gradient Descent</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Intuition"><span class="nav-number">1.4.1.</span> <span class="nav-text">Intuition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Minimum-Value"><span class="nav-number">1.4.2.</span> <span class="nav-text">The Minimum Value</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mathematical-Interpretation-of-Cost-Function"><span class="nav-number">1.4.3.</span> <span class="nav-text">Mathematical Interpretation of Cost Function</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Learning-rate"><span class="nav-number">1.5.</span> <span class="nav-text">The Learning rate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Derivatives"><span class="nav-number">1.6.</span> <span class="nav-text">Derivatives</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Calculating-Gradient-Descent"><span class="nav-number">1.6.1.</span> <span class="nav-text">Calculating Gradient Descent</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclusion"><span class="nav-number">1.7.</span> <span class="nav-text">Conclusion</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#jenkins-声明式pipeline调用远程Docker执行任务"><span class="nav-number">1.</span> <span class="nav-text">jenkins 声明式pipeline调用远程Docker执行任务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用远程服务器执行任务的好处"><span class="nav-number">1.1.</span> <span class="nav-text">调用远程服务器执行任务的好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将任务执行环境采用-docker-部署而不是直接安装的好处"><span class="nav-number">1.2.</span> <span class="nav-text">将任务执行环境采用 docker 部署而不是直接安装的好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-配置任务在远程服务器-Docker-容器中执行"><span class="nav-number">1.3.</span> <span class="nav-text">Jenkins 配置任务在远程服务器 Docker 容器中执行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-配置-Jenkins-子节点"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 配置 Jenkins 子节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-远程服务器上镜像构建"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 远程服务器上镜像构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-pipeline-配置"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. pipeline 配置</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
