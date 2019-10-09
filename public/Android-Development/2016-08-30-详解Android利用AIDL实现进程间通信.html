@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.0">
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta name="keywords" content="Android,AIDL,进程间通信,技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="详解Android利用AIDL实现进程间通信">
+<meta property="og:url" content="https://www.jacklee.work/Android-Development/2016-08-30-详解Android利用AIDL实现进程间通信.html">
+<meta property="og:site_name" content="JackLee">
+<meta property="og:description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/Create_AIDL_File.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/AIDL_File.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/SYNC.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/AIDL_JAVA_File.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/Result.gif">
+<meta property="og:updated_time" content="2019-09-27T03:31:58.399Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="详解Android利用AIDL实现进程间通信">
+<meta name="twitter:description" content="什么是AIDL？AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对">
+<meta name="twitter:image" content="https://www.jacklee.work/assets/images/Create_AIDL_File.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://www.jacklee.work/Android-Development/2016-08-30-详解Android利用AIDL实现进程间通信.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>详解Android利用AIDL实现进程间通信 | JackLee</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JackLee</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">专注,深入,折腾,热爱生活,</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/Android-Development/2016-08-30-详解Android利用AIDL实现进程间通信.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JackLee">
+      <meta itemprop="description" content="自由泳宇宙顶尖高手">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JackLee">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">详解Android利用AIDL实现进程间通信
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-08-30 17:11:53" itemprop="dateCreated datePublished" datetime="2016-08-30T17:11:53+08:00">2016-08-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-27 11:31:58" itemprop="dateModified" datetime="2019-09-27T11:31:58+08:00">2019-09-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android-Development/" itemprop="url" rel="index"><span itemprop="name">Android Development</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/Android-Development/2016-08-30-详解Android利用AIDL实现进程间通信.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Android-Development/2016-08-30-详解Android利用AIDL实现进程间通信.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/Android-Development/2016-08-30-详解Android利用AIDL实现进程间通信.html" class="leancloud_visitors" data-flag-title="详解Android利用AIDL实现进程间通信">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="什么是AIDL？"><a href="#什么是AIDL？" class="headerlink" title="什么是AIDL？"></a>什么是AIDL？</h2><p>AIDL是 Android Interface definition language的缩写，是Android的一种接口定义语言。通过它我们可以定义在Android上实现进程间通信的接口,在ADT和AS中会自动为我们写好的AIDL文件生成JAVA代码。<br>在Android中，为了实现进程间访问需要把复杂对象分解成操作系统可以理解的基本数据类型，在跨过进程边界后再组合成对象，实现组合成对象的代码单调又难于开发，好在Android为我们提供了AIDL处理这些功能。</p>
+<h2 id="什么场合下用AIDL？"><a href="#什么场合下用AIDL？" class="headerlink" title="什么场合下用AIDL？"></a>什么场合下用AIDL？</h2><p>直接看官方指南:<a href="https://developer.android.com/guide/components/aidl.html的这段话：" target="_blank" rel="noopener">https://developer.android.com/guide/components/aidl.html的这段话：</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Note: Using AIDL is necessary only if you allow clients from different applications </span><br><span class="line">to access your service for IPC and want to handle multithreading in your service. </span><br><span class="line">If you do not need to perform concurrent IPC across different applications, you </span><br><span class="line">should create your interface by implementing a Binder or, if you want to perform </span><br><span class="line">IPC, but do not need to handle multithreading, implement your interface using a </span><br><span class="line">Messenger.</span><br></pre></td></tr></table></figure>
+<p>只有在你允许多个应用程序访问你提供的服务进行进程间通信，并且在提供的服务中涉及到多线程处理的时候才需要使用到AIDL。如果你无需处理多应用并发通信，你应该采用Binder进行进程间通信。如果你实现的进程间通信未涉及多线程处理，你需要采用Messenger进行进程间通信。<br>一般适用于为其它应用程序提供公共服务的Service，这种Service即为系统常驻的Service(如：天气服务，日历服务等)。</p>
+<h2 id="选择AIDL进行进程间通信有什么优缺点"><a href="#选择AIDL进行进程间通信有什么优缺点" class="headerlink" title="选择AIDL进行进程间通信有什么优缺点?"></a>选择AIDL进行进程间通信有什么优缺点?</h2><p>优点:<br>1.AIDL有自己的独立进程，不会受到其它进程的影响；<br>2.可以被其它进程复用，提供公共服务；<br>3.具有很高的灵活性。<br>4.相比Messenger,可以传输的数据量大。<br>缺点:<br>1.相对普通服务，占用系统资源较多，使用AIDL进行IPC也相对麻烦。</p>
+<h2 id="AIDL如何使用？"><a href="#AIDL如何使用？" class="headerlink" title="AIDL如何使用？"></a>AIDL如何使用？</h2><p>既然用AIDL的最终目标是进行不同进程间通信，那这里咱们搞两个APP，一个Server,提供一个Service，用来对传入的参数做加法运算，另外一个Client,调用Server提供的Service。</p>
+<h3 id="Server端实现"><a href="#Server端实现" class="headerlink" title="Server端实现"></a>Server端实现</h3><p>1.建立一个工程，命名:AIDLServer<br>2.新建AIDL文件,命名:IMyAidlInterface<br><img src="../assets/images/Create_AIDL_File.png" alt><br>3.生成后如图2，可以看到自动帮我们生成了一个函数basicTypes，示范了我们可以在AIDL里面使用的基本数据类型，这些类型可以当做参数或者函数返回值，这个函数我们没用到，不用理会，我们新增一个自己的函数add,AIDL文件创建到此结束。<br><img src="../assets/images/AIDL_File.png" alt><br>4.我们前面提到过，ADT和AS会自动为我们写的AIDL文件生成JAVA代码，这篇文章里面我用的AS，我们点击<img src="../assets/images/SYNC.png" alt>，然后在app/build/generated/source/aidl/debug/包名下可以看到自动生成的IMyAidlInterface.java,不过实际上这个文件我们不会去动它。如图3：<br><img src="../assets/images/AIDL_JAVA_File.png" alt><br>5.创建Service提供服务，AIDL涉及到IPC通信，所以需要使用绑定服务,在这里我们创建了一个内部类MyAidlImpl继承我们前面写的IMyAidlInterface，并实现了add函数，然后在onBind函数里面返回匿名MyAidlImpl实例。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlserver;</span><br><span class="line">import android.app.Service;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.annotation.Nullable;</span><br><span class="line"></span><br><span class="line">public class AIDLService extends Service</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    public class MyAidlImpl extends IMyAidlInterface.Stub</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public int add(int value1, int value2) throws RemoteException &#123;</span><br><span class="line">            return value1 + value2;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException &#123;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Nullable</span><br><span class="line">    @Override</span><br><span class="line">    public IBinder onBind(Intent intent) &#123;</span><br><span class="line">        return new MyAidlImpl();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>6.注册AIDLService,在AndroidManifest里面加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;service android:name=&quot;jackleeforce.aidlserver.AIDLService&quot;</span><br><span class="line">            android:exported=&quot;true&quot;&gt;</span><br><span class="line">&lt;/service&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Server端口开发到此结束，实际上就三步，新增AIDL文件，然后创建绑定服务，在服务内实现我们要对外暴露的接口，然后注册服务，大家注意注册服务时我们写的name值，后面要用到，android:exported=”true”表示导出这个服务接口。接下来我们实现客户端。</p>
+<h3 id="Client端实现"><a href="#Client端实现" class="headerlink" title="Client端实现"></a>Client端实现</h3><p>1.建立一个工程，命名:AIDLClient<br>2.把刚才在AIDLServer工程里面建的IMyAidlInterface.aidl文件拷贝过来，这里注意包名，一定要跟Server端的一致，可以直接从AIDLServer文件夹里面连同AIDL目录一起拷过来，然后在AS里面刷新一下文件就出现了,如图4:<br><br>3.我们刚才在服务端定义了一个add计算两个数字和的接口，现在在客户端要使用这个接口，为了演示，这里做个简单计算器好了，MainActivity布局文件如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    android:padding=&quot;16dp&quot;</span><br><span class="line">    tools:context=&quot;.MainActivity&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_a&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:inputType=&quot;number&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;+&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_b&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:inputType=&quot;number&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:text=&quot;=&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:id=&quot;@+id/et_result&quot;</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:enabled=&quot;false&quot;</span><br><span class="line">        android:gravity=&quot;center_horizontal&quot; /&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=&quot;@+id/calculate&quot;</span><br><span class="line">        android:layout_width=&quot;0dp&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_weight=&quot;1&quot;</span><br><span class="line">        android:onClick=&quot;onCalculate&quot;</span><br><span class="line">        android:text=&quot;计算&quot; /&gt;</span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure>
+<p>MainActivity.java代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line">package jackleeforce.aidlclient;</span><br><span class="line"></span><br><span class="line">import android.content.ComponentName;</span><br><span class="line">import android.content.Context;</span><br><span class="line">import android.content.Intent;</span><br><span class="line">import android.content.ServiceConnection;</span><br><span class="line">import android.os.IBinder;</span><br><span class="line">import android.os.RemoteException;</span><br><span class="line">import android.support.v7.app.AppCompatActivity;</span><br><span class="line">import android.os.Bundle;</span><br><span class="line">import android.view.View;</span><br><span class="line">import android.widget.Button;</span><br><span class="line">import android.widget.EditText;</span><br><span class="line">import android.widget.Toast;</span><br><span class="line">import jackleeforce.aidlserver.IMyAidlInterface;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class MainActivity extends AppCompatActivity implements View.OnClickListener &#123;</span><br><span class="line"></span><br><span class="line">    private EditText et_a;</span><br><span class="line">    private EditText et_b;</span><br><span class="line">    private EditText et_result;</span><br><span class="line">    private Button btn_calc;</span><br><span class="line">    private IMyAidlInterface mService;</span><br><span class="line">    private AddServiceConnect mServiceConnect;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    </span><br><span class="line">        initUI();</span><br><span class="line">    </span><br><span class="line">        connectService();</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    protected void onDestroy() &#123;</span><br><span class="line">        super.onDestroy();</span><br><span class="line">    </span><br><span class="line">        releaseService();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void initUI()</span><br><span class="line">    &#123;</span><br><span class="line">        et_a = (EditText)findViewById(R.id.et_a);</span><br><span class="line">        et_b = (EditText)findViewById(R.id.et_b);</span><br><span class="line">        et_result = (EditText)findViewById(R.id.et_result);</span><br><span class="line">        btn_calc = (Button)findViewById(R.id.calculate);</span><br><span class="line">    </span><br><span class="line">        btn_calc.setOnClickListener(this);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">        switch (v.getId())</span><br><span class="line">        &#123;</span><br><span class="line">            case R.id.calculate:</span><br><span class="line">                calc();</span><br><span class="line">                break;</span><br><span class="line">            default:</span><br><span class="line">                break;</span><br><span class="line">    </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private void calc()</span><br><span class="line">    &#123;</span><br><span class="line">        int a = Integer.parseInt(et_a.getText().toString());</span><br><span class="line">        int b = Integer.parseInt(et_b.getText().toString());</span><br><span class="line">    </span><br><span class="line">        try</span><br><span class="line">        &#123;</span><br><span class="line">            int result = mService.add(a, b);</span><br><span class="line">    </span><br><span class="line">            et_result.setText(String.valueOf(result));</span><br><span class="line">        &#125;</span><br><span class="line">        catch (Exception e)</span><br><span class="line">        &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    class AddServiceConnect implements ServiceConnection</span><br><span class="line">    &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public void onServiceConnected(ComponentName name, IBinder service) &#123;</span><br><span class="line">            mService = IMyAidlInterface.Stub.asInterface(service);</span><br><span class="line">    </span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;onServiceConnected&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        @Override</span><br><span class="line">        public void onServiceDisconnected(ComponentName name) &#123;</span><br><span class="line">            mService = null;</span><br><span class="line">    </span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;onServiceDisconnected&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void connectService()</span><br><span class="line">    &#123;</span><br><span class="line">        mServiceConnect = new AddServiceConnect();</span><br><span class="line">        Intent i = new Intent();</span><br><span class="line">    </span><br><span class="line">        i.setComponent(new ComponentName(&quot;jackleeforce.aidlserver&quot;,&quot;jackleeforce.aidlserver.AIDLService&quot;));</span><br><span class="line">        i.setPackage(getPackageName());</span><br><span class="line">    </span><br><span class="line">        boolean result = getApplicationContext().bindService(i,mServiceConnect, Context.BIND_AUTO_CREATE);</span><br><span class="line">        if (!result)</span><br><span class="line">        &#123;</span><br><span class="line">            Toast.makeText(MainActivity.this,&quot;bindService failed&quot;,Toast.LENGTH_LONG).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void releaseService()</span><br><span class="line">    &#123;</span><br><span class="line">        unbindService(mServiceConnect);</span><br><span class="line">        mServiceConnect = null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到MainActivity起来的时候调用我们实现的connectService去连接服务端提供的服务，咱们看一下上面的connectService函数，第104行创建一个AddServiceConnect对象，从85行可以看到AddServiceConnect是一个内部类，实现了ServiceConnection接口，一看重载的两个方法名字就能明白，这是一个回调接口，当服务成功连接上了会调用onServiceConnected方法，89行我在onServiceConnected方法中，将返回的Binder对象转换成AIDL接口，以后就可以通过这个AIDL接口去调用服务端暴露出来的Service（在服务端实现的add）。当服务端因异常或者主动断开后，会执行onServiceDisConnected方法，表示已经断开连接。<br>接下来再回到connectService函数，第105行创建了一个Intent对象，接下来107和108两行代码非常关键，可以说是一个大坑，照着网络上大部分博文学习AIDL，最后无法成功绑定服务就是因为写错，107行设置Intent对象的ComponentName，第一个参数服务端的包名，第二个参数服务端暴露的Service名字,也就是前面实现服务端代码时在AndroidManifest里面注册的Service Name，这里是jackleeforce.aidlserver.AIDLService，由于Andorid 5.0以后不允许使用匿名Intent对象，这里在108行通过setPackage方法设置包名。然后在110行通过bindService函数去绑定服务。</p>
+<p>到这里我们Server端与Client端代码都实现完成了，这里总结一下：<br>服务端<br>1.定义AIDL文件。<br>2.定义要暴露的的Service，并在里面实现AIDL文件中声明的方法。<br>3.注册Service，明确Service Name，并将Service声明成Export。</p>
+<p>客户端<br>1.引入AIDL文件。<br>2.通过bindService函数去绑定服务端暴露的Service,系统会通过我们指定的Service Name找到这个Service，成功连接了以后会返回一个Binder对象，我们要用Stub.asInterface将这个Binder对象转换成我们需要的AIDL对象，这个AIDL对象的类实现代码就是系统自动为我们引入的AIDL文件生成的JAVA文件。<br>3.有了AIDL对象，我们就可以调用里面暴露的接口了。</p>
+<p>分别编译运行AIDLServer与AIDLClient,我这里实现的例子中要先运行AIDLServer与AIDLClient，效果如图：<br><img src="../assets/images/Result.gif" alt></p>
+<p>以上就是AIDL的基本使用知识，接下来我将专门写一篇文章讲诉如何通过AIDL传递复杂对象，并通过AIDL模拟实现QQ社交登陆SDK。</p>
+<p>本文中的两个工程例子在此：<a href="https://github.com/lijiahua/AIDL_Test" target="_blank" rel="noopener">https://github.com/lijiahua/AIDL_Test</a></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>支持原创，随手一扫</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/reward/wechatpay.jpg" alt="JackLee 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/reward/alipay.jpg" alt="JackLee 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android-AIDL-进程间通信-技术/" rel="tag"># Android,AIDL,进程间通信,技术</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/财经/2018-10-10-（转载）这个时代没有怀才不遇.html" rel="prev" title="（转载）这个时代没有怀才不遇">
+                （转载）这个时代没有怀才不遇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="JackLee">
+            
+              <p class="site-author-name" itemprop="name">JackLee</p>
+              <p class="site-description motion-element" itemprop="description">自由泳宇宙顶尖高手</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/lijiahua" title="GitHub &rarr; https://github.com/lijiahua" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:jackleeforce@gmail.com" title="E-Mail &rarr; mailto:jackleeforce@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是AIDL？"><span class="nav-number">1.</span> <span class="nav-text">什么是AIDL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么场合下用AIDL？"><span class="nav-number">2.</span> <span class="nav-text">什么场合下用AIDL？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择AIDL进行进程间通信有什么优缺点"><span class="nav-number">3.</span> <span class="nav-text">选择AIDL进行进程间通信有什么优缺点?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AIDL如何使用？"><span class="nav-number">4.</span> <span class="nav-text">AIDL如何使用？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Server端实现"><span class="nav-number">4.1.</span> <span class="nav-text">Server端实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Client端实现"><span class="nav-number">4.2.</span> <span class="nav-text">Client端实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JackLee</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: true,
+    appId: 'G1YbJueC49tfw4JS3cb37xdA-gzGzoHsz',
+    appKey: 'AyTKiuhas070qOdPPMv98khk',
+    placeholder: '',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "default";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
