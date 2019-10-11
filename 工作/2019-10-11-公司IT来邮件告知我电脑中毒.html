@@ -101,25 +101,33 @@
 
 
 
-  <meta name="description" content="决策树决策树是一种非常基础又常见的机器学习模型。 一棵决策树（Decision Tree）是一个树结构（可以是二叉树或非二叉树），每个非叶节点对应一个特征，该节点的每个分支代表这个特征的一个取值，而每个叶节点存放一个类别或一个回归函数。 使用决策树进行决策的过程就是从根节点开始，提取出待分类项中相应的特征，按照其值选择输出分支，依次向下，直到到达叶子节点，将叶子节点存放的类别或者回归函数的运算结果">
-<meta name="keywords" content="机器学习,人工智能,AI,学习笔记">
+  <meta name="description" content="中毒昨天下午收到公司 IT 来邮件说，在公司深信服系统中监测出我的电脑疑似中毒: 看到邮件，第一时间觉得不可思议，我用苹果 OSX 系统，中毒概率应该比较低吧。不过深入想了下，自己平时下载软件，能直接下载 DMG 的，就不在 AppStore里面下，平时如果没有认真防范，中招也不是不可能。 中了什么病毒根据邮件里面的关键字，谷歌了一下：  看来公司IT真没冤枉我，这个 Mokes 有专门针对苹果">
+<meta name="keywords" content="工作,计算机技能,个人计算机,PC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习极简入门课学习笔记-第十六课(决策树——既能分类又能回归的模型)">
-<meta property="og:url" content="https://www.jacklee.work/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html">
+<meta property="og:title" content="详解Android利用AIDL实现进程间通信">
+<meta property="og:url" content="https://www.jacklee.work/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="决策树决策树是一种非常基础又常见的机器学习模型。 一棵决策树（Decision Tree）是一个树结构（可以是二叉树或非二叉树），每个非叶节点对应一个特征，该节点的每个分支代表这个特征的一个取值，而每个叶节点存放一个类别或一个回归函数。 使用决策树进行决策的过程就是从根节点开始，提取出待分类项中相应的特征，按照其值选择输出分支，依次向下，直到到达叶子节点，将叶子节点存放的类别或者回归函数的运算结果">
+<meta property="og:description" content="中毒昨天下午收到公司 IT 来邮件说，在公司深信服系统中监测出我的电脑疑似中毒: 看到邮件，第一时间觉得不可思议，我用苹果 OSX 系统，中毒概率应该比较低吧。不过深入想了下，自己平时下载软件，能直接下载 DMG 的，就不在 AppStore里面下，平时如果没有认真防范，中招也不是不可能。 中了什么病毒根据邮件里面的关键字，谷歌了一下：  看来公司IT真没冤枉我，这个 Mokes 有专门针对苹果">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-09T05:42:17.272Z">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011111740823.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011112454594.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011113215660.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011113308062.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011113435803.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011113517769.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20191011113734118.png">
+<meta property="og:updated_time" content="2019-10-11T03:40:04.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习极简入门课学习笔记-第十六课(决策树——既能分类又能回归的模型)">
-<meta name="twitter:description" content="决策树决策树是一种非常基础又常见的机器学习模型。 一棵决策树（Decision Tree）是一个树结构（可以是二叉树或非二叉树），每个非叶节点对应一个特征，该节点的每个分支代表这个特征的一个取值，而每个叶节点存放一个类别或一个回归函数。 使用决策树进行决策的过程就是从根节点开始，提取出待分类项中相应的特征，按照其值选择输出分支，依次向下，直到到达叶子节点，将叶子节点存放的类别或者回归函数的运算结果">
+<meta name="twitter:title" content="详解Android利用AIDL实现进程间通信">
+<meta name="twitter:description" content="中毒昨天下午收到公司 IT 来邮件说，在公司深信服系统中监测出我的电脑疑似中毒: 看到邮件，第一时间觉得不可思议，我用苹果 OSX 系统，中毒概率应该比较低吧。不过深入想了下，自己平时下载软件，能直接下载 DMG 的，就不在 AppStore里面下，平时如果没有认真防范，中招也不是不可能。 中了什么病毒根据邮件里面的关键字，谷歌了一下：  看来公司IT真没冤枉我，这个 Mokes 有专门针对苹果">
+<meta name="twitter:image" content="https://www.jacklee.work/assets/images/image-20191011111740823.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://www.jacklee.work/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html">
+  <link rel="canonical" href="https://www.jacklee.work/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html">
 
 
 
@@ -129,7 +137,7 @@
   };
 </script>
 
-  <title>机器学习极简入门课学习笔记-第十六课(决策树——既能分类又能回归的模型) | JackLee</title>
+  <title>详解Android利用AIDL实现进程间通信 | JackLee</title>
   
 
 
@@ -327,7 +335,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html">
+    <link itemprop="mainEntityOfPage" href="https://www.jacklee.work/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackLee">
@@ -344,7 +352,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习极简入门课学习笔记-第十六课(决策树——既能分类又能回归的模型)
+          <h1 class="post-title" itemprop="name headline">详解Android利用AIDL实现进程间通信
 
               
             
@@ -370,24 +378,12 @@
                 
               
 
-              <time title="创建时间：2019-02-22 11:12:29" itemprop="dateCreated datePublished" datetime="2019-02-22T11:12:29+08:00">2019-02-22</time>
+              <time title="创建时间：2019-10-11 11:11:53 / 修改时间：11:40:04" itemprop="dateCreated datePublished" datetime="2019-10-11T11:11:53+08:00">2019-10-11</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-09 13:42:17" itemprop="dateModified" datetime="2019-10-09T13:42:17+08:00">2019-10-09</time>
               
             
           </span>
@@ -404,7 +400,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/人工智能/" itemprop="url" rel="index"><span itemprop="name">人工智能</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工作/" itemprop="url" rel="index"><span itemprop="name">工作</span></a></span>
 
                 
                 
@@ -423,8 +419,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html" itemprop="commentCount"></span>
+                <a href="/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -432,7 +428,7 @@
 
           
           
-            <span id="/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html" class="leancloud_visitors" data-flag-title="机器学习极简入门课学习笔记-第十六课(决策树——既能分类又能回归的模型)">
+            <span id="/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html" class="leancloud_visitors" data-flag-title="详解Android利用AIDL实现进程间通信">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -463,26 +459,17 @@
       
 
       
-        <h4 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h4><p>决策树是一种非常基础又常见的机器学习模型。</p>
-<p>一棵决策树（Decision Tree）是一个树结构（可以是二叉树或非二叉树），每个非叶节点对应一个特征，该节点的每个分支代表这个特征的一个取值，而每个叶节点存放一个类别或一个回归函数。</p>
-<p>使用决策树进行决策的过程就是从根节点开始，提取出待分类项中相应的特征，按照其值选择输出分支，依次向下，直到到达叶子节点，将叶子节点存放的类别或者回归函数的运算结果作为输出（决策）结果。</p>
-<h4 id="构建决策树"><a href="#构建决策树" class="headerlink" title="构建决策树"></a>构建决策树</h4><ol>
-<li><p>准备若干的训练数据（假设有 m 个样本）；</p>
-</li>
-<li><p>标明每个样本预期的类别；</p>
-</li>
-<li><p>人为选取一些特征（即决策条件）；</p>
-</li>
-<li><p>为每个训练样本对应所有需要的特征生成相应值——数值化特征；</p>
-</li>
-<li><p>将通过上面的1-4步获得的训练数据输入给训练算法，训练算法通过一定的原则，决定各个特征的重要性程度，然后按照决策重要性从高到底，生成决策树。</p>
-</li>
-</ol>
-<h4 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h4><p><strong>一条信息的信息量和它的不确定性有着直接的关系，而信息熵就是用来衡量不确定性的程度</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">熵：表示随机变量的不确定性。</span><br><span class="line">条件熵：在一个条件下，随机变量的不确定性。</span><br><span class="line">信息增益：熵 - 条件熵在一个条件下，信息不确定性减少的程度！</span><br><span class="line"></span><br><span class="line">通俗地讲，X(明天下雨)是一个随机变量，X的熵可以算出来， Y(明天阴天)也是随机变量，在阴天情况下下雨的信息熵我们如果也知道的话（此处需要知道其联合概率分布或是通过数据估计）即是条件熵。两者相减就是信息增益！原来明天下雨例如信息熵是2，条件熵是0.01（因为如果是阴天就下雨的概率很大，信息就少了），这样相减后为1.99，在获得阴天这个信息后，下雨信息不确定性减少了1.99！是很多的！所以信息增益大！也就是说，阴天这个信息对下雨来说是很重要的！所以在特征选择的时候常常用信息增益，如果IG（信息增益大）的话那么这个特征对于分类来说很关键~~ 决策树就是这样来找特征的！</span><br><span class="line"></span><br><span class="line">作者：卡伊粥</span><br><span class="line">链接：https://www.zhihu.com/question/22104055/answer/67014456</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
-<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><p><a href="https://zhuanlan.zhihu.com/p/26486223" target="_blank" rel="noopener">通俗理解信息熵</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/26551798" target="_blank" rel="noopener">通俗理解条件熵</a></p>
-<p><a href="https://www.zhihu.com/question/22104055" target="_blank" rel="noopener">信息增益到底怎么理解</a></p>
+        <h2 id="中毒"><a href="#中毒" class="headerlink" title="中毒"></a>中毒</h2><p>昨天下午收到公司 IT 来邮件说，在公司深信服系统中监测出我的电脑疑似中毒:<br><img src="../assets/images/image-20191011111740823.png" alt="image-20191011111740823"></p>
+<p>看到邮件，第一时间觉得不可思议，我用苹果 OSX 系统，中毒概率应该比较低吧。不过深入想了下，自己平时下载软件，能直接下载 DMG 的，就不在 AppStore里面下，平时如果没有认真防范，中招也不是不可能。</p>
+<h2 id="中了什么病毒"><a href="#中了什么病毒" class="headerlink" title="中了什么病毒"></a>中了什么病毒</h2><p>根据邮件里面的关键字，谷歌了一下：</p>
+<p><img src="../assets/images/image-20191011112454594.png" alt="image-20191011112454594"></p>
+<p>看来公司IT真没冤枉我，这个 Mokes 有专门针对苹果 OSX 的版本。</p>
+<h2 id="查毒杀毒"><a href="#查毒杀毒" class="headerlink" title="查毒杀毒"></a>查毒杀毒</h2><p>自从用了苹果系统，就从来没装过杀毒软件，在上一家公司的时候，公司 IT 部门会定期检查员工个人电脑上是否有装杀毒软件，每次临查，我都是提前溜到公司天台去躲避检查。现在知道电脑上中毒了，不把它纠出来也不放心啊，苹果 OSX 的杀毒软件不多，大多数是国外品牌，我挑选了以前在 Windows 上经常用的 ESET ：<br><img src="../assets/images/image-20191011113215660.png" alt="image-20191011113215660"></p>
+<p>下载安装好后，更新了一下防病毒引擎:<br><img src="../assets/images/image-20191011113308062.png" alt="image-20191011113308062"></p>
+<p>看着设置面板提醒，当前为免费评估版本，免费使用一个月，心理又不痛快了，谷歌了下 ESET 激活码，里面随便挑一个没过期的，还真可以用！😄。</p>
+<p><img src="../assets/images/image-20191011113435803.png" alt="image-20191011113435803"><br><img src="../assets/images/image-20191011113517769.png" alt="image-20191011113517769"></p>
+<p>放着慢慢查杀吧，希望尽快将病毒纠出来：<br><img src="../assets/images/image-20191011113734118.png" alt="image-20191011113734118"></p>
+<h2 id="杀毒结果"><a href="#杀毒结果" class="headerlink" title="杀毒结果"></a>杀毒结果</h2><p>TBD</p>
 
       
     </div>
@@ -535,7 +522,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习-人工智能-AI-学习笔记/" rel="tag"># 机器学习,人工智能,AI,学习笔记</a>
+            <a href="/tags/工作-计算机技能-个人计算机-PC/" rel="tag"># 工作,计算机技能,个人计算机,PC</a>
           
         </div>
       
@@ -568,8 +555,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/人工智能/2019-02-21-机器学习极简入门课学习笔记-第十五课-逻辑回归——用来做分类的回归模型.html" rel="next" title="机器学习极简入门课学习笔记-第十五课(逻辑回归——用来做分类的回归模型)">
-                <i class="fa fa-chevron-left"></i> 机器学习极简入门课学习笔记-第十五课(逻辑回归——用来做分类的回归模型)
+              <a href="/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html" rel="next" title="jenkins 声明式pipeline调用远程Docker执行任务">
+                <i class="fa fa-chevron-left"></i> jenkins 声明式pipeline调用远程Docker执行任务
               </a>
             
           </div>
@@ -577,10 +564,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/想法/2019-03-05-远程智能儿童监控系统.html" rel="prev" title="远程儿童监控系统">
-                远程儿童监控系统 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -780,7 +763,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#决策树"><span class="nav-number">1.</span> <span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构建决策树"><span class="nav-number">2.</span> <span class="nav-text">构建决策树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#信息熵"><span class="nav-number">3.</span> <span class="nav-text">信息熵</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#参考资料"><span class="nav-number">3.1.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#中毒"><span class="nav-number">1.</span> <span class="nav-text">中毒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中了什么病毒"><span class="nav-number">2.</span> <span class="nav-text">中了什么病毒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查毒杀毒"><span class="nav-number">3.</span> <span class="nav-text">查毒杀毒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杀毒结果"><span class="nav-number">4.</span> <span class="nav-text">杀毒结果</span></a></li></ol></div>
             
 
           </div>
