@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>一次服务器中挖矿病毒的排查经历</title>
+      <link href="/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2020-02-28-%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%E7%9A%84%E6%8E%92%E6%9F%A5%E7%BB%8F%E5%8E%86.html"/>
+      <url>/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2020-02-28-%E4%B8%80%E6%AC%A1%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92%E7%9A%84%E6%8E%92%E6%9F%A5%E7%BB%8F%E5%8E%86.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h2 id="排查"><a href="#排查" class="headerlink" title="排查"></a>排查</h2><h3 id="排查步骤"><a href="#排查步骤" class="headerlink" title="排查步骤"></a>排查步骤</h3><h2 id="事后总结"><a href="#事后总结" class="headerlink" title="事后总结"></a>事后总结</h2><h3 id="服务器安全"><a href="#服务器安全" class="headerlink" title="服务器安全"></a>服务器安全</h3><h3 id="病毒缺陷分析"><a href="#病毒缺陷分析" class="headerlink" title="病毒缺陷分析"></a>病毒缺陷分析</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作记录,linux,病毒 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>抽取 git 仓库的子目录独立成新仓库</title>
       <link href="/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2019-11-25-%E6%8A%BD%E5%8F%96%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%E5%AD%90%E7%9B%AE%E5%BD%95%E7%8B%AC%E7%AB%8B%E6%88%90%E6%96%B0%E4%BB%93%E5%BA%93.html"/>
       <url>/%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/2019-11-25-%E6%8A%BD%E5%8F%96%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%E5%AD%90%E7%9B%AE%E5%BD%95%E7%8B%AC%E7%AB%8B%E6%88%90%E6%96%B0%E4%BB%93%E5%BA%93.html</url>
