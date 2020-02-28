@@ -1,7 +1,10 @@
+https://www.jacklee.work/操作记录/2019-11-25-抽取 git 仓库的子目录独立成新仓库.html
+https://www.jacklee.work/游泳/2019-11-01-2019-10-31 游泳视频记录.html
+https://www.jacklee.work/游泳/2019-10-24-2019-10-23 游泳视频记录.html
+https://www.jacklee.work/工作/2019-10-11-公司IT来邮件告知我电脑中毒.html
 https://www.jacklee.work/工作/2019-09-27-jenkins 声明式pipeline调用远程Docker执行任务.html
 https://www.jacklee.work/教程/2019-06-17-躺在沙发上看电影的正确姿势.html
 https://www.jacklee.work/操作记录/2019-06-09-Set up the ladder.html
-https://www.jacklee.work/人工智能/2019-03-28-Understanding the Mathematics behind Gradient Descent.html
 https://www.jacklee.work/想法/2019-03-05-远程智能儿童监控系统.html
 https://www.jacklee.work/人工智能/2019-02-22-机器学习极简入门课学习笔记-第十六课-决策树——既能分类又能回归的模型.html
 https://www.jacklee.work/人工智能/2019-02-21-机器学习极简入门课学习笔记-第十五课-逻辑回归——用来做分类的回归模型.html

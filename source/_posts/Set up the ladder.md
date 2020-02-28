@@ -1,7 +1,7 @@
 ---
 title: Set up the ladder
 date: 2019-06-09 14:57:46
-tags: 教程
+tags: 教程,ladder
 categories: 操作记录
 
 ---
