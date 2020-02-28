@@ -101,18 +101,27 @@
 
 
 
-  <meta name="description" content="事件排查排查步骤事后总结服务器安全病毒缺陷分析">
+  <meta name="description" content="事件记录由于疫情，最近一个月公司安排在家办公，早上我正在努力撸代码好好学习的时候，突然公司 IT 部门的人问我最近有没有操作过某台服务器(下文用 XXX 代替)，正好我昨天登陆上这台服务器进行过一次连通性测试，我问他怎么了？他告诉我 XXX 被阿里云系统分析出中毒了，详情见下两张图: 我大吃一惊，马上登陆 XXX，执行了下top命令，发现有一个进程 Macron 几乎占用了百分百的CPU, 执行这">
 <meta name="keywords" content="操作记录,linux,病毒">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一次服务器中挖矿病毒的排查经历">
 <meta property="og:url" content="https://www.jacklee.work/操作记录/2020-02-28-一次服务器中挖矿病毒的排查经历.html">
 <meta property="og:site_name" content="JackLee">
-<meta property="og:description" content="事件排查排查步骤事后总结服务器安全病毒缺陷分析">
+<meta property="og:description" content="事件记录由于疫情，最近一个月公司安排在家办公，早上我正在努力撸代码好好学习的时候，突然公司 IT 部门的人问我最近有没有操作过某台服务器(下文用 XXX 代替)，正好我昨天登陆上这台服务器进行过一次连通性测试，我问他怎么了？他告诉我 XXX 被阿里云系统分析出中毒了，详情见下两张图: 我大吃一惊，马上登陆 XXX，执行了下top命令，发现有一个进程 Macron 几乎占用了百分百的CPU, 执行这">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-28T06:07:39.058Z">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228141413349.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228141452048.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228141729926.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228174426478.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228175719606.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228180519098.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228181548609.png">
+<meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228182555187.png">
+<meta property="og:updated_time" content="2020-02-28T10:27:52.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一次服务器中挖矿病毒的排查经历">
-<meta name="twitter:description" content="事件排查排查步骤事后总结服务器安全病毒缺陷分析">
+<meta name="twitter:description" content="事件记录由于疫情，最近一个月公司安排在家办公，早上我正在努力撸代码好好学习的时候，突然公司 IT 部门的人问我最近有没有操作过某台服务器(下文用 XXX 代替)，正好我昨天登陆上这台服务器进行过一次连通性测试，我问他怎么了？他告诉我 XXX 被阿里云系统分析出中毒了，详情见下两张图: 我大吃一惊，马上登陆 XXX，执行了下top命令，发现有一个进程 Macron 几乎占用了百分百的CPU, 执行这">
+<meta name="twitter:image" content="https://www.jacklee.work/assets/images/image-20200228141413349.png">
 
 
 
@@ -372,7 +381,7 @@
                 
               
 
-              <time title="创建时间：2020-02-28 12:57:46 / 修改时间：14:07:39" itemprop="dateCreated datePublished" datetime="2020-02-28T12:57:46+08:00">2020-02-28</time>
+              <time title="创建时间：2020-02-28 12:57:46 / 修改时间：18:27:52" itemprop="dateCreated datePublished" datetime="2020-02-28T12:57:46+08:00">2020-02-28</time>
             
 
             
@@ -453,7 +462,37 @@
       
 
       
-        <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h2 id="排查"><a href="#排查" class="headerlink" title="排查"></a>排查</h2><h3 id="排查步骤"><a href="#排查步骤" class="headerlink" title="排查步骤"></a>排查步骤</h3><h2 id="事后总结"><a href="#事后总结" class="headerlink" title="事后总结"></a>事后总结</h2><h3 id="服务器安全"><a href="#服务器安全" class="headerlink" title="服务器安全"></a>服务器安全</h3><h3 id="病毒缺陷分析"><a href="#病毒缺陷分析" class="headerlink" title="病毒缺陷分析"></a>病毒缺陷分析</h3>
+        <h2 id="事件记录"><a href="#事件记录" class="headerlink" title="事件记录"></a>事件记录</h2><p>由于疫情，最近一个月公司安排在家办公，早上我正在努力撸代码好好学习的时候，突然公司 IT 部门的人问我最近有没有操作过某台服务器(下文用 <code>XXX</code> 代替)，正好我昨天登陆上这台服务器进行过一次连通性测试，我问他怎么了？他告诉我 <code>XXX</code> 被阿里云系统分析出中毒了，详情见下两张图:<br><img src="../assets/images/image-20200228141413349.png" alt="image-20200228141413349"><br><img src="../assets/images/image-20200228141452048.png" alt="image-20200228141452048"></p>
+<p>我大吃一惊，马上登陆 <code>XXX</code>，执行了下<code>top</code>命令，发现有一个进程 Macron 几乎占用了百分百的<code>CPU</code>, 执行这个进程的用户正是 <code>share</code>，<code>XXX</code>服务器是被人入侵并植入恶意程序了。<br><img src="../assets/images/image-20200228141729926.png" alt="image-20200228141729926"></p>
+<p>IT 部门的人委婉地告诉我，好好对自己的电脑查毒下，因为就在我登陆服务器操作后的当天，服务器就中毒了。我听完这话就笑了，这跟看一眼就怀孕的理论有什么区别？不过作为技术人的严谨加上服务器确实是被入侵了，作为服务器的管理员我还是有必要查下到底什么原因，当然也要将这个病毒赶走。</p>
+<h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><p>首先用关键词 <code>Macron</code> 阿里云 CPU 关键词 google 了一把，得到一个相同经历的网友帖子：<br><img src="../assets/images/image-20200228174426478.png" alt="image-20200228174426478"><br>但是整个帖子和下面的回复都没有什么有用的东西。</p>
+<p>接下来我先尝试结束掉这个 <code>Macron</code> 进程，过了一会儿，这个进程又自动运行了，看来应该有其他辅助进程在后面，既然这个进程是 <code>share</code>用户起的，但是这个<code>share</code>用户记得在这台服务器上没人使用，它怎么会运行这些进程的？我用 <code>ps -ef | grep share</code> 看看还有没有其他进程，果然，得到了几个看起来很可疑的进程名字：<code>rhhktt</code>, <code>rhhktt.dir</code>,看名字就不是什么正经进程。尝试结束掉这几个进程，无一例外，<code>kill</code>掉这几个进程后不到2分钟，又自动起来了。</p>
+<p>我看看能否把这几个进程的文件删除掉，看看删除进程文件后有什么行为，执行了下 <code>ps -efx | grep Macron</code> ，发现这些进程文件都是放在 <code>/tmp</code> 下面， <code>/tmp</code> 是 <code>linux</code> 的一个临时文件目录，任何用户都可以往这个目录写入文件，可是这几个拥有者是 <code>share</code> 用户的文件是怎么写进来的呢？</p>
+<p>执行了下 <code>cat /var/log/secure* | grep share</code>, 发现了一些 <code>share</code> 用户的异常行为，在北京时间凌晨1点多到3点多登陆这台服务器：<br><img src="../assets/images/image-20200228175719606.png" alt="image-20200228175719606"></p>
+<p>看来是 <code>share</code> 用户密码泄露或者被爆破了，我直接打开 <code>/var/log/secure</code> ，发现最近不断有人在尝试连接 <code>ssh</code>：<br><img src="../assets/images/image-20200228180519098.png" alt="image-20200228180519098"></p>
+<p>那看来就是 <code>share</code> 用户密码被猜出来了，然后被对方使用 <code>ssh</code> 通道下载了 <code>Marcron</code> 这些病毒文件并执行，我到 <code>/home/share/.ssh</code> 里面还看到一个 <code>authorized_keys</code> 文件，里面的公钥明显不是我熟知的几个管理员帐号，应该是被对方用来做<code>ssh</code> 免密码登陆，方便传输文件用的。从表现上看这些病毒占用大量 <code>CPU</code> 资源，估计是挖矿病毒，从阿里云的行为预警系统报告中也看出这一点：<br><img src="../assets/images/image-20200228181548609.png" alt="image-20200228181548609"></p>
+<h2 id="安全加固"><a href="#安全加固" class="headerlink" title="安全加固"></a>安全加固</h2><p>查出服务器有如下安全隐患后，就要开始着手解决了，主要有如下已知问题和解决办法：</p>
+<ul>
+<li><p>无用帐号</p>
+<ul>
+<li>将系统中的无用帐删除掉，留着是个隐患。确认过帐号是没用的，执行 <code>userdel 帐号名</code> 吧。</li>
+</ul>
+</li>
+<li><p>帐号弱口令</p>
+<ul>
+<li>对于需要使用的帐号，一定要保证帐号密码足够复杂，可以使用类似 <code>KeeWeb</code> 的密码管理软件，生成随机复杂密码并记住。</li>
+</ul>
+</li>
+<li><p>有些帐号未设置禁止远程登陆</p>
+<ul>
+<li>执行 <code>cat /etc/passwd | grep -v nologin</code> 看看哪些帐号是允许远程登陆的，如果没有必要远程登陆的，修改 <code>/etc/passwd</code> ，改成 <code>nologin</code> 即可：<br><img src="../assets/images/image-20200228182555187.png" alt="image-20200228182555187"></li>
+</ul>
+</li>
+<li><p><code>ssh</code> 经常被尝试登陆扫描</p>
+<pre><code>- 将 `ssh` 监听端口改成其他端口，不要用 `22` 端口，免去被强行扫描的尴尬局面，修改`/etc/ssh/sshd.conf` 中的对应端口并执行 `service sshd restart` 即可。
+</code></pre></li>
+</ul>
+
       
     </div>
 
@@ -759,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">1.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排查"><span class="nav-number">2.</span> <span class="nav-text">排查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排查步骤"><span class="nav-number">2.1.</span> <span class="nav-text">排查步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事后总结"><span class="nav-number">3.</span> <span class="nav-text">事后总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器安全"><span class="nav-number">3.1.</span> <span class="nav-text">服务器安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#病毒缺陷分析"><span class="nav-number">3.2.</span> <span class="nav-text">病毒缺陷分析</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件记录"><span class="nav-number">1.</span> <span class="nav-text">事件记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#排查过程"><span class="nav-number">2.</span> <span class="nav-text">排查过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全加固"><span class="nav-number">3.</span> <span class="nav-text">安全加固</span></a></li></ol></div>
             
 
           </div>
