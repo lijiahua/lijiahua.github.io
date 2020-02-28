@@ -117,7 +117,7 @@
 <meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228180519098.png">
 <meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228181548609.png">
 <meta property="og:image" content="https://www.jacklee.work/assets/images/image-20200228182555187.png">
-<meta property="og:updated_time" content="2020-02-28T10:27:52.924Z">
+<meta property="og:updated_time" content="2020-02-28T10:29:35.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一次服务器中挖矿病毒的排查经历">
 <meta name="twitter:description" content="事件记录由于疫情，最近一个月公司安排在家办公，早上我正在努力撸代码好好学习的时候，突然公司 IT 部门的人问我最近有没有操作过某台服务器(下文用 XXX 代替)，正好我昨天登陆上这台服务器进行过一次连通性测试，我问他怎么了？他告诉我 XXX 被阿里云系统分析出中毒了，详情见下两张图: 我大吃一惊，马上登陆 XXX，执行了下top命令，发现有一个进程 Macron 几乎占用了百分百的CPU, 执行这">
@@ -381,7 +381,7 @@
                 
               
 
-              <time title="创建时间：2020-02-28 12:57:46 / 修改时间：18:27:52" itemprop="dateCreated datePublished" datetime="2020-02-28T12:57:46+08:00">2020-02-28</time>
+              <time title="创建时间：2020-02-28 12:57:46 / 修改时间：18:29:35" itemprop="dateCreated datePublished" datetime="2020-02-28T12:57:46+08:00">2020-02-28</time>
             
 
             
@@ -464,7 +464,7 @@
       
         <h2 id="事件记录"><a href="#事件记录" class="headerlink" title="事件记录"></a>事件记录</h2><p>由于疫情，最近一个月公司安排在家办公，早上我正在努力撸代码好好学习的时候，突然公司 IT 部门的人问我最近有没有操作过某台服务器(下文用 <code>XXX</code> 代替)，正好我昨天登陆上这台服务器进行过一次连通性测试，我问他怎么了？他告诉我 <code>XXX</code> 被阿里云系统分析出中毒了，详情见下两张图:<br><img src="../assets/images/image-20200228141413349.png" alt="image-20200228141413349"><br><img src="../assets/images/image-20200228141452048.png" alt="image-20200228141452048"></p>
 <p>我大吃一惊，马上登陆 <code>XXX</code>，执行了下<code>top</code>命令，发现有一个进程 Macron 几乎占用了百分百的<code>CPU</code>, 执行这个进程的用户正是 <code>share</code>，<code>XXX</code>服务器是被人入侵并植入恶意程序了。<br><img src="../assets/images/image-20200228141729926.png" alt="image-20200228141729926"></p>
-<p>IT 部门的人委婉地告诉我，好好对自己的电脑查毒下，因为就在我登陆服务器操作后的当天，服务器就中毒了。我听完这话就笑了，这跟看一眼就怀孕的理论有什么区别？不过作为技术人的严谨加上服务器确实是被入侵了，作为服务器的管理员我还是有必要查下到底什么原因，当然也要将这个病毒赶走。</p>
+<p>IT 部门的人委婉地告诉我，好好对自己的电脑查毒下，因为就在我登陆服务器操作后的当天，服务器就中毒了。我听完这话就笑了，这跟看一眼就怀孕的理论有什么区别？不过作为技术人的严谨加上服务器确实是被入侵了，身为服务器的管理员我还是有必要查下到底什么原因，也要将这个病毒赶走。</p>
 <h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><p>首先用关键词 <code>Macron</code> 阿里云 CPU 关键词 google 了一把，得到一个相同经历的网友帖子：<br><img src="../assets/images/image-20200228174426478.png" alt="image-20200228174426478"><br>但是整个帖子和下面的回复都没有什么有用的东西。</p>
 <p>接下来我先尝试结束掉这个 <code>Macron</code> 进程，过了一会儿，这个进程又自动运行了，看来应该有其他辅助进程在后面，既然这个进程是 <code>share</code>用户起的，但是这个<code>share</code>用户记得在这台服务器上没人使用，它怎么会运行这些进程的？我用 <code>ps -ef | grep share</code> 看看还有没有其他进程，果然，得到了几个看起来很可疑的进程名字：<code>rhhktt</code>, <code>rhhktt.dir</code>,看名字就不是什么正经进程。尝试结束掉这几个进程，无一例外，<code>kill</code>掉这几个进程后不到2分钟，又自动起来了。</p>
 <p>我看看能否把这几个进程的文件删除掉，看看删除进程文件后有什么行为，执行了下 <code>ps -efx | grep Macron</code> ，发现这些进程文件都是放在 <code>/tmp</code> 下面， <code>/tmp</code> 是 <code>linux</code> 的一个临时文件目录，任何用户都可以往这个目录写入文件，可是这几个拥有者是 <code>share</code> 用户的文件是怎么写进来的呢？</p>
